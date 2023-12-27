@@ -1,11 +1,13 @@
-import './App.css'
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import "./App.css";
+import TemplateRoot from "./pages/TemplateRoot";
 
 function App() {
-  return (
-    <>
-      
-    </>
-  )
+  const router = createBrowserRouter([
+    { index: true, element: <TemplateRoot /> },
+  ]);
+
+  return <RouterProvider router={router} />;
 }
 
-export default App
+export default App;
