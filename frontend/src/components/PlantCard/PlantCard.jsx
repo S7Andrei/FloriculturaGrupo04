@@ -5,7 +5,7 @@ import { deletePlant, fetchPlantsData } from "../../store/plants/plantsAction";
 import { NavLink } from "react-router-dom";
 import { useEffect } from "react";
 
-const PlantCard = ({ filter }) => {
+const PlantCard = ({ listagemTotal = false, filter }) => {
   const plants = useSelector((state) => state.plants.plants);
   const dispatch = useDispatch();
 
@@ -19,14 +19,16 @@ const PlantCard = ({ filter }) => {
 
   return (
     <>
-      {filter
+      {!listagemTotal
         ? plants
-            .filter((plant) => plant.label === filter)
+            .filter((plant) => plant.isInSale === filter)
             .map((plant) => {
               return (
                 <div key={plant.id} className="card">
                   <div className="card-content">
-                    <li>{plant.plantName}</li>
+                    {plant.name}
+                    {plant.description}
+                    {plant.isInSale}
                     <button
                       type="button"
                       onClick={() => handleDelete(plant.id)}
@@ -43,7 +45,7 @@ const PlantCard = ({ filter }) => {
             return (
               <div key={plant.id} className="card">
                 <div className="card-content">
-                  <li>{plant.plantName}</li>
+                  <li>{plant.name}</li>
                   <button type="button" onClick={() => handleDelete(plant.id)}>
                     Deletar
                   </button>
