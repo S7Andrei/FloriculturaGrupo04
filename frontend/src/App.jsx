@@ -4,6 +4,7 @@ import { useEffect } from "react";
 
 import TemplateRoot from "./pages/TemplateRoot";
 import Home from "./pages/Home";
+
 import AboutUs from "./pages/AboutUs";
 import Products from "./pages/Products";
 import Register from "./pages/Register";
@@ -26,6 +27,7 @@ function App() {
     },
   ]);
 
+
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -33,6 +35,7 @@ function App() {
   }, [dispatch]);
 
   return <RouterProvider router={router} />;
+
 }
 
 export default App;
