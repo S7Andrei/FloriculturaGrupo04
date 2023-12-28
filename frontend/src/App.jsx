@@ -1,6 +1,4 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import { useDispatch } from "react-redux";
-import { useEffect } from "react";
 
 import TemplateRoot from "./pages/TemplateRoot";
 import Home from "./pages/Home";
@@ -8,8 +6,6 @@ import Home from "./pages/Home";
 import AboutUs from "./pages/AboutUs";
 import Products from "./pages/Products";
 import Register from "./pages/Register";
-
-import {fetchPlantsData} from "./store/plants/plantsAction";
 
 import "./App.css";
 
@@ -28,11 +24,7 @@ function App() {
   ]);
 
 
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(fetchPlantsData());
-  }, [dispatch]);
+  
 
   return <RouterProvider router={router} />;
 
