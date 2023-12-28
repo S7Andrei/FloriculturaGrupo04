@@ -33,13 +33,13 @@ const Register = () => {
       headers: {
         "Content-Type": "application/json",
       },
+
       body: JSON.stringify(
         data
       ),
     });
 
-    
-  console.log(formData)
+    console.log(formData);
   };
 
 

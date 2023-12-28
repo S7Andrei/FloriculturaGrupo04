@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialPlantsState = { plants: [] };
+const initialPlantsState = { plants: [], plantSelected: {} };
 
 const plantsSlice = createSlice({
   name: "plants",
@@ -8,10 +8,25 @@ const plantsSlice = createSlice({
   reducers: {
     handleGetPlants(state, action) {
       state.plants = action.payload;
-      //console.log(state.plants)
+    },
+    handleDeletePlant(state, action) {
+      state.plants = state.plants.filter(
+        (plant) => plant.id !== action.payload
+      );
+    },
+    handleGetPlantDetails(state, action) {
+      const plantIndex = state.plants.findIndex(
+        (plant) => plant.id === action.payload
+      );
+
+      if (plantIndex >= 0) {
+        state.plantSelected = state.plants[plantIndex];
+      } else {
+        state.plantSelected = false;
+      }
     },
   },
 });
 
 export default plantsSlice;
-export const plantsAction = plantsSlice.actions;
+export const plantsActions = plantsSlice.actions;
