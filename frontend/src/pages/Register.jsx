@@ -14,7 +14,6 @@ const Register = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-
     const validationErrors = {};
     if (!plantName) {
       validationErrors.plantName = "Plant Name is required";
@@ -32,49 +31,40 @@ const Register = () => {
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors);
     } else {
-    const myData = new FormData(e.target);
-      
-    const isInSale = true;
-    const data = Object.fromEntries(myData.entries());
-    const {
-      description,
-      discountPercentage,
-      features,
-      labelDoor,
-      name,
-      plantType,
-      price,
-      subtitle,
-    } = data;
+      const myData = new FormData(e.target);
 
-    console.log(description);
-    console.log(data);
+      let isInSale;
+      const data = Object.fromEntries(myData.entries());
+      const {
+        description,
+        discountPercentage,
+        features,
+        labelDoor,
+        name,
+        plantType,
+        price,
+        subtitle,
+      } = data;
 
-    const plantsObject = {
-      name: name,
-      subtitle: subtitle,
-      label: [plantType, labelDoor],
-      isInSale,
-      price: price,
-      discountPercentage: discountPercentage,
-      features: features,
-      description: description,
-    };
+      if(discountPercentage > 0){
+        isInSale = 'promo'
+      }else{
+        isInSale = 'notPromo'
+      }
 
-    
+      console.log(description);
+      console.log(data);
 
-
-
-      // const formData = {
-      //   plantName,
-      //   plantSubtitle,
-      //   plantType,
-      //   price,
-      //   discountPercentage,
-      //   label,
-      //   features,
-      //   description,
-      // };
+      const plantsObject = {
+        name: name,
+        subtitle: subtitle,
+        label: [plantType, labelDoor],
+        isInSale,
+        price: price,
+        discountPercentage: discountPercentage,
+        features: features,
+        description: description,
+      };
 
       fetch("http://localhost:3000/plants", {
         method: "POST",
@@ -82,17 +72,15 @@ const Register = () => {
           "Content-Type": "application/json",
         },
 
-         body: JSON.stringify(plantsObject),
-    })
+        body: JSON.stringify(plantsObject),
+      })
         .then((response) => {
           if (response.ok) {
             console.log("Form submitted successfully");
-  
+
             e.target.reset();
             setErrors({});
-
           } else {
-            
             throw new Error("Failed to submit form");
           }
         })
@@ -101,8 +89,6 @@ const Register = () => {
         });
     }
   };
-
-
 
   return (
     <>
@@ -148,7 +134,7 @@ const Register = () => {
           <label>
             Price:
             <input
-              type="text"
+              type="number"
               value={price}
               onChange={(e) => setPrice(e.target.value)}
               name="price"
@@ -158,7 +144,7 @@ const Register = () => {
           <label>
             Discount Percentage:
             <input
-              type="text"
+              type="number"
               value={discountPercentage}
               onChange={(e) => setDiscountPercentage(e.target.value)}
               name="discountPercentage"
