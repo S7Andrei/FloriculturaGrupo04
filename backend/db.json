@@ -1,50 +1,6 @@
 {
   "plants": [
     {
-      "plantName": "asdasd",
-      "plantSubtitle": "asdasd",
-      "plantType": "asdasd",
-      "price": "asd",
-      "discountPercentage": "asd",
-      "label": "indoor",
-      "features": "asd",
-      "description": "asd",
-      "id": 1
-    },
-    {
-      "plantName": "asdasd",
-      "plantSubtitle": "asdasda",
-      "plantType": "sdasda",
-      "price": "sdasd",
-      "discountPercentage": "asdasd",
-      "label": "indoor",
-      "features": "asdasa",
-      "description": "sdasd",
-      "id": 2
-    },
-    {
-      "plantName": "asdasd",
-      "plantSubtitle": "asdasda",
-      "plantType": "sdasda",
-      "price": "sdasd",
-      "discountPercentage": "asdasd",
-      "label": "indoor",
-      "features": "asdasa",
-      "description": "sdasd",
-      "id": 3
-    },
-    {
-      "plantName": "asdasda",
-      "plantSubtitle": "sdasd",
-      "plantType": "asdasas",
-      "price": "dasd",
-      "discountPercentage": "asdas",
-      "label": "indoor",
-      "features": "asdasd",
-      "description": "asdasd",
-      "id": 4
-    },
-    {
       "name": "asdasd",
       "subtitle": "asdasd",
       "label": [
@@ -57,6 +13,20 @@
       "features": "asdasd",
       "description": "asdasd",
       "id": 5
+    },
+    {
+      "name": "asdaasdasd",
+      "subtitle": "asdasd",
+      "label": [
+        "asdasdas",
+        "indoor"
+      ],
+      "isInSale": "promo",
+      "price": "2121",
+      "discountPercentage": "232",
+      "features": "asdasd",
+      "description": "asdasd",
+      "id": 6
     }
   ]
 }
