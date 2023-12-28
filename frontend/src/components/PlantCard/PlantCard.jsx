@@ -1,9 +1,8 @@
 /* eslint-disable react/prop-types */
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
-import { deletePlant, fetchPlantsData } from "../../store/plants/plantsAction";
+import { deletePlant } from "../../store/plants/plantsAction";
 import { NavLink } from "react-router-dom";
-import { useEffect } from "react";
 
 const PlantCard = ({ listagemTotal = false, filter }) => {
   const plants = useSelector((state) => state.plants.plants);
@@ -12,10 +11,6 @@ const PlantCard = ({ listagemTotal = false, filter }) => {
   const handleDelete = (id) => {
     dispatch(deletePlant(id));
   };
-
-  useEffect(() => {
-    dispatch(fetchPlantsData());
-  }, [dispatch]);
 
   return (
     <>

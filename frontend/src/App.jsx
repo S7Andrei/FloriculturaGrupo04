@@ -7,16 +7,18 @@ import AboutUs from "./pages/AboutUs";
 import Products from "./pages/Products";
 import Register from "./pages/Register";
 
-
-
 import "./App.css";
 import ProductsDetails from "./pages/ProductsDetails";
+import { useEffect } from "react";
+import { fetchPlantsData } from "./store/plants/plantsAction";
+import { useDispatch } from "react-redux";
 
 function App() {
   const router = createBrowserRouter([
     {
       path: "/",
       element: <TemplateRoot />,
+
       children: [
         { index: true, element: <Home /> },
         { path: "about-us", element: <AboutUs /> },
@@ -27,7 +29,11 @@ function App() {
     },
   ]);
 
-  
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchPlantsData());
+  }, [dispatch]);
 
   return <RouterProvider router={router} />;
 }
