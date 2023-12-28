@@ -1,59 +1,37 @@
 {
   "plants": [
     {
-      "plantName": "dsada",
+      "plantName": "dsdasd",
       "plantSubtitle": "dasda",
-      "plantType": "ddsad",
-      "price": "asda",
-      "discountPercentage": "dsad",
+      "plantType": "dasdas",
+      "price": "dasda",
+      "discountPercentage": "dasd",
       "label": "indoor",
-      "features": "dasd",
-      "description": "adsa",
+      "features": "dasda",
+      "description": "dsada",
       "id": 1
     },
     {
-      "plantName": "dsadaoooooooo",
+      "plantName": "sdsadsaaaaaa",
       "plantSubtitle": "dasda",
-      "plantType": "ddsad",
-      "price": "asda",
-      "discountPercentage": "dsad",
+      "plantType": "dasdas",
+      "price": "dasda",
+      "discountPercentage": "dasd",
       "label": "indoor",
-      "features": "dasd",
-      "description": "adsa",
+      "features": "dasda",
+      "description": "dsada",
       "id": 2
     },
     {
-      "plantName": "dfsfsdfs",
-      "plantSubtitle": "fdsfsdf",
-      "plantType": "fdsfdsf",
-      "price": "sdfsd",
-      "discountPercentage": "sfsd",
-      "label": "indoor",
-      "features": "fsdfs",
-      "description": "fsdfs",
-      "id": 3
-    },
-    {
-      "plantName": "dfsfs",
-      "plantSubtitle": "fdsfdf",
-      "plantType": "sdfsfd",
-      "price": "fsdfs",
-      "discountPercentage": "fsfsd",
-      "label": "indoor",
-      "features": "fsdfs",
-      "description": "fds",
-      "id": 4
-    },
-    {
-      "plantName": "sdasda",
-      "plantSubtitle": "dadssdad",
-      "plantType": "dsaddassd",
-      "price": "dasad",
-      "discountPercentage": "dada",
-      "label": "indoor",
-      "features": "sadadas",
+      "plantName": "outdooooor",
+      "plantSubtitle": "dasdaasa",
+      "plantType": "dasdas",
+      "price": "dasda",
+      "discountPercentage": "dasd",
+      "label": "outdoor",
+      "features": "dasda",
       "description": "dsada",
-      "id": 5
+      "id": 3
     }
   ]
 }
