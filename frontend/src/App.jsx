@@ -7,6 +7,11 @@ import "./App.css";
 import AboutUs from "./pages/AboutUs";
 import Products from "./pages/Products";
 import Register from "./pages/Register";
+import { useSelector, useDispatch } from "react-redux";
+import { useEffect } from "react";
+import fetchPlantsData from "./store/plants/plantsAction";
+
+let isInitial = true;
 
 function App() {
   const router = createBrowserRouter([
@@ -22,15 +27,28 @@ function App() {
     },
   ]);
 
+  const dispatch = useDispatch();
+  const plants = useSelector((state) => state.plant);
+
+  useEffect(() => {
+    dispatch(fetchPlantsData());
+    isInitial = false;
+  }, [dispatch]);
+
+  console.log(plants);
+
   return (
     <>
       <Header />
 
       <Register />
+      {/* {!isInitial &&
+        plants.plants.map((plantinhadobem) => {
+          <p>{plantinhadobem.plantName}</p>;
+        })} */}
 
       {/*<Footer />*/}
     </>
-    
   );
 }
 
