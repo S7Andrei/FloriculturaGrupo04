@@ -13,7 +13,7 @@ const Register = () => {
   const [description, setDescription] = useState("");
   const [errors, setErrors] = useState({});
 
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -50,10 +50,10 @@ const Register = () => {
         subtitle,
       } = data;
 
-      if(discountPercentage > 0){
-        isInSale = 'promo'
-      }else{
-        isInSale = 'notPromo'
+      if (discountPercentage > 0) {
+        isInSale = "promo";
+      } else {
+        isInSale = "notPromo";
       }
 
       console.log(description);
@@ -70,7 +70,7 @@ const Register = () => {
         description: description,
       };
 
-      dispatch(plantsActions.handleAddPlant(plantsObject))
+      dispatch(plantsActions.handleAddPlant(plantsObject));
 
       fetch("http://localhost:3000/plants", {
         method: "POST",
@@ -78,6 +78,7 @@ const Register = () => {
           "Content-Type": "application/json",
         },
 
+        body: JSON.stringify(plantsObject),
         body: JSON.stringify(plantsObject),
       })
         .then((response) => {
