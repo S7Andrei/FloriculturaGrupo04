@@ -2,6 +2,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import TemplateRoot from "./pages/TemplateRoot";
 import Header from "./components/Header/Header";
 import Home from "./pages/Home";
+import Footer from "./components/Footer/Footer";
 import "./App.css";
 import AboutUs from "./pages/AboutUs";
 import Products from "./pages/Products";
@@ -24,7 +25,9 @@ function App() {
   return (
     <>
       <Header />
+      <Footer />
     </>
+    
   );
 }
 
