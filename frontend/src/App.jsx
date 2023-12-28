@@ -25,7 +25,10 @@ function App() {
   return (
     <>
       <Header />
-      <Footer />
+
+      <Register />
+
+      {/*<Footer />*/}
     </>
     
   );
