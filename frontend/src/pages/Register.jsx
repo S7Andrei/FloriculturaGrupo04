@@ -14,6 +14,7 @@ const Register = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+
     const validationErrors = {};
     if (!plantName) {
       validationErrors.plantName = "Plant Name is required";
@@ -31,9 +32,38 @@ const Register = () => {
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors);
     } else {
-      const myData = new FormData(e.target);
+    const myData = new FormData(e.target);
+      
+    const isInSale = true;
+    const data = Object.fromEntries(myData.entries());
+    const {
+      description,
+      discountPercentage,
+      features,
+      labelDoor,
+      name,
+      plantType,
+      price,
+      subtitle,
+    } = data;
 
-      const data = Object.entries(myData.entries());
+    console.log(description);
+    console.log(data);
+
+    const plantsObject = {
+      name: name,
+      subtitle: subtitle,
+      label: [plantType, labelDoor],
+      isInSale,
+      price: price,
+      discountPercentage: discountPercentage,
+      features: features,
+      description: description,
+    };
+
+    
+
+
 
       // const formData = {
       //   plantName,
@@ -52,8 +82,8 @@ const Register = () => {
           "Content-Type": "application/json",
         },
 
-        body: JSON.stringify(data),
-      })
+         body: JSON.stringify(plantsObject),
+    })
         .then((response) => {
           if (response.ok) {
             console.log("Form submitted successfully");
@@ -72,6 +102,8 @@ const Register = () => {
     }
   };
 
+
+
   return (
     <>
       <form onSubmit={handleSubmit}>
@@ -83,6 +115,7 @@ const Register = () => {
               type="text"
               value={plantName}
               onChange={(e) => setPlantName(e.target.value)}
+              name="name"
             />
             {errors.plantName && <span>{errors.plantName}</span>}
           </label>
@@ -94,6 +127,7 @@ const Register = () => {
               type="text"
               value={plantSubtitle}
               onChange={(e) => setPlantSubtitle(e.target.value)}
+              name="subtitle"
             />
             {errors.plantSubtitle && <span>{errors.plantSubtitle}</span>}
           </label>
@@ -105,6 +139,7 @@ const Register = () => {
               type="text"
               value={plantType}
               onChange={(e) => setPlantType(e.target.value)}
+              name="plantType"
             />
             {errors.plantType && <span>{errors.plantType}</span>}
           </label>
@@ -116,6 +151,7 @@ const Register = () => {
               type="text"
               value={price}
               onChange={(e) => setPrice(e.target.value)}
+              name="price"
             />
             {errors.price && <span>{errors.price}</span>}
           </label>
@@ -125,6 +161,7 @@ const Register = () => {
               type="text"
               value={discountPercentage}
               onChange={(e) => setDiscountPercentage(e.target.value)}
+              name="discountPercentage"
             />
             {errors.discountPercentage && (
               <span>{errors.discountPercentage}</span>
@@ -140,6 +177,7 @@ const Register = () => {
               value="indoor"
               checked={label === "indoor"}
               onChange={() => setLabel("indoor")}
+              name="labelDoor"
             />
           </label>
           <label>
@@ -149,6 +187,7 @@ const Register = () => {
               value="outdoor"
               checked={label === "outdoor"}
               onChange={() => setLabel("outdoor")}
+              name="labelDoor"
             />
           </label>
         </div>
@@ -158,6 +197,7 @@ const Register = () => {
             <textarea
               value={features}
               onChange={(e) => setFeatures(e.target.value)}
+              name="features"
             />
             {errors.features && <span>{errors.features}</span>}
           </label>
@@ -168,6 +208,7 @@ const Register = () => {
             <textarea
               value={description}
               onChange={(e) => setDescription(e.target.value)}
+              name="description"
             />
             {errors.description && <span>{errors.description}</span>}
           </label>
