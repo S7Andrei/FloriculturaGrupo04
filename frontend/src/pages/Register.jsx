@@ -9,11 +9,31 @@ const Register = () => {
   const [label, setLabel] = useState("indoor");
   const [features, setFeatures] = useState("");
   const [description, setDescription] = useState("");
+  const [errors, setErrors] = useState({});
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
+
+    const validationErrors = {};
+    if (!plantName) {
+      validationErrors.plantName = "Plant Name is required";
+    }
+    if (!plantSubtitle) {
+      validationErrors.plantSubtitle = "Plant Subtitle is required";
+    }
+    if (!plantType) {
+      validationErrors.plantType = "Plant Type is required";
+    }
+    if (!price) {
+      validationErrors.price = "Price is required";
+    }
+
+    if (Object.keys(validationErrors).length > 0) {
+      setErrors(validationErrors);
+    } else {
     const myData = new FormData(e.target);
+      
     const isInSale = true;
     const data = Object.fromEntries(myData.entries());
     const {
@@ -41,15 +61,48 @@ const Register = () => {
       description: description,
     };
 
-    fetch("http://localhost:3000/plants", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
+    
 
-      body: JSON.stringify(plantsObject),
-    });
+
+
+      // const formData = {
+      //   plantName,
+      //   plantSubtitle,
+      //   plantType,
+      //   price,
+      //   discountPercentage,
+      //   label,
+      //   features,
+      //   description,
+      // };
+
+      fetch("http://localhost:3000/plants", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+
+         body: JSON.stringify(plantsObject),
+    })
+        .then((response) => {
+          if (response.ok) {
+            console.log("Form submitted successfully");
+  
+            e.target.reset();
+            setErrors({});
+
+          } else {
+            
+            throw new Error("Failed to submit form");
+          }
+        })
+        .catch((error) => {
+          console.error("Form submission error:", error);
+        });
+    }
   };
+
+
 
   return (
     <>
@@ -64,6 +117,7 @@ const Register = () => {
               onChange={(e) => setPlantName(e.target.value)}
               name="name"
             />
+            {errors.plantName && <span>{errors.plantName}</span>}
           </label>
         </div>
         <div>
@@ -75,6 +129,7 @@ const Register = () => {
               onChange={(e) => setPlantSubtitle(e.target.value)}
               name="subtitle"
             />
+            {errors.plantSubtitle && <span>{errors.plantSubtitle}</span>}
           </label>
         </div>
         <div>
@@ -86,6 +141,7 @@ const Register = () => {
               onChange={(e) => setPlantType(e.target.value)}
               name="plantType"
             />
+            {errors.plantType && <span>{errors.plantType}</span>}
           </label>
         </div>
         <div>
@@ -97,6 +153,7 @@ const Register = () => {
               onChange={(e) => setPrice(e.target.value)}
               name="price"
             />
+            {errors.price && <span>{errors.price}</span>}
           </label>
           <label>
             Discount Percentage:
@@ -106,6 +163,9 @@ const Register = () => {
               onChange={(e) => setDiscountPercentage(e.target.value)}
               name="discountPercentage"
             />
+            {errors.discountPercentage && (
+              <span>{errors.discountPercentage}</span>
+            )}
           </label>
         </div>
         <div>
@@ -139,6 +199,7 @@ const Register = () => {
               onChange={(e) => setFeatures(e.target.value)}
               name="features"
             />
+            {errors.features && <span>{errors.features}</span>}
           </label>
         </div>
         <div>
@@ -149,6 +210,7 @@ const Register = () => {
               onChange={(e) => setDescription(e.target.value)}
               name="description"
             />
+            {errors.description && <span>{errors.description}</span>}
           </label>
         </div>
         <button type="submit">Register</button>
