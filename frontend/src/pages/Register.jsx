@@ -13,19 +13,32 @@ const Register = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const myData = new FormData(e.target)
-
-    const data = Object.entries(myData.entries())
-  
-    const formData = {
-      plantName,
-      plantSubtitle,
+    const myData = new FormData(e.target);
+    const isInSale = true;
+    const data = Object.fromEntries(myData.entries());
+    const {
+      description,
+      discountPercentage,
+      features,
+      labelDoor,
+      name,
       plantType,
       price,
-      discountPercentage,
-      label,
-      features,
-      description,
+      subtitle,
+    } = data;
+
+    console.log(description);
+    console.log(data);
+
+    const plantsObject = {
+      name: name,
+      subtitle: subtitle,
+      label: [plantType, labelDoor],
+      isInSale,
+      price: price,
+      discountPercentage: discountPercentage,
+      features: features,
+      description: description,
     };
 
     fetch("http://localhost:3000/plants", {
@@ -34,14 +47,9 @@ const Register = () => {
         "Content-Type": "application/json",
       },
 
-      body: JSON.stringify(
-        data
-      ),
+      body: JSON.stringify(plantsObject),
     });
-
-    console.log(formData);
   };
-
 
   return (
     <>
@@ -54,6 +62,7 @@ const Register = () => {
               type="text"
               value={plantName}
               onChange={(e) => setPlantName(e.target.value)}
+              name="name"
             />
           </label>
         </div>
@@ -64,6 +73,7 @@ const Register = () => {
               type="text"
               value={plantSubtitle}
               onChange={(e) => setPlantSubtitle(e.target.value)}
+              name="subtitle"
             />
           </label>
         </div>
@@ -74,6 +84,7 @@ const Register = () => {
               type="text"
               value={plantType}
               onChange={(e) => setPlantType(e.target.value)}
+              name="plantType"
             />
           </label>
         </div>
@@ -84,6 +95,7 @@ const Register = () => {
               type="text"
               value={price}
               onChange={(e) => setPrice(e.target.value)}
+              name="price"
             />
           </label>
           <label>
@@ -92,6 +104,7 @@ const Register = () => {
               type="text"
               value={discountPercentage}
               onChange={(e) => setDiscountPercentage(e.target.value)}
+              name="discountPercentage"
             />
           </label>
         </div>
@@ -104,6 +117,7 @@ const Register = () => {
               value="indoor"
               checked={label === "indoor"}
               onChange={() => setLabel("indoor")}
+              name="labelDoor"
             />
           </label>
           <label>
@@ -113,6 +127,7 @@ const Register = () => {
               value="outdoor"
               checked={label === "outdoor"}
               onChange={() => setLabel("outdoor")}
+              name="labelDoor"
             />
           </label>
         </div>
@@ -122,6 +137,7 @@ const Register = () => {
             <textarea
               value={features}
               onChange={(e) => setFeatures(e.target.value)}
+              name="features"
             />
           </label>
         </div>
@@ -131,6 +147,7 @@ const Register = () => {
             <textarea
               value={description}
               onChange={(e) => setDescription(e.target.value)}
+              name="description"
             />
           </label>
         </div>
