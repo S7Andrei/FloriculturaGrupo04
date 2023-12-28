@@ -1,18 +1,5 @@
 import { plantsActions } from "./plantsSlice";
 
-const fetchPlantsData = () => {
-  return async (dispatch) => {
-    const fetchData = async () => {
-      const response = await fetch("http://localhost:3000/plants");
-      const data = await response.json();
-      return data;
-    };
-
-    const plantData = await fetchData();
-    dispatch(plantsActions.handleGetPlants(plantData));
-  };
-};
-
 const deletePlant = (id) => {
   return async (dispatch) => {
     try {
@@ -30,4 +17,4 @@ const deletePlant = (id) => {
   };
 };
 
-export { fetchPlantsData, deletePlant };
+export { deletePlant };

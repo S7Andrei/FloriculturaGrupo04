@@ -43,6 +43,20 @@
       "features": "asdasd",
       "description": "asdasd",
       "id": 4
+    },
+    {
+      "name": "asdasd",
+      "subtitle": "asdasd",
+      "label": [
+        "asdasd",
+        "outdoor"
+      ],
+      "isInSale": true,
+      "price": "asdasd",
+      "discountPercentage": "asdas",
+      "features": "asdasd",
+      "description": "asdasd",
+      "id": 5
     }
   ]
 }
