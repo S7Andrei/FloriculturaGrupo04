@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import AboutUs from "./pages/AboutUs";
 import Products from "./pages/Products";
 import Register from "./pages/Register";
+import NotFound from "./pages/NotFound";
 
 
 
@@ -17,6 +18,7 @@ function App() {
     {
       path: "/",
       element: <TemplateRoot />,
+      
       children: [
         { index: true, element: <Home /> },
         { path: "about-us", element: <AboutUs /> },
