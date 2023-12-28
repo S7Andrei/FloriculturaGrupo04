@@ -1,19 +1,59 @@
 {
-  "posts": [
+  "plants": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
+      "plantName": "dsada",
+      "plantSubtitle": "dasda",
+      "plantType": "ddsad",
+      "price": "asda",
+      "discountPercentage": "dsad",
+      "label": "indoor",
+      "features": "dasd",
+      "description": "adsa",
+      "id": 1
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "plantName": "dsadaoooooooo",
+      "plantSubtitle": "dasda",
+      "plantType": "ddsad",
+      "price": "asda",
+      "discountPercentage": "dsad",
+      "label": "indoor",
+      "features": "dasd",
+      "description": "adsa",
+      "id": 2
+    },
+    {
+      "plantName": "dfsfsdfs",
+      "plantSubtitle": "fdsfsdf",
+      "plantType": "fdsfdsf",
+      "price": "sdfsd",
+      "discountPercentage": "sfsd",
+      "label": "indoor",
+      "features": "fsdfs",
+      "description": "fsdfs",
+      "id": 3
+    },
+    {
+      "plantName": "dfsfs",
+      "plantSubtitle": "fdsfdf",
+      "plantType": "sdfsfd",
+      "price": "fsdfs",
+      "discountPercentage": "fsfsd",
+      "label": "indoor",
+      "features": "fsdfs",
+      "description": "fds",
+      "id": 4
+    },
+    {
+      "plantName": "sdasda",
+      "plantSubtitle": "dadssdad",
+      "plantType": "dsaddassd",
+      "price": "dasad",
+      "discountPercentage": "dada",
+      "label": "indoor",
+      "features": "sadadas",
+      "description": "dsada",
+      "id": 5
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }
