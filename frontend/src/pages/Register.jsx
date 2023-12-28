@@ -9,39 +9,68 @@ const Register = () => {
   const [label, setLabel] = useState("indoor");
   const [features, setFeatures] = useState("");
   const [description, setDescription] = useState("");
+  const [errors, setErrors] = useState({});
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const myData = new FormData(e.target)
+    const validationErrors = {};
+    if (!plantName) {
+      validationErrors.plantName = "Plant Name is required";
+    }
+    if (!plantSubtitle) {
+      validationErrors.plantSubtitle = "Plant Subtitle is required";
+    }
+    if (!plantType) {
+      validationErrors.plantType = "Plant Type is required";
+    }
+    if (!price) {
+      validationErrors.price = "Price is required";
+    }
 
-    const data = Object.entries(myData.entries())
+    if (Object.keys(validationErrors).length > 0) {
+      setErrors(validationErrors);
+    } else {
+      const myData = new FormData(e.target);
+
+      const data = Object.entries(myData.entries());
+
+      // const formData = {
+      //   plantName,
+      //   plantSubtitle,
+      //   plantType,
+      //   price,
+      //   discountPercentage,
+      //   label,
+      //   features,
+      //   description,
+      // };
+
+      fetch("http://localhost:3000/plants", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+
+        body: JSON.stringify(data),
+      })
+        .then((response) => {
+          if (response.ok) {
+            console.log("Form submitted successfully");
   
-    const formData = {
-      plantName,
-      plantSubtitle,
-      plantType,
-      price,
-      discountPercentage,
-      label,
-      features,
-      description,
-    };
+            e.target.reset();
+            setErrors({});
 
-    fetch("http://localhost:3000/plants", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-
-      body: JSON.stringify(
-        data
-      ),
-    });
-
-    console.log(formData);
+          } else {
+            
+            throw new Error("Failed to submit form");
+          }
+        })
+        .catch((error) => {
+          console.error("Form submission error:", error);
+        });
+    }
   };
-
 
   return (
     <>
@@ -55,6 +84,7 @@ const Register = () => {
               value={plantName}
               onChange={(e) => setPlantName(e.target.value)}
             />
+            {errors.plantName && <span>{errors.plantName}</span>}
           </label>
         </div>
         <div>
@@ -65,6 +95,7 @@ const Register = () => {
               value={plantSubtitle}
               onChange={(e) => setPlantSubtitle(e.target.value)}
             />
+            {errors.plantSubtitle && <span>{errors.plantSubtitle}</span>}
           </label>
         </div>
         <div>
@@ -75,6 +106,7 @@ const Register = () => {
               value={plantType}
               onChange={(e) => setPlantType(e.target.value)}
             />
+            {errors.plantType && <span>{errors.plantType}</span>}
           </label>
         </div>
         <div>
@@ -85,6 +117,7 @@ const Register = () => {
               value={price}
               onChange={(e) => setPrice(e.target.value)}
             />
+            {errors.price && <span>{errors.price}</span>}
           </label>
           <label>
             Discount Percentage:
@@ -93,6 +126,9 @@ const Register = () => {
               value={discountPercentage}
               onChange={(e) => setDiscountPercentage(e.target.value)}
             />
+            {errors.discountPercentage && (
+              <span>{errors.discountPercentage}</span>
+            )}
           </label>
         </div>
         <div>
@@ -123,6 +159,7 @@ const Register = () => {
               value={features}
               onChange={(e) => setFeatures(e.target.value)}
             />
+            {errors.features && <span>{errors.features}</span>}
           </label>
         </div>
         <div>
@@ -132,6 +169,7 @@ const Register = () => {
               value={description}
               onChange={(e) => setDescription(e.target.value)}
             />
+            {errors.description && <span>{errors.description}</span>}
           </label>
         </div>
         <button type="submit">Register</button>
