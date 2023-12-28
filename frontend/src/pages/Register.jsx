@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { plantsActions } from "../store/plants/plantsSlice";
 
 const Register = () => {
   const [plantName, setPlantName] = useState("");
@@ -10,6 +12,8 @@ const Register = () => {
   const [features, setFeatures] = useState("");
   const [description, setDescription] = useState("");
   const [errors, setErrors] = useState({});
+
+  const dispatch = useDispatch()
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -65,6 +69,8 @@ const Register = () => {
         features: features,
         description: description,
       };
+
+      dispatch(plantsActions.handleAddPlant(plantsObject))
 
       fetch("http://localhost:3000/plants", {
         method: "POST",
