@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { deletePlant } from "../store/plants/plantsAction";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const plants = useSelector((state) => state.plants.plants);
@@ -24,8 +24,9 @@ const Home = () => {
                 <button type="button" onClick={() => handleDelete(plant.id)}>
                   Deletar
                 </button>
+                <Link to={`products/${plant.id}`}>GO to plant</Link>
 
-                <NavLink to={"/products"}>Products</NavLink>
+                <Link to={"/products"}>Products</Link>
               </div>
             </div>
           );
@@ -41,8 +42,9 @@ const Home = () => {
                 <button type="button" onClick={() => handleDelete(plant.id)}>
                   Deletar
                 </button>
+                <Link to={`products/${plant.id}`}>GO to plant</Link>
 
-                <NavLink to={"/products"}>Products</NavLink>
+                <Link to={"/products"}>Products</Link>
               </div>
             </div>
           );

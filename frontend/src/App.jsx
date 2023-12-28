@@ -9,9 +9,10 @@ import AboutUs from "./pages/AboutUs";
 import Products from "./pages/Products";
 import Register from "./pages/Register";
 
-import {fetchPlantsData} from "./store/plants/plantsAction";
+import { fetchPlantsData } from "./store/plants/plantsAction";
 
 import "./App.css";
+import ProductsDetails from "./pages/ProductsDetails";
 
 function App() {
   const router = createBrowserRouter([
@@ -22,11 +23,11 @@ function App() {
         { index: true, element: <Home /> },
         { path: "about-us", element: <AboutUs /> },
         { path: "products", element: <Products /> },
+        { path: "products/:id", element: <ProductsDetails /> },
         { path: "register", element: <Register /> },
       ],
     },
   ]);
-
 
   const dispatch = useDispatch();
 
@@ -35,7 +36,6 @@ function App() {
   }, [dispatch]);
 
   return <RouterProvider router={router} />;
-
 }
 
 export default App;

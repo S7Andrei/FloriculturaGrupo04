@@ -1,10 +1,9 @@
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { deletePlant } from "../store/plants/plantsAction";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Products = () => {
-
   const plants = useSelector((state) => state.plants.plants);
   const dispatch = useDispatch();
 
@@ -17,19 +16,21 @@ const Products = () => {
       <h1>Products</h1>
 
       {plants.map((plant) => {
-          return (
-            <div key={plant.id} className="card">
-              <div className="card-content">
-                <li>{plant.plantName}</li>
-                <button type="button" onClick={() => handleDelete(plant.id)}>
-                  Deletar
-                </button>
+        return (
+          <div key={plant.id} className="card">
+            <div className="card-content">
+              <li>{plant.plantName}</li>
+              <button type="button" onClick={() => handleDelete(plant.id)}>
+                Deletar
+              </button>
 
-                <NavLink to={"/products"}>Products</NavLink>
-              </div>
+              <Link to={`/products/${plant.id}`}>GO to plant</Link>
+
+              <Link to={"/products"}>Products</Link>
             </div>
-          );
-        })}
+          </div>
+        );
+      })}
     </>
   );
 };
