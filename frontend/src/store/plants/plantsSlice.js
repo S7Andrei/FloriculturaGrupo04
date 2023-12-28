@@ -8,10 +8,12 @@ const plantsSlice = createSlice({
   reducers: {
     handleGetPlants(state, action) {
       state.plants = action.payload;
-      //console.log(state.plants)
+    },
+    handleDeletePlant(state, action) {
+      state.plants = state.plants.filter((plant) => plant.id !== action.payload);
     },
   },
 });
 
 export default plantsSlice;
-export const plantsAction = plantsSlice.actions;
+export const plantsActions = plantsSlice.actions;

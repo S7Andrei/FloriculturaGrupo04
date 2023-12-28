@@ -9,7 +9,7 @@ import AboutUs from "./pages/AboutUs";
 import Products from "./pages/Products";
 import Register from "./pages/Register";
 
-import fetchPlantsData from "./store/plants/plantsAction";
+import {fetchPlantsData} from "./store/plants/plantsAction";
 
 import "./App.css";
 

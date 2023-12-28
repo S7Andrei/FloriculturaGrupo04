@@ -1,4 +1,4 @@
-import { plantsAction } from "./plantsSlice";
+import { plantsActions } from "./plantsSlice";
 
 const fetchPlantsData = () => {
   return async (dispatch) => {
@@ -9,9 +9,25 @@ const fetchPlantsData = () => {
     };
 
     const plantData = await fetchData();
-    //console.log(plantData)
-    dispatch(plantsAction.handleGetPlants(plantData));
+    dispatch(plantsActions.handleGetPlants(plantData));
   };
 };
 
-export default fetchPlantsData;
+const deletePlant = (id) => {
+  return async (dispatch) => {
+    try {
+      const response = await fetch(`http://localhost:3000/plants/${id}`, {
+        method: "DELETE",
+      });
+      if (response.ok) {
+        dispatch(plantsActions.handleDeletePlant(id));
+      } else {
+        console.error(`Erro ao excluir planta com ID ${id}`);
+      }
+    } catch (error) {
+      console.error("Erro na solicitação de exclusão:", error);
+    }
+  };
+};
+
+export { fetchPlantsData, deletePlant };
