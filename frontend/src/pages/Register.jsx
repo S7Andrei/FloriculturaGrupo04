@@ -13,6 +13,10 @@ const Register = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    const myData = new FormData(e.target)
+
+    const data = Object.entries(myData.entries())
+  
     const formData = {
       plantName,
       plantSubtitle,
@@ -29,7 +33,10 @@ const Register = () => {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(formData),
+
+      body: JSON.stringify(
+        data
+      ),
     });
 
     console.log(formData);
