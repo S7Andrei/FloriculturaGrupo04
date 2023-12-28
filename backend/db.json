@@ -54,6 +54,73 @@
       "features": "sadadas",
       "description": "dsada",
       "id": 5
-    }
+    },
+    {
+      "plantName": "a",
+      "plantSubtitle": "b",
+      "plantType": "c",
+      "price": "d",
+      "discountPercentage": "e",
+      "label": "indoor",
+      "features": "fgh",
+      "description": "ijk",
+      "id": 6
+    },
+    {
+      "plantName": "a",
+      "plantSubtitle": "b",
+      "plantType": "c",
+      "price": "d",
+      "discountPercentage": "e",
+      "label": "indoor",
+      "features": "fgh",
+      "description": "ijk",
+      "id": 7
+    },
+    {
+      "plantName": "a",
+      "plantSubtitle": "b",
+      "plantType": "c",
+      "price": "d",
+      "discountPercentage": "e",
+      "label": "indoor",
+      "features": "fgh",
+      "description": "ijk",
+      "id": 8
+    },
+    {
+      "plantName": "a",
+      "plantSubtitle": "b",
+      "plantType": "c",
+      "price": "d",
+      "discountPercentage": "e",
+      "label": "indoor",
+      "features": "fgh",
+      "description": "ijk",
+      "id": 9
+    },
+    {
+      "plantName": "a",
+      "plantSubtitle": "b",
+      "plantType": "c",
+      "price": "d",
+      "discountPercentage": "e",
+      "label": "indoor",
+      "features": "fgh",
+      "description": "ijk",
+      "id": 10
+    },
+    {
+      "plantName": "a",
+      "plantSubtitle": "b",
+      "plantType": "c",
+      "price": "d",
+      "discountPercentage": "e",
+      "label": "indoor",
+      "features": "fgh",
+      "description": "ijk",
+      "id": 11
+    },
+    []
   ]
 }
