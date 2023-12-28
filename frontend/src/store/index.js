@@ -1,10 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
-import  plantsSlice from './plants/plantsSlice.js'
+import plantsSlice from "./plants/plantsSlice.js";
 
-export const plantsActions = plantsSlice.actions
+export const plantsActions = plantsSlice.actions;
 const store = configureStore({
-    reducer: {plant: plantsSlice.reducer}
+  reducer: { plants: plantsSlice.reducer },
+});
 
-})
-
-export default store
+export default store;
