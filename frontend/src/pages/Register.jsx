@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { plantsActions } from "../store/plants/plantsSlice";
+import { useDispatch } from "react-redux";
+import { plantsActions } from "../store/plants/plantsSlice";
 
 const Register = () => {
   const [plantName, setPlantName] = useState("");
@@ -13,7 +15,7 @@ const Register = () => {
   const [description, setDescription] = useState("");
   const [errors, setErrors] = useState({});
 
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -50,10 +52,10 @@ const Register = () => {
         subtitle,
       } = data;
 
-      if(discountPercentage > 0){
-        isInSale = 'promo'
-      }else{
-        isInSale = 'notPromo'
+      if (discountPercentage > 0) {
+        isInSale = "promo";
+      } else {
+        isInSale = "notPromo";
       }
 
       console.log(description);
@@ -70,7 +72,7 @@ const Register = () => {
         description: description,
       };
 
-      dispatch(plantsActions.handleAddPlant(plantsObject))
+      dispatch(plantsActions.handleAddPlant(plantsObject));
 
       fetch("http://localhost:3000/plants", {
         method: "POST",
@@ -78,6 +80,7 @@ const Register = () => {
           "Content-Type": "application/json",
         },
 
+        body: JSON.stringify(plantsObject),
         body: JSON.stringify(plantsObject),
       })
         .then((response) => {
@@ -108,6 +111,7 @@ const Register = () => {
               value={plantName}
               onChange={(e) => setPlantName(e.target.value)}
               name="name"
+              name="name"
             />
             {errors.plantName && <span>{errors.plantName}</span>}
           </label>
@@ -119,6 +123,7 @@ const Register = () => {
               type="text"
               value={plantSubtitle}
               onChange={(e) => setPlantSubtitle(e.target.value)}
+              name="subtitle"
               name="subtitle"
             />
             {errors.plantSubtitle && <span>{errors.plantSubtitle}</span>}
@@ -132,6 +137,7 @@ const Register = () => {
               value={plantType}
               onChange={(e) => setPlantType(e.target.value)}
               name="plantType"
+              name="plantType"
             />
             {errors.plantType && <span>{errors.plantType}</span>}
           </label>
@@ -144,6 +150,7 @@ const Register = () => {
               value={price}
               onChange={(e) => setPrice(e.target.value)}
               name="price"
+              name="price"
             />
             {errors.price && <span>{errors.price}</span>}
           </label>
@@ -153,6 +160,7 @@ const Register = () => {
               type="number"
               value={discountPercentage}
               onChange={(e) => setDiscountPercentage(e.target.value)}
+              name="discountPercentage"
               name="discountPercentage"
             />
             {errors.discountPercentage && (
@@ -170,6 +178,7 @@ const Register = () => {
               checked={label === "indoor"}
               onChange={() => setLabel("indoor")}
               name="labelDoor"
+              name="labelDoor"
             />
           </label>
           <label>
@@ -179,6 +188,7 @@ const Register = () => {
               value="outdoor"
               checked={label === "outdoor"}
               onChange={() => setLabel("outdoor")}
+              name="labelDoor"
               name="labelDoor"
             />
           </label>
@@ -190,6 +200,7 @@ const Register = () => {
               value={features}
               onChange={(e) => setFeatures(e.target.value)}
               name="features"
+              name="features"
             />
             {errors.features && <span>{errors.features}</span>}
           </label>
@@ -200,6 +211,7 @@ const Register = () => {
             <textarea
               value={description}
               onChange={(e) => setDescription(e.target.value)}
+              name="description"
               name="description"
             />
             {errors.description && <span>{errors.description}</span>}
