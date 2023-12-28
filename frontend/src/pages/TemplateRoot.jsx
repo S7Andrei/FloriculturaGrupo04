@@ -1,10 +1,13 @@
 import { Outlet } from "react-router-dom";
+import Footer from "../components/Footer/Footer";
+import Header from "../components/Header/Header";
 
 function TemplateRoot() {
   return (
     <>
-      <h1>Template</h1>
+      <Header />
       <Outlet />
+      <Footer />
     </>
   );
 }
