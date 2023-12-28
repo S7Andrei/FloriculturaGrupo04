@@ -1,19 +1,15 @@
 {
-  "posts": [
+  "plants": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "plantName": "dsada",
+      "plantSubtitle": "dasda",
+      "plantType": "ddsad",
+      "price": "asda",
+      "discountPercentage": "dsad",
+      "label": "indoor",
+      "features": "dasd",
+      "description": "adsa",
+      "id": 1
     }
-  ],
-  "comments": [
-    {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }
