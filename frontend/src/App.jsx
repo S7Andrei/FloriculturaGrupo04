@@ -4,13 +4,21 @@ import Header from "./components/Header/Header";
 import Home from "./pages/Home";
 import Footer from "./components/Footer/Footer";
 import "./App.css";
+import AboutUs from "./pages/AboutUs";
+import Products from "./pages/Products";
+import Register from "./pages/Register";
 
 function App() {
   const router = createBrowserRouter([
     {
       path: "/",
       element: <TemplateRoot />,
-      children: [{ index: true, element: <Home /> }],
+      children: [
+        { index: true, element: <Home /> },
+        { path: "about-us", element: <AboutUs /> },
+        { path: "products", element: <Products /> },
+        { path: "register", element: <Register /> },
+      ],
     },
   ]);
 
