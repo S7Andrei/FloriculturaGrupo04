@@ -1,10 +1,13 @@
 :root {
+
+  /*COLORS*/
+
   --white: #fdfdfc;
   --athena-Grey: #f9f8fb;
   --wisper: #f1f0ef;
 
   /*Primary*/
-  --luna-green: #354732;
+  --luna-green: #354733;
   --avocado: #8a9b6e;
   --accent: #dddea0;
 
@@ -15,10 +18,28 @@
   /*Secondary*/
   --teak: #b99374;
   --secondary: #808276;
+  
+  /*FONTS*/
+  --pacifico: font-family: 'Pacifico';
+  --eb-garamond: ;
+  --raleway: ;
+  --lato: ;
+  --oswald: ;
+  --inter: ;
+
 
   /*Font size*/
   --fonte-pequena: 16px;
   --fonte-media: calc(var(--fonte-pequena) * 1.5);
   --fonte-grande: calc(var(--fonte-pequena) * 4);
+
+
+
+
 }
+
+body {
+  background-color: var(--wisper);
+}
+
 

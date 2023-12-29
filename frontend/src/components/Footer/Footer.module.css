@@ -1,3 +1,5 @@
+
+
 footer {
     color: var(--white);
 }
@@ -5,8 +7,9 @@ footer {
 .footerContent {
    background-color: var(--luna-green);
    background-image: url(../../assets/bkgreen.png);
-   padding: 80px 100px;
+   padding: 135px 100px 50px 100px;
 }
+
 
 .footerContainer {
     display: flex;
@@ -16,9 +19,43 @@ footer {
 
 .LinkCommunityContainer {
     display: flex;
-    
+    gap: 60px;
+    margin-bottom: 100px;
 }
 
 .creditsContainer {
-    display: flex;
+    display: flex; 
+}
+
+.line {
+    border-top: 1px solid var(--accent);
+    padding-top: 20px;
+}
+
+.fresh {
+    align-items: baseline;
+}
+
+
+h1 {
+    font-size: var(--fonte-grande);
+    margin-bottom: 16PX;
+
+}
+
+h2 {
+    font-size: var(--fonte-media);
+    margin-bottom: 32px;
+}
+
+h3 {
+    font-size: var(--fonte-pequena);
+}
+
+li {
+    margin-bottom: 16px;
+}
+
+h1, h2 {
+    font-weight: bold;
 }
