@@ -5,7 +5,7 @@ import Home from "./pages/Home";
 
 import AboutUs from "./pages/AboutUs";
 import Products from "./pages/Products/Products";
-import Register from "./pages/Register";
+import Register from "./pages/Register/Register";
 
 import NotFound from "./pages/NotFound";
 
@@ -22,7 +22,7 @@ function App() {
       children: [
         { index: true, element: <Home /> },
         { path: "about-us", element: <AboutUs /> },
-        { path: "products", element: <Products listagemTotal={true}  /> },
+        { path: "products", element: <Products listagemTotal={true} /> },
         { path: "products/:id", element: <ProductsDetails /> },
         { path: "register", element: <Register /> },
       ],
