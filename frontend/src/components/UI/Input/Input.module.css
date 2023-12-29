@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap");
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.inputLabel,
+input {
+  font-family: "Inter", sans-serif;
+  color: var(--IBBNB);
+}
+
+.inputLabel {
+  font-size: 18px;
+}
+
+input {
+  font-size: 16px;
+  padding: 12px 16px;
+}
