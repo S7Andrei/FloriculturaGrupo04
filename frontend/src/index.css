@@ -1,0 +1,18 @@
+:root {
+    --white: #FDFDFC;
+    --athena-Grey: #F9F8FB;
+    --wisper: #F1F0EF;
+    
+    /*Primary*/
+    --luna-green: #354732;
+    --avocado: #8A9B6E;
+    --accent: #DDDEA0;
+
+    /*Dark*/
+    --IBBNB: #1F1F24;
+    --gray: #AFB3AA;
+
+    /*Secondary*/
+    --teak: #B99374;
+    --secondary: #808276;
+}
