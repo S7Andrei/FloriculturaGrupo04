@@ -1,11 +1,17 @@
 import { NavLink } from "react-router-dom";
+import prantaDocarai from "../../assets/plants.png";
+
+import styles from "./Header.module.css";
 
 const Header = () => {
   return (
-    <header>
+    <header className={styles.headerContainer}>
       {/*Logo a ser inserida: <img src={} />*/}
+      <figure>
+        <img src={prantaDocarai} alt="" style={{ width: "50px" }} />
+      </figure>
       <nav>
-        <ul>
+        <ul className={styles.navBar}>
           <li>
             <NavLink to={"/"} end>
               Home
@@ -22,6 +28,9 @@ const Header = () => {
           </li>
         </ul>
       </nav>
+      <figure>
+        <img src={prantaDocarai} alt="" style={{ width: "50px" }} />
+      </figure>
     </header>
   );
 };

@@ -1,0 +1,23 @@
+.headerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5vw;
+  width: 90vw;
+  font-size: 20px;
+}
+
+.navBar {
+  display: flex;
+  gap: 10px;
+}
+
+.navBar a {
+  text-decoration: none;
+}
+
+@media (max-width: 600px) {
+  .headerContainer {
+    font-size: 15px;
+  }
+}
