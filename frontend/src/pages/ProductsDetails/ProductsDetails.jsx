@@ -17,15 +17,34 @@ const ProductsDetails = () => {
 
   console.log(plantSelected);
 
+  //const splitFeatures = plantSelected.features.split(".");
   return (
     <>
-      <section className={styles.plantDetails}>
-        <figure id={styles.img}>
+      <div className={styles.plantsDetails}>
+        <div className={styles.img}>
           <img src={imgPlant} alt="Uma planta" />
-        </figure>
-        <div className={styles.plantContent}></div>
-        {plantSelected.name}
-      </section>
+        </div>
+
+        <div className={styles.plantContent}>
+          <p id={styles.name}>{plantSelected.name}</p>
+          <p id={styles.subtitle}>{plantSelected.subtitle}</p>
+
+          <div className={styles.labelContainer}>
+            <p id={styles.label}>{plantSelected.label}</p>
+            <p id={styles.label}>{plantSelected.label}</p>
+          </div>
+
+          <p id={styles.price}>{plantSelected.price}</p>
+
+          <button id={styles.btn}>Check out</button>
+
+          <div className={styles.features}>
+            {/* {splitFeatures.map((sentence, index) => (
+              <li key={index}>{sentence.trim()}</li>
+            ))} */}
+          </div>
+        </div>
+      </div>
     </>
   );
 };

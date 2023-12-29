@@ -1,0 +1,85 @@
+.plantsDetails {
+  display: flex;
+}
+
+.img {
+  width: 752px;
+  height: 690px;
+  flex-shrink: 0;
+}
+
+#name {
+  color: var(--Primary-Lunar-green, #354733);
+
+  /* Primary/Primary */
+  font-family: EB Garamond;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: capitalize;
+}
+
+#subtitle {
+  color: var(--Dark-gray, #afb2aa);
+
+  /* Primary/card heading */
+  font-family: Lato;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+#label {
+  color: var(--main-colors-green-95, #158212);
+  width: fit-content;
+  /* secondary/Secondary */
+  font-family: Raleway;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 154.5%; /* 24.72px */
+
+  border-radius: 19.427px;
+  border: 1.619px solid var(--Main-Colors-Green-6, #83e281);
+  background: var(--main-colors-green-05, #f6fff6);
+
+  margin-left: 10px;
+}
+
+.labelContainer {
+  display: flex;
+}
+
+#price {
+  width: 677.182px;
+
+  color: #000;
+
+  /* Primary/card heading */
+  font-family: Lato;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+#btn {
+  background: var(--Primary-Lunar-green, #354733);
+  width: 191px;
+  height: 62px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  color: var(--Athena-Grey, #f8f9fb);
+  text-align: center;
+
+  /* secondary/Secondary */
+  font-family: Raleway;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 154.5%; /* 24.72px */
+}
