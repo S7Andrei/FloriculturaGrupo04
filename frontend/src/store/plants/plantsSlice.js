@@ -25,6 +25,9 @@ const plantsSlice = createSlice({
         state.plantSelected = false;
       }
     },
+    handleAddPlant(state, action){
+      state.plants.push(action.payload) 
+    }
   },
 });
 

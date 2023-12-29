@@ -3,14 +3,14 @@ import PlantCard from "../components/PlantCard/PlantCard";
 const Home = () => {
   return (
     <>
-      <PlantCard />
-      <h1>Home</h1>
+      <h1>Listagem completa</h1>
+      <PlantCard listagemTotal={true} />
 
-      <h1>Outdoor</h1>
-      <PlantCard filter={'outdoor'}/>
+      <h1>Não esta em promoção</h1>
+      <PlantCard filter={"notPromo"} />
 
-      <h1>Indoor</h1>
-      <PlantCard filter={'indoor'}/>
+      <h1>Em promoção</h1>
+      <PlantCard filter={"promo"} />
     </>
   );
 };
