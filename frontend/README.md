@@ -1,1 +1,0 @@
-![readme](src/assets/readmeCompass2.png)
