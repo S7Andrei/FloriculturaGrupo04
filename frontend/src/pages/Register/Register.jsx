@@ -2,10 +2,12 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { plantsActions } from "../../store/plants/plantsSlice";
 import { getPlants } from "../../store/plants/plantsAction";
-import Input from "../../components/UI/Input/Input";
+import Input from "../../components/UI/Form/Input/Input";
 import plant from "../../assets/plantForm.svg";
 
 import styles from "./Register.module.css";
+import Textarea from "../../components/UI/Form/Textarea/Textarea";
+import ButtonForm from "../../components/UI/Form/ButtonForm/ButtonForm";
 
 const Register = () => {
   const [plantName, setPlantName] = useState("");
@@ -109,7 +111,7 @@ const Register = () => {
   return (
     <>
       <section className={styles.registerContainer}>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className={styles.formContainer}>
           <h2 className={styles.registerTitle}>Plant Registration</h2>
           <Input
             id={"name"}
@@ -129,44 +131,39 @@ const Register = () => {
             onChange={(e) => setPlantSubtitle(e.target.value)}
             erroMsg={errors.plantSubtitle}
           />
-          <div>
-            <label>
-              Plant Type:
-              <input
-                type="text"
-                value={plantType}
-                onChange={(e) => setPlantType(e.target.value)}
-                name="plantType"
-              />
-              {errors.plantType && <span>{errors.plantType}</span>}
-            </label>
+          <Input
+            id={"plantType"}
+            name={"plantType"}
+            label={"Plant Type"}
+            placeholder={"Cactus"}
+            value={plantType}
+            onChange={(e) => setPlantType(e.target.value)}
+            erroMsg={errors.plantType}
+          />
+          <div className={styles.halfInputs}>
+            <Input
+              id={"price"}
+              name="price"
+              label={"Price"}
+              type="number"
+              placeholder={"$139.99"}
+              value={price}
+              onChange={(e) => setPrice(e.target.value)}
+              erroMsg={errors.price}
+            />
+            <Input
+              id={"discountPercentage"}
+              name="discountPercentage"
+              label={"Discount Percentage"}
+              type="number"
+              placeholder={"20%"}
+              value={discountPercentage}
+              onChange={(e) => setDiscountPercentage(e.target.value)}
+              erroMsg={errors.discountPercentage}
+            />
           </div>
           <div>
-            <label>
-              Price:
-              <input
-                type="number"
-                value={price}
-                onChange={(e) => setPrice(e.target.value)}
-                name="price"
-              />
-              {errors.price && <span>{errors.price}</span>}
-            </label>
-            <label>
-              Discount Percentage:
-              <input
-                type="number"
-                value={discountPercentage}
-                onChange={(e) => setDiscountPercentage(e.target.value)}
-                name="discountPercentage"
-              />
-              {errors.discountPercentage && (
-                <span>{errors.discountPercentage}</span>
-              )}
-            </label>
-          </div>
-          <div>
-            <span>Label:</span>
+            <h3>Label:</h3>
             <label>
               Indoor
               <input
@@ -188,29 +185,25 @@ const Register = () => {
               />
             </label>
           </div>
-          <div>
-            <label>
-              Features:
-              <textarea
-                value={features}
-                onChange={(e) => setFeatures(e.target.value)}
-                name="features"
-              />
-              {errors.features && <span>{errors.features}</span>}
-            </label>
-          </div>
-          <div>
-            <label>
-              Description:
-              <textarea
-                value={description}
-                onChange={(e) => setDescription(e.target.value)}
-                name="description"
-              />
-              {errors.description && <span>{errors.description}</span>}
-            </label>
-          </div>
-          <button type="submit">Register</button>
+          <Textarea
+            id={"feature"}
+            name="features"
+            label={"Features"}
+            placeholder={"Species: Echinocereus..."}
+            errorMsg={""}
+            value={features}
+            onChange={(e) => setFeatures(e.target.value)}
+          />
+          <Textarea
+            id={"description"}
+            name="description"
+            label={"Description"}
+            placeholder={"Ladyfinger cactus..."}
+            errorMsg={errors.description}
+            value={description}
+            onChange={(e) => setDescription(e.target.value)}
+          />
+          <ButtonForm type="submit">Register</ButtonForm>
         </form>
 
         <figure>

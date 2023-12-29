@@ -1,0 +1,5 @@
+.inputLabel {
+  font-family: "Inter", sans-serif;
+  color: var(--IBBNB);
+  font-size: calc(var(--fonte-pequena) + 2);
+}
