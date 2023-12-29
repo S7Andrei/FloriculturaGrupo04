@@ -4,7 +4,7 @@ import TemplateRoot from "./pages/TemplateRoot";
 import Home from "./pages/Home";
 
 import AboutUs from "./pages/AboutUs";
-import Products from "./pages/Products";
+import Products from "./pages/Products/Products";
 import Register from "./pages/Register";
 
 import "./App.css";
