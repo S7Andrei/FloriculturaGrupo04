@@ -79,7 +79,6 @@ const Register = () => {
         },
 
         body: JSON.stringify(plantsObject),
-        body: JSON.stringify(plantsObject),
       })
         .then((response) => {
           if (response.ok) {
