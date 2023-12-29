@@ -10,7 +10,7 @@ import Register from "./pages/Register";
 import NotFound from "./pages/NotFound";
 
 import "./App.css";
-import ProductsDetails from "./pages/ProductsDetails";
+import ProductsDetails from "./pages/ProductsDetails/ProductsDetails";
 import { getPlants } from "./store/plants/plantsAction";
 
 function App() {
@@ -22,7 +22,7 @@ function App() {
       children: [
         { index: true, element: <Home /> },
         { path: "about-us", element: <AboutUs /> },
-        { path: "products", element: <Products /> },
+        { path: "products", element: <Products listagemTotal={true}  /> },
         { path: "products/:id", element: <ProductsDetails /> },
         { path: "register", element: <Register /> },
       ],
