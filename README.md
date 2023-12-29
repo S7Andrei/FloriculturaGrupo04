@@ -1,1 +1,1 @@
-![readme](src/assets/readmeCompass2.png)
+![readme](frontend/src/assets/readmeCompass2.png)
