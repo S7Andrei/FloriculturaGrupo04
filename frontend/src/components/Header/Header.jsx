@@ -1,35 +1,36 @@
-import { NavLink } from "react-router-dom";
-import prantaDocarai from "../../assets/plants.png";
+import logo from "../../assets/logo.svg";
+import profile from "../../assets/profileLogo.svg";
 
 import styles from "./Header.module.css";
+import Nav from "../UI/Nav/Nav";
 
 const Header = () => {
   return (
     <header className={styles.headerContainer}>
       {/*Logo a ser inserida: <img src={} />*/}
       <figure>
-        <img src={prantaDocarai} alt="" style={{ width: "50px" }} />
+        <img src={logo} alt="" style={{ width: "50px" }} />
       </figure>
       <nav>
         <ul className={styles.navBar}>
           <li>
-            <NavLink to={"/"} end>
+            <Nav to={"/"} end>
               Home
-            </NavLink>
+            </Nav>
           </li>
           <li>
-            <NavLink to={"/register"}>Register</NavLink>
+            <Nav to={"/register"}>Register</Nav>
           </li>
           <li>
-            <NavLink to={"/products"}>Products</NavLink>
+            <Nav to={"/products"}>Products</Nav>
           </li>
           <li>
-            <NavLink to={"/about-us"}>About us</NavLink>
+            <Nav to={"/about-us"}>About us</Nav>
           </li>
         </ul>
       </nav>
       <figure>
-        <img src={prantaDocarai} alt="" style={{ width: "50px" }} />
+        <img src={profile} alt="" style={{ width: "50px" }} />
       </figure>
     </header>
   );

@@ -1,0 +1,7 @@
+.navLink {
+  color: var(--luna-green);
+}
+
+.active {
+  color: var(--avocado);
+}
