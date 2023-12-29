@@ -16,13 +16,25 @@ const ProductsDetails = () => {
   }, [plantId, dispatch]);
 
   console.log(plantSelected);
+  var { price } = plantSelected;
+  price = new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD",
+  }).format(price);
+
+  const handleSearch = () => {
+    const plantName = plantSelected.name;
+    window.location.href = `https://www.google.com/search?q=${encodeURIComponent(
+      plantName
+    )}`;
+  };
 
   //const splitFeatures = plantSelected.features.split(".");
   return (
     <>
       <div className={styles.plantsDetails}>
-        <div className={styles.img}>
-          <img src={imgPlant} alt="Uma planta" />
+        <div className={styles.imgContainer}>
+          <img src={imgPlant} alt="Uma planta" id={styles.img} />
         </div>
 
         <div className={styles.plantContent}>
@@ -34,14 +46,22 @@ const ProductsDetails = () => {
             <p id={styles.label}>{plantSelected.label}</p>
           </div>
 
-          <p id={styles.price}>{plantSelected.price}</p>
+          <p id={styles.price}>{price}</p>
 
-          <button id={styles.btn}>Check out</button>
+          <button id={styles.btn} onClick={handleSearch}>
+            Check out
+          </button>
 
           <div className={styles.features}>
+            <p id={styles.price}>Features</p>
             {/* {splitFeatures.map((sentence, index) => (
               <li key={index}>{sentence.trim()}</li>
             ))} */}
+          </div>
+
+          <div className={styles.description}>
+            <p id={styles.price}>Description</p>
+            <p>{plantSelected.description}</p>
           </div>
         </div>
       </div>
