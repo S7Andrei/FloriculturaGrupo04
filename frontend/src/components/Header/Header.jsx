@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
-import prantaDocarai from "../../assets/plants.png";
+import logo from "../../assets/logo.svg";
+import profile from "../../assets/profileLogo.svg";
 
 import styles from "./Header.module.css";
 
@@ -8,7 +9,7 @@ const Header = () => {
     <header className={styles.headerContainer}>
       {/*Logo a ser inserida: <img src={} />*/}
       <figure>
-        <img src={prantaDocarai} alt="" style={{ width: "50px" }} />
+        <img src={logo} alt="" style={{ width: "50px" }} />
       </figure>
       <nav>
         <ul className={styles.navBar}>
@@ -29,7 +30,7 @@ const Header = () => {
         </ul>
       </nav>
       <figure>
-        <img src={prantaDocarai} alt="" style={{ width: "50px" }} />
+        <img src={profile} alt="" style={{ width: "50px" }} />
       </figure>
     </header>
   );
