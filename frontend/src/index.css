@@ -20,12 +20,12 @@
   --secondary: #808276;
   
   /*FONTS*/
-  --pacifico: font-family: 'Pacifico';
-  --eb-garamond: ;
-  --raleway: ;
-  --lato: ;
-  --oswald: ;
-  --inter: ;
+  --pacifico: 'Pacifico', cursive;
+  --eb-garamond: 'EB Garamond', serif;
+  --raleway: 'Raleway', cursive;
+  --lato: 'Lato', cursive;
+  --oswald: 'Ostewald', cursive;
+  --inter: 'Inter', cursive;
 
 
   /*Font size*/
@@ -40,6 +40,39 @@
 
 body {
   background-color: var(--wisper);
+}
+
+/* font.css */
+
+@font-face {
+  font-family: 'Pacifico';
+  src: url('path/to/pacifico.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'EB Garamond';
+  src: url('path/to/eb-garamond.woff2') format('woff2');
+}
+
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('path/to/raleway.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('path/to/lato.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Oswald';
+  src: url('path/to/oswald.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('path/to/inter.woff2') format('woff2');
 }
 
 
