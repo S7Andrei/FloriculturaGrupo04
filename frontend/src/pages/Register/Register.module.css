@@ -2,9 +2,26 @@
 
 .registerContainer {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  padding-left: 105px;
+  gap: 40px;
 }
 
 .registerTitle {
   font-size: var(--fonte-media);
   font-family: "Inter", sans-serif;
+  color: var(--luna-green);
+  border-bottom: 2px solid var(--gray);
+  padding-bottom: 20px;
+}
+
+.halfInputs {
+  display: flex;
+  gap: 20px;
 }

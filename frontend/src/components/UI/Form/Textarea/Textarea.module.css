@@ -1,0 +1,7 @@
+.inputTextarea {
+  font-family: "Inter", sans-serif;
+  color: var(--IBBNB);
+  font-size: var(--fonte-pequena);
+  padding: 16px;
+  height: 100px;
+}
