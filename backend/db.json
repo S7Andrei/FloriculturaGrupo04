@@ -97,6 +97,20 @@
       "features": "asdasd",
       "description": "asdasd",
       "id": 11
+    },
+    {
+      "name": "Echinoetexas",
+      "subtitle": "Teste",
+      "label": [
+        "Teste",
+        "indoor"
+      ],
+      "isInSale": "promo",
+      "price": "3434",
+      "discountPercentage": "3434",
+      "features": "Teste",
+      "description": "Teste",
+      "id": 12
     }
   ]
 }

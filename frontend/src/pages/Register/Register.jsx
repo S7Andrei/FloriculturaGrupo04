@@ -122,18 +122,6 @@ const Register = () => {
           />
           <div>
             <label>
-              Plant Name:
-              <input
-                type="text"
-                value={plantName}
-                onChange={(e) => setPlantName(e.target.value)}
-                name="name"
-              />
-              {errors.plantName && <span>{errors.plantName}</span>}
-            </label>
-          </div>
-          <div>
-            <label>
               Plant Subtitle:
               <input
                 type="text"
