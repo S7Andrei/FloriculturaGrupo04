@@ -15,4 +15,9 @@
   /*Secondary*/
   --teak: #b99374;
   --secondary: #808276;
+
+  /*Font size*/
+  --fonte-pequena: 16px;
+  --fonte-media: calc(var(--fonte-pequena) * 1.5);
+  --fonte-grande: calc(var(--fonte-pequena) * 4);
 }

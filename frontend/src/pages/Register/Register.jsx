@@ -110,7 +110,7 @@ const Register = () => {
     <>
       <section className={styles.registerContainer}>
         <form onSubmit={handleSubmit}>
-          <h2>Title: Plant Registration</h2>
+          <h2 className={styles.registerTitle}>Plant Registration</h2>
           <Input
             id={"name"}
             name={"name"}
