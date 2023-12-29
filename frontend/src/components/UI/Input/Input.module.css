@@ -13,7 +13,7 @@ input {
 }
 
 .inputLabel {
-  font-size: 18px;
+  font-size: calc(var(--fonte-pequena) + 2);
 }
 
 input {

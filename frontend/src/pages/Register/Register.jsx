@@ -1,9 +1,11 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { plantsActions } from "../store/plants/plantsSlice";
-import { getPlants } from "../store/plants/plantsAction";
-import Input from "../components/UI/Input/Input";
-import plant from "../assets/plants.png";
+import { plantsActions } from "../../store/plants/plantsSlice";
+import { getPlants } from "../../store/plants/plantsAction";
+import Input from "../../components/UI/Input/Input";
+import plant from "../../assets/plantForm.svg";
+
+import styles from "./Register.module.css";
 
 const Register = () => {
   const [plantName, setPlantName] = useState("");
@@ -106,9 +108,9 @@ const Register = () => {
 
   return (
     <>
-      <section>
+      <section className={styles.registerContainer}>
         <form onSubmit={handleSubmit}>
-          <h2>Title: Plant Registration</h2>
+          <h2 className={styles.registerTitle}>Plant Registration</h2>
           <Input
             id={"name"}
             name={"name"}
@@ -118,18 +120,6 @@ const Register = () => {
             onChange={(e) => setPlantName(e.target.value)}
             erroMsg={errors.plantName}
           />
-          <div>
-            <label>
-              Plant Name:
-              <input
-                type="text"
-                value={plantName}
-                onChange={(e) => setPlantName(e.target.value)}
-                name="name"
-              />
-              {errors.plantName && <span>{errors.plantName}</span>}
-            </label>
-          </div>
           <div>
             <label>
               Plant Subtitle:
