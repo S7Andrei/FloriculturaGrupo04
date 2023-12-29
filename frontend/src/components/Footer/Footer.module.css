@@ -1,0 +1,24 @@
+footer {
+    color: var(--white);
+}
+
+.footerContent {
+   background-color: var(--luna-green);
+   background-image: url(../../assets/bkgreen.png);
+   padding: 80px 100px;
+}
+
+.footerContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.LinkCommunityContainer {
+    display: flex;
+    
+}
+
+.creditsContainer {
+    display: flex;
+}

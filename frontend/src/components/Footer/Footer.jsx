@@ -1,9 +1,15 @@
+import styles from './Footer.module.css';
+import bkgreen from '../../assets/bkgreen.png';
+import logo from "../../assets/logowhite.svg";
+
 const Footer = () => {
     return (
-      <footer>
-          {/*Logo a ser inserida: <img src={} />*/}
+      <footer className={styles.footerContent}>
+         
+         <div className={styles.footerContainer}>
+
           <ul>
-              <li>
+              <li className>
                   <h1>Stay Fresh</h1>
               </li>
               <li>
@@ -14,7 +20,8 @@ const Footer = () => {
               </li>
           </ul>
 
-        <div> {/* Div Container a ser configurado*/}
+        <div className={styles.LinkCommunityContainer}>
+
           <ul>
             <li>
                 <h2>Links</h2>
@@ -25,11 +32,12 @@ const Footer = () => {
             <li>
                 <h3>Products</h3>
             </li>
-            <li>
                 <h3>Blogs</h3>
+            <li>
             </li>
           </ul>
 
+            
           <ul>
             <li>
                 <h2>Community</h2>
@@ -44,16 +52,21 @@ const Footer = () => {
                 <h3>Blogs</h3>
             </li>
           </ul>
+
         </div>
-        
+    
+         </div>
+
+        <div className={styles.footerContainer}>
+            <figure>
+                    <img src={logo} alt="" style={{ width: "50px" }} />
+            </figure>
           <ul>
-            <li>
-                {/*img (plantPeace): <img src={} />*/}
-            </li>
             <li>
                 <h3>Compassinhos ®. All rights reserved.</h3>
             </li>
           </ul>
+        </div>
 
       </footer>
     )
