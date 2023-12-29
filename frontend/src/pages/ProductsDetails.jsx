@@ -17,8 +17,8 @@ const ProductsDetails = () => {
 
   return (
     <>
-      <h1>{plantSelected.plantName}</h1>
-      <h2>{plantSelected.id}</h2>
+      <h1>Product Details</h1>
+      {plantSelected.name}
     </>
   );
 };

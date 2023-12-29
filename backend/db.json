@@ -69,6 +69,34 @@
       "features": "asdasda",
       "description": "sdasd",
       "id": 9
+    },
+    {
+      "name": "Teste",
+      "subtitle": "asdasd",
+      "label": [
+        "asdasd",
+        "indoor"
+      ],
+      "isInSale": "promo",
+      "price": "234",
+      "discountPercentage": "34",
+      "features": "asdasd",
+      "description": "asdasd",
+      "id": 10
+    },
+    {
+      "name": "Teste Master",
+      "subtitle": "asdasdas",
+      "label": [
+        "asdas",
+        "indoor"
+      ],
+      "isInSale": "promo",
+      "price": "34",
+      "discountPercentage": "343",
+      "features": "asdasd",
+      "description": "asdasd",
+      "id": 11
     }
   ]
 }
