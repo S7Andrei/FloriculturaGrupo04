@@ -1,0 +1,19 @@
+.productList {
+  display: flex;
+  gap: 18px;
+
+}
+
+button, input[type="button"], input[type="submit"], input[type="reset"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+  background: none;
+  text-decoration: none;
+  font: inherit;
+  cursor: pointer;
+  outline: none;
+}
