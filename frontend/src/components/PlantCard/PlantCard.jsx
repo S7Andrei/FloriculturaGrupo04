@@ -5,17 +5,23 @@ import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
 import CardContent from "../CardContent/CardContent";
+import {useNavigate } from "react-router-dom";
 
 const PlantCard = ({ listagemTotal = false, filter }) => {
   const plants = useSelector((state) => state.plants.plants);
   const carrosel = useRef();
 
-  const [width, setWidth] = useState(0)
+  const [width, setWidth] = useState(0);
 
+  const navigate = useNavigate();
+
+  const handleProductDetails = (id) => {
+    navigate(`/products/${id}`);
+  }
 
   useEffect(() => {
-    setWidth(carrosel.current?.scrollWidth - carrosel.current?.offsetWidth)
-  }, [])
+    setWidth(carrosel.current?.scrollWidth - carrosel.current?.offsetWidth);
+  }, []);
 
   return (
     <motion.div ref={carrosel}>
@@ -31,12 +37,14 @@ const PlantCard = ({ listagemTotal = false, filter }) => {
           .filter((plant) => (listagemTotal ? true : plant.isInSale === filter))
           .map((plant) => (
             <motion.div key={plant.id}>
-              <CardContent
-                id={plant.id}
-                name={plant.name}
-                price={plant.price}
-                label={plant.label[1]}
-              />
+              <button onClick={() => handleProductDetails(plant.id)}>
+                <CardContent
+                  id={plant.id}
+                  name={plant.name}
+                  price={plant.price}
+                  label={plant.label[1]}
+                />
+              </button>
             </motion.div>
           ))}
       </motion.div>
