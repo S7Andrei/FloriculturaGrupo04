@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { plantsActions } from "../store/plants/plantsSlice";
+import { getPlants } from "../store/plants/plantsAction";
 
 const Register = () => {
   const [plantName, setPlantName] = useState("");
@@ -14,6 +15,11 @@ const Register = () => {
   const [errors, setErrors] = useState({});
 
   const dispatch = useDispatch();
+
+  async function updateStatePlants() {
+    const data = await getPlants();
+    dispatch(plantsActions.handleGetPlants(data));
+  }
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -70,8 +76,6 @@ const Register = () => {
         description: description,
       };
 
-      dispatch(plantsActions.handleAddPlant(plantsObject));
-
       fetch("http://localhost:3000/plants", {
         method: "POST",
         headers: {
@@ -83,6 +87,8 @@ const Register = () => {
         .then((response) => {
           if (response.ok) {
             console.log("Form submitted successfully");
+
+            updateStatePlants();
 
             e.target.reset();
             setErrors({});

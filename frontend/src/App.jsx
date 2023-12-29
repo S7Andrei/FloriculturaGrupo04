@@ -11,22 +11,14 @@ import NotFound from "./pages/NotFound";
 
 import "./App.css";
 import ProductsDetails from "./pages/ProductsDetails";
+import { getPlants } from "./store/plants/plantsAction";
 
 function App() {
   const router = createBrowserRouter([
     {
       path: "/",
       element: <TemplateRoot />,
-      loader: async () => {
-        const fetchData = async () => {
-          const response = await fetch("http://localhost:3000/plants");
-          const data = await response.json();
-          return data;
-        };
-
-        const plantData = await fetchData();
-        return plantData;
-      },
+      loader: getPlants,
       children: [
         { index: true, element: <Home /> },
         { path: "about-us", element: <AboutUs /> },
