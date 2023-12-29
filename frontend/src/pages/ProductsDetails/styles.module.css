@@ -1,11 +1,36 @@
 .plantsDetails {
+  height: 100%;
   display: flex;
+  flex-direction: row;
+  margin-top: 141px;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-bottom: 239px;
+  justify-content: center;
 }
 
-.img {
-  width: 752px;
-  height: 690px;
-  flex-shrink: 0;
+.plantContent {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-left: 80px;
+}
+
+body {
+  min-height: 100vh;
+  background: #f0f1ee;
+}
+
+.imgContainer {
+  width: 40%;
+}
+
+#img {
+  max-width: 752px;
+  width: 100%;
+  height: 100%x;
+  opacity: 0.9;
+  gap: 25px;
 }
 
 #name {
@@ -18,6 +43,9 @@
   font-weight: 700;
   line-height: normal;
   text-transform: capitalize;
+  padding: 0;
+  margin: 0;
+  display: flex;
 }
 
 #subtitle {
@@ -29,6 +57,8 @@
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+  margin-bottom: 13px;
+  margin-left: 0;
 }
 
 #label {
@@ -45,7 +75,11 @@
   border: 1.619px solid var(--Main-Colors-Green-6, #83e281);
   background: var(--main-colors-green-05, #f6fff6);
 
-  margin-left: 10px;
+  padding: 5px;
+}
+
+#label:nth-child(even) {
+  margin-left: 20px;
 }
 
 .labelContainer {
@@ -55,6 +89,7 @@
 #price {
   width: 677.182px;
 
+  margin-left: 0;
   color: #000;
 
   /* Primary/card heading */
@@ -69,9 +104,6 @@
   background: var(--Primary-Lunar-green, #354733);
   width: 191px;
   height: 62px;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
 
   color: var(--Athena-Grey, #f8f9fb);
   text-align: center;
