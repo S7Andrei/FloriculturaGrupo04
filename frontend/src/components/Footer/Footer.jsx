@@ -5,7 +5,7 @@ import logo from "../../assets/logowhite.svg";
 const Footer = () => {
   return (
     <footer className={styles.footerContent}>
-      <div className={`${styles.footerContainer} ${styles.fres}`}>
+      <div className={`${styles.footerContainer} ${styles.fresh}`}>
         <ul>
           <li>
             <h1 className={styles.footerTitle}>Stay Fresh</h1>

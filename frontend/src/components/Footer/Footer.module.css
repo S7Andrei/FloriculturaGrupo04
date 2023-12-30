@@ -35,18 +35,24 @@ footer {
 
 .footerTitle {
   font-size: var(--fonte-grande);
-  margin-bottom: 16px;
-  font-weight: bold;
+  margin-bottom: 32px;
+
+  font-family: var(--eb-garamond);
+  font-weight: 700;
 }
 
 .footerSubtitle {
   font-size: var(--fonte-media);
   margin-bottom: 32px;
+
+  font-family: var(--lato);
   font-weight: bold;
 }
 
 .footerInfo {
   font-size: var(--fonte-pequena);
+
+  font-family: var(--raleway);
 }
 
 li {
