@@ -97,7 +97,7 @@
 #learn {
   position: absolute;
   display: flex;
-  margin-top: 95vh;
+  margin-top: 92vh;
   color: var(--Secondary-Secondary, #808276);
   text-align: center;
   
@@ -117,7 +117,7 @@
   z-index: 0;
   filter: grayscale(100%);
   transition: filter 0.3s ease;
-  margin-top: -50px;
+  margin-top: -109px;
 }
 
 #plantLeft:hover {
