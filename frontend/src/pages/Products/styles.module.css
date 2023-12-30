@@ -1,5 +1,35 @@
 .productList {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 20px;
 }
+
+.productContainer {
+  margin-bottom: 20vw;
+}
+
+h1 {
+  display: flex;
+  margin: 50px;
+  justify-content: center;
+  color: var(--Primary-Avacado, #8a9b6e);
+  text-align: center;
+
+  /* Primary/Primary */
+  font-family: EB Garamond;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: capitalize;
+}
+
+#colorGreen {
+    color: var(--Primary-Lunar-green, #354733);
+    margin-left: 8px
+  }
+  

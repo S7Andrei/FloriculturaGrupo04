@@ -14,22 +14,29 @@ const Products = ({ listagemTotal = false, filter }) => {
 
   return (
     <>
-      <h1>Listagem completa</h1>
-      <div className={styles.productList}>
-        {plants
-          .filter((plant) => (listagemTotal ? true : plant.isInSale === filter))
-          .map((plant) => (
-            <div key={plant.id}>
-              <button onClick={() => handleProductDetails(plant.id)}>
-                <CardContent
-                  id={plant.id}
-                  name={plant.name}
-                  price={plant.price}
-                  label={plant.label[1]}
-                />
-              </button>
-            </div>
-          ))}
+      <div className={styles.productContainer}>
+        <h1>
+          check out all our <span id={styles.colorGreen}>plants</span>
+        </h1>
+
+        <div className={styles.productList}>
+          {plants
+            .filter((plant) =>
+              listagemTotal ? true : plant.isInSale === filter
+            )
+            .map((plant) => (
+              <div key={plant.id}>
+                <button onClick={() => handleProductDetails(plant.id)}>
+                  <CardContent
+                    id={plant.id}
+                    name={plant.name}
+                    price={plant.price}
+                    label={plant.label[1]}
+                  />
+                </button>
+              </div>
+            ))}
+        </div>
       </div>
     </>
   );
