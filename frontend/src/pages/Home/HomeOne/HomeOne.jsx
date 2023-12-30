@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router";
 import styles from "../Home.module.css";
 import ButtonHome from "../../../components/UI/Home/ButtonHome/ButtonHome";
+import arrow from '../../../assets/Arrow 1.svg'
 
 const HomeOne = () => {
   const navigate = useNavigate();
@@ -26,6 +27,8 @@ const HomeOne = () => {
         <ButtonHome onClick={handleProductDetails} id={styles.btn}>
           Shop now
         </ButtonHome>
+
+        <p id={styles.learn}>Learn Gardening <img src={arrow} /></p>
       </section>
     </>
   );
