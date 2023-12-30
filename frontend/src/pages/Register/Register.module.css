@@ -4,7 +4,7 @@
   width: 100%;
   background-image: url("../../assets//plantForm.svg");
   background-repeat: no-repeat;
-  background-position: right;
+  background-position: right bottom;
 }
 
 .formContainer {
