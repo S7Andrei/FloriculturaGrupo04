@@ -1,13 +1,18 @@
+.carePlantsContainer {
+  background-color: #fcfcfc;
+  padding: 100px;
+}
+
 .carePlantsTitle {
   font-size: var(--fonte-grande);
 }
 
-.carPlantsSubtitle {
+.carePlantsSubtitle {
   font-size: var(--fonte-pequena);
   color: var(--gray);
 }
 
-.carPlantsParagraph {
+.carePlantsParagraph {
   font-size: var(--fonte-pequena);
   color: var(--secondary);
 }
