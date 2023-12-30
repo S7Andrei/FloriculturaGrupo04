@@ -1,0 +1,24 @@
+.h1 {
+  width: 800px;
+  margin-top: 43px;
+
+  color: var(--Primary-Lunar-green, #354733);
+
+  /* Primary/Primary */
+  font-family: EB Garamond;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: capitalize;
+}
+
+#title {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+#colorGreen {
+  color: var(--Primary-Avacado, #8a9b6e);
+}

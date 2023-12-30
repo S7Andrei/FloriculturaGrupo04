@@ -1,6 +1,6 @@
-import PlantCard from "../../components/PlantCard/PlantCard";
 import CarePlants from "./CarePlants/CarePlants.jsx";
 import HomeOne from "./HomeOne/HomeOne.jsx";
+import SalesPlants from "./SalesPlants/SalesPlants.jsx";
 
 const Home = () => {
   return (
@@ -8,11 +8,8 @@ const Home = () => {
       {/*Cabeçario */}
       <HomeOne />
       <CarePlants />
-      <h1>Não esta em promoção</h1>
-      <PlantCard filter={"notPromo"} />
-
-      <h1>Em promoção</h1>
-      <PlantCard filter={"promo"} />
+      <SalesPlants />
+      
     </>
   );
 };

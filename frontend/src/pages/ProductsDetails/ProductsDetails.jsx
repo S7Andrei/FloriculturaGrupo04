@@ -4,6 +4,7 @@ import { plantsActions } from "../../store/plants/plantsSlice";
 import { useEffect } from "react";
 import styles from "./styles.module.css";
 import imgPlant from "../../assets/plants.png";
+import ButtonHome from "../../components/UI/Home/ButtonHome/ButtonHome";
 
 const ProductsDetails = () => {
   const plantSelected = useSelector((state) => state.plants.plantSelected);
@@ -48,10 +49,7 @@ const ProductsDetails = () => {
 
           <p id={styles.price}>{price}</p>
 
-          <button id={styles.btn} onClick={handleSearch}>
-            Check out
-          </button>
-
+          <ButtonHome onClick={handleSearch}>Check out</ButtonHome>
           <div className={styles.features}>
             <p id={styles.price}>Features</p>
             {/* {splitFeatures.map((sentence, index) => (
