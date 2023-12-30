@@ -7,7 +7,7 @@ footer {
 .footerContent {
    background-color: var(--luna-green);
    background-image: url(../../assets/bkgreen.png);
-   padding: 135px 100px 50px 100px;
+   padding: 135px 100px 100px 100px;
 }
 
 
@@ -36,19 +36,25 @@ footer {
     align-items: baseline;
 }
 
-
 h1 {
     font-size: var(--fonte-grande);
-    margin-bottom: 16PX;
+    margin-bottom: 32px;
+
+    font-family: var(--eb-garamond);
+    font-weight: 700;
 }
 
 h2 {
     font-size: var(--fonte-media);
     margin-bottom: 32px;
+
+    font-family: var(--lato);
 }
 
 h3 {
     font-size: var(--fonte-pequena);
+
+    font-family: var(--raleway);
 }
 
 li {
