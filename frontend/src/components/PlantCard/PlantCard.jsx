@@ -1,42 +1,56 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import { useSelector } from "react-redux";
 import styles from "./styles.module.css";
-import { motion } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
-
+import { useEffect, useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
 import CardContent from "../CardContent/CardContent";
-import {useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import "swiper/css";
+import { register } from "swiper/element/bundle";
+
+register();
+
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
 
 const PlantCard = ({ listagemTotal = false, filter }) => {
+  //const [slides, setSlides] = useState(4);
   const plants = useSelector((state) => state.plants.plants);
-  const carrosel = useRef();
-
-  const [width, setWidth] = useState(0);
 
   const navigate = useNavigate();
 
   const handleProductDetails = (id) => {
     navigate(`/products/${id}`);
-  }
+  };
 
-  useEffect(() => {
-    setWidth(carrosel.current?.scrollWidth - carrosel.current?.offsetWidth);
-  }, []);
+  //responsividade
+  // useEffect(() => {
+  //   const handleResize = () => {
+  //     if (window.innerWidth < 720) {
+  //       setSlides(1);
+  //     }else{
+  //       setSlides(4)
+  //     }
+  //   };
+
+  //   handleResize()
+  //   window.addEventListener("resize", handleResize)
+
+  //   return() => {
+  //     window.removeEventListener("resize", handleResize)
+  //   }
+  // }, []);
 
   return (
-    <motion.div ref={carrosel}>
-      <motion.div
-        className={styles.productList}
-        drag="x"
-        dragConstraints={{
-          right: 0,
-          left: -width,
-        }}
-      >
-        {plants
-          .filter((plant) => (listagemTotal ? true : plant.isInSale === filter))
-          .map((plant) => (
-            <motion.div key={plant.id}>
+    <Swiper slidesPerView={4} className={styles.swiper}>
+      {plants
+        .filter((plant) => (listagemTotal ? true : plant.isInSale === filter))
+        .map((plant) => (
+          <SwiperSlide key={plant.id}>
+            <div className={styles.productList}>
               <button onClick={() => handleProductDetails(plant.id)}>
                 <CardContent
                   id={plant.id}
@@ -45,10 +59,10 @@ const PlantCard = ({ listagemTotal = false, filter }) => {
                   label={plant.label[1]}
                 />
               </button>
-            </motion.div>
-          ))}
-      </motion.div>
-    </motion.div>
+            </div>
+          </SwiperSlide>
+        ))}
+    </Swiper>
   );
 };
 
