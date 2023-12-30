@@ -1,3 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap");
+
+.inputRadioContainer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.inputRadioLabel {
+  font-size: var(--fonte-pequena);
+  color: var(--IBBNB);
+  font-family: "Inter", sans-serif;
+}
+
 .inputRadio {
-    
+  appearance: none;
+  margin: 0;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 2px solid var(--gray);
+}
+
+.inputRadio:checked {
+  background-color: var(--luna-green);
+  border: 2px solid var(--gray);
+}
+
+.isActive {
+  color: var(--IBBNB);
+  font-size: 24px;
 }

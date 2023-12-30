@@ -8,6 +8,7 @@ import plant from "../../assets/plantForm.svg";
 import styles from "./Register.module.css";
 import Textarea from "../../components/UI/Form/Textarea/Textarea";
 import ButtonForm from "../../components/UI/Form/ButtonForm/ButtonForm";
+import InputRadio from "../../components/UI/Form/InputRadio/InputRadio";
 
 const Register = () => {
   const [plantName, setPlantName] = useState("");
@@ -163,27 +164,25 @@ const Register = () => {
             />
           </div>
           <div>
-            <h3>Label:</h3>
-            <label>
-              Indoor
-              <input
-                type="radio"
+            <h3 className={styles.labelRadios}>Label:</h3>
+            <div className={styles.inputRadioControl}>
+              <InputRadio
+                id={"indoor"}
                 value="indoor"
+                label={"Indoor"}
                 checked={label === "indoor"}
-                onChange={() => setLabel("indoor")}
                 name="labelDoor"
+                onChange={() => setLabel("indoor")}
               />
-            </label>
-            <label>
-              Outdoor
-              <input
-                type="radio"
+              <InputRadio
+                id={"outdoor"}
+                name="labelDoor"
                 value="outdoor"
+                label={"Outdoor"}
                 checked={label === "outdoor"}
                 onChange={() => setLabel("outdoor")}
-                name="labelDoor"
               />
-            </label>
+            </div>
           </div>
           <Textarea
             id={"feature"}
