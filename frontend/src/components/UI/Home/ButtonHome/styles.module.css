@@ -9,7 +9,7 @@
 
   width: 191px;
   height: 62px;
-  margin-top: 24px;
+  
   color: var(--Athena-Grey, #f8f9fb);
   text-align: center;
 
@@ -18,7 +18,7 @@
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  margin-left: 100px;
+  
   line-height: 154.5%; /* 24.72px */
 }
 

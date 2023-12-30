@@ -23,7 +23,9 @@ const HomeOne = () => {
           green oasis.
         </p>
 
-        <ButtonHome onClick={handleProductDetails}>Shop now</ButtonHome>
+        <ButtonHome onClick={handleProductDetails} id={styles.btn}>
+          Shop now
+        </ButtonHome>
       </section>
     </>
   );
