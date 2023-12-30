@@ -11,6 +11,45 @@
   gap: 10px;
 }
 
+.mobileNav {
+  display: none;
+}
+
+.navBar a {
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .navBar {
+    display: none;
+  }
+
+  .mobileNav {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .desktopNav {
+    display: none;
+  }
+}
+
+/* .headerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navBar {
+  display: flex;
+  gap: 10px;
+}
+
+.mobileNav {
+  display: none;
+}
+
 .navBar a {
   text-decoration: none;
 }
@@ -20,3 +59,14 @@
     font-size: 15px;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .navBar {
+    display: none;
+  }
+
+  .mobileNav {
+    display: flex;
+    justify-content: flex-start;
+  }
+} */
