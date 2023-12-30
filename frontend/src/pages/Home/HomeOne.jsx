@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router";
 import styles from "./Home.module.css";
-
+import ButtonHome from '../../components/UI/Home/ButtonHome/ButtonHome'
 const HomeOne = () => {
   const navigate = useNavigate();
 
@@ -22,9 +22,10 @@ const HomeOne = () => {
           green oasis.
         </p>
 
-        <button id={styles.btn} onClick={handleProductDetails}>
-          Shop now
-        </button>
+        <ButtonHome onClick={handleProductDetails}>
+            Shop now
+        </ButtonHome>
+
       </section>
     </>
   );
