@@ -4,4 +4,5 @@
   font-size: var(--fonte-pequena);
   padding: 16px;
   height: 100px;
+  resize: none;
 }

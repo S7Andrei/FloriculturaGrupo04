@@ -1,8 +1,9 @@
+import { useEffect, useRef, useState } from "react";
 import styles from "./InputRadio.module.css";
 
 function InputRadio({ label, id, name, ...props }) {
   return (
-    <p>
+    <p className={styles.inputRadioContainer}>
       <input
         type="radio"
         name={name}
@@ -10,7 +11,9 @@ function InputRadio({ label, id, name, ...props }) {
         className={styles.inputRadio}
         {...props}
       />
-      <label htmlFor={id}>{label}</label>
+      <label htmlFor={id} className={styles.inputRadioLabel}>
+        {label}
+      </label>
     </p>
   );
 }

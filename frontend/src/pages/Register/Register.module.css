@@ -25,3 +25,16 @@
   display: flex;
   gap: 20px;
 }
+
+.inputRadioControl {
+  display: flex;
+  gap: 20px;
+}
+
+.labelRadios {
+  font-family: "Inter", sans-serif;
+  color: var(--IBBNB);
+  font-size: calc(var(--fonte-pequena) + 2);
+  margin-bottom: 16px;
+  font-weight: 600;
+}
