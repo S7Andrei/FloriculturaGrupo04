@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router";
-import styles from "../Home.module.css";
+import styles from "./HomeOne.module.css";
 import ButtonHome from "../../../components/UI/Home/ButtonHome/ButtonHome";
 import arrow from "../../../assets/Arrow 1.svg";
 import plant from "../../../assets/plantForm.svg";

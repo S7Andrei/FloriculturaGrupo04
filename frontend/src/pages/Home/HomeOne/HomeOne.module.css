@@ -18,9 +18,7 @@
   text-transform: capitalize;
 }
 
-body {
-  background: #aaff00;
-}
+
 #bio {
   display: flex;
   width: 611px;
