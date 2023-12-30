@@ -15,7 +15,7 @@ const Products = ({ listagemTotal = false, filter }) => {
   return (
     <>
       <div className={styles.productContainer}>
-        <h1>
+        <h1 className={styles.productTitle}>
           check out all our <span id={styles.colorGreen}>plants</span>
         </h1>
 
