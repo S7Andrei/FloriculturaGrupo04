@@ -1,13 +1,84 @@
+.carePlantsContainer {
+  background-color: #fcfcfc;
+  padding: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+
 .carePlantsTitle {
   font-size: var(--fonte-grande);
+  font-family: var(---eb-garamond);
+  color: var(--luna-green);
+  font-weight: 700;
+  text-transform: capitalize;
+  margin-bottom: 30px;
+  text-align: center;
 }
 
-.carPlantsSubtitle {
+.carePlantsTitle strong {
+  color: var(--avocado);
+}
+
+.carePlantsSubtitle {
   font-size: var(--fonte-pequena);
+  font-family: var(--raleway);
   color: var(--gray);
+  text-align: center;
 }
 
-.carPlantsParagraph {
+.carePlantsParagraph {
   font-size: var(--fonte-pequena);
+  font-family: var(--raleway);
   color: var(--secondary);
+  line-height: 27.87px;
+  letter-spacing: 0.08px;
+  word-wrap: break-word;
+}
+
+.listItemParagraph {
+  text-align: center;
+  line-height: 24.72px;
+}
+
+.listItemTitle {
+  font-size: var(--fonte-media);
+  font-family: var(--lato);
+  color: var(--IBBNB);
+  font-weight: 700;
+}
+
+.containerGrid {
+  display: grid;
+  grid-template-columns: repeat(3, min-content);
+  grid-template-rows: min-content 1fr;
+  justify-items: center;
+  justify-content: space-between;
+  row-gap: 162px;
+}
+
+.containerGrid button {
+  margin: 0;
+}
+
+.containerList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: fit-content;
+  gap: 16px;
+}
+
+.containerImgsDetails {
+  display: flex;
+  flex-direction: column;
+  width: min-content;
+  gap: 32px;
+}
+
+.containerItems {
+  width: min-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
