@@ -55,6 +55,6 @@ footer {
   font-family: var(--raleway);
 }
 
-li {
+.footerList li {
   margin-bottom: 16px;
 }

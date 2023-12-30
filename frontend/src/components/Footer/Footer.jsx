@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer className={styles.footerContent}>
       <div className={`${styles.footerContainer} ${styles.fresh}`}>
-        <ul>
+        <ul className={styles.footerList}>
           <li>
             <h1 className={styles.footerTitle}>Stay Fresh</h1>
           </li>
@@ -19,7 +19,7 @@ const Footer = () => {
         </ul>
 
         <div className={styles.LinkCommunityContainer}>
-          <ul>
+          <ul className={styles.footerList}>
             <li>
               <h2 className={styles.footerSubtitle}>Links</h2>
             </li>
@@ -33,7 +33,7 @@ const Footer = () => {
             <li></li>
           </ul>
 
-          <ul>
+          <ul className={styles.footerList}>
             <li>
               <h2 className={styles.footerSubtitle}>Community</h2>
             </li>
@@ -54,7 +54,7 @@ const Footer = () => {
         <figure>
           <img src={logo} alt="" style={{ width: "50px" }} />
         </figure>
-        <ul>
+        <ul className={styles.footerList}>
           <li>
             <h3>Compassinhos ®. All rights reserved.</h3>
           </li>
