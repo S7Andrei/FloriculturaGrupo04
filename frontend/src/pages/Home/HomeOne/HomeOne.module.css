@@ -1,11 +1,10 @@
 .h1 {
   display: flex;
-  width: 631px;
-  height: 144px;
+  width: 506px;
 
   justify-content: center;
   margin-left: 95px;
-  margin-top: 211px;
+
   align-items: flex-start;
   color: var(--Primary-Lunar-green, #354733);
 
@@ -17,7 +16,6 @@
   line-height: normal;
   text-transform: capitalize;
 }
-
 
 #bio {
   display: flex;
@@ -49,16 +47,16 @@
   display: flex;
   flex-direction: row-reverse;
   width: 100%;
-  height: 1024px;
+  height: 100vh;
   transition: filter 0.3s ease;
   top: 0;
   left: 0;
   z-index: 0;
-  filter: none;
+  filter: grayscale(100%);
 }
 
 #img:hover {
-  filter: grayscale(100%);
+  filter: none;
   z-index: 1;
 }
 
@@ -67,7 +65,7 @@
 } */
 
 #colorGreen {
-  color: var(--Primary-Lunar-green, #354733);
+  color: var(--Primary-Avacado, #8a9b6e);
 }
 
 .teste {
@@ -80,11 +78,29 @@
   margin-top: 24px;
 }
 
+#topTitle {
+  width: 159px;
+  height: 28px;
+  color: #000;
+  text-align: center;
+  margin-left: 95px;
+
+  /* Stylish */
+  font-family: Pacifico;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 259px;
+}
+
 #learn {
+  position: absolute;
   display: flex;
+  margin-top: 95vh;
   color: var(--Secondary-Secondary, #808276);
   text-align: center;
-  margin-top: 391px;
+  
   margin-left: 100px;
   /* secondary/Secondary */
   font-family: Raleway;
@@ -95,8 +111,20 @@
 }
 
 #plantLeft {
-  width: 460.567px;
-  height: 550.142px;
-  transform: rotate(15.614deg);
   flex-shrink: 0;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+  margin-top: -50px;
+}
+
+#plantLeft:hover {
+  filter: none;
+  z-index: 1;
+}
+
+#box{
+  margin-bottom: 5px;
 }
