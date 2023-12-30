@@ -4,5 +4,8 @@
   font-family: "Inter", sans-serif;
   color: var(--IBBNB);
   font-size: var(--fonte-pequena);
+  background-color: transparent;
   padding: 12px 16px;
+  border-radius: 4px;
+  border: 2px solid var(--gray);
 }
