@@ -1,0 +1,13 @@
+.carePlantsTitle {
+  font-size: var(--fonte-grande);
+}
+
+.carPlantsSubtitle {
+  font-size: var(--fonte-pequena);
+  color: var(--gray);
+}
+
+.carPlantsParagraph {
+  font-size: var(--fonte-pequena);
+  color: var(--secondary);
+}

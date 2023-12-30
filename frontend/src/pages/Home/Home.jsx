@@ -1,11 +1,13 @@
 import PlantCard from "../../components/PlantCard/PlantCard";
-import HomeOne from "./HomeOne.jsx";
+import CarePlants from "./CarePlants/CarePlants.jsx";
+import HomeOne from "./HomeOne/HomeOne.jsx";
 
 const Home = () => {
   return (
     <>
       {/*Cabeçario */}
       <HomeOne />
+      <CarePlants />
       <h1>Não esta em promoção</h1>
       <PlantCard filter={"notPromo"} />
 
