@@ -1,18 +1,72 @@
 .carePlantsContainer {
   background-color: #fcfcfc;
   padding: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
 }
 
 .carePlantsTitle {
   font-size: var(--fonte-grande);
+  font-family: var(---eb-garamond);
+  color: var(--luna-green);
+  font-weight: 700;
+  text-transform: capitalize;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.carePlantsTitle strong {
+  color: var(--avocado);
 }
 
 .carePlantsSubtitle {
   font-size: var(--fonte-pequena);
+  font-family: var(--raleway);
   color: var(--gray);
+  text-align: center;
 }
 
 .carePlantsParagraph {
   font-size: var(--fonte-pequena);
+  font-family: var(--raleway);
   color: var(--secondary);
+  line-height: 27.87px;
+  letter-spacing: 0.08px;
+  word-wrap: break-word;
+}
+
+.listItemParagraph {
+  text-align: center;
+  line-height: 24.72px;
+}
+
+.listItemTitle {
+  font-size: var(--fonte-media);
+  font-family: var(--lato);
+  color: var(--IBBNB);
+  font-weight: 700;
+}
+
+.containerGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.containerList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.containerGrid button {
+  margin: 0;
+}
+
+.containerImgsDetails {
+  display: flex;
+  flex-direction: column;
+  width: min-content;
+  gap: 32px;
 }

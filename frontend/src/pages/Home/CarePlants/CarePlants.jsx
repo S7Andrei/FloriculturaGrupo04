@@ -13,7 +13,7 @@ function CarePlants() {
     <section className={styles.carePlantsContainer}>
       <div>
         <h2 className={styles.carePlantsTitle}>
-          Stepes To Take Care Of Your Plants
+          Stepes To Take Care Of Your <strong>Plants</strong>
         </h2>
         <p className={styles.carePlantsSubtitle}>
           By following these three steps - proper watering, appropriate
@@ -22,45 +22,51 @@ function CarePlants() {
         </p>
       </div>
 
-      <div>
-        <ul>
+      <div className={styles.containerGrid}>
+        <ul className={styles.containerList}>
           <li>
             <img src={watering} alt="" />
           </li>
           <li>
-            <h3>Watering</h3>
+            <h3 className={styles.listItemTitle}>Watering</h3>
           </li>
           <li>
-            <p>
+            <p
+              className={`${styles.carePlantsParagraph} ${styles.listItemParagraph}`}
+            >
               water your plants when the top inch of soil feels dry to the
               touch. Avoid overwatering, as it can lead to root dehydration.
             </p>
           </li>
         </ul>
-        <ul>
+        <ul className={styles.containerList}>
           <li>
             <img src={sunligth} alt="" />
           </li>
           <li>
-            <h3>Sunlight</h3>
+            <h3 className={styles.listItemTitle}>Sunlight</h3>
           </li>
           <li>
-            <p>
+            <p
+              className={`${styles.carePlantsParagraph} ${styles.listItemParagraph}`}
+            >
               Most plants need adequate sunlight to thrive. Place your plants in
               areas that receive the appropriate amount of light for their
               specific needs
             </p>
           </li>
         </ul>
-        <ul>
+        <ul className={styles.containerList}>
           <li>
             <img src={nutrientsAndFertilizing} alt="" />
           </li>
           <li>
-            <h3>Nutrients and Fertilizing</h3>
+            <h3 className={styles.listItemTitle}>Nutrients and Fertilizing</h3>
           </li>
           <li>
-            <p>
+            <p
+              className={`${styles.carePlantsParagraph} ${styles.listItemParagraph}`}
+            >
               Choose a suitable fertilizer based on the specific needs of your
               plants, whether it's a balanced or specialized formula.
             </p>
@@ -68,18 +74,18 @@ function CarePlants() {
         </ul>
       </div>
 
-      <div>
+      <div className={styles.containerGrid}>
         <figure>
           <img src={carePlantsImg1} alt="" />
         </figure>
         <figure>
           <img src={carePlantsImg2} alt="" />
         </figure>
-        <div>
+        <div className={styles.containerImgsDetails}>
           <figure>
             <img src={carePlantsImg3} alt="" />
           </figure>
-          <p className={styles.carPlantsSubtitle}>
+          <p className={styles.carePlantsParagraph}>
             Our website offers a wide array of stunning plants, ranging from
             vibrant flowers to lush indoor foliage, allowing you to create your
             very own green oasis. In addition to our extensive plant selection,
