@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router";
 import styles from "../Home.module.css";
-import ButtonHome from "../../components/UI/Home/ButtonHome/ButtonHome";
+import ButtonHome from "../../../components/UI/Home/ButtonHome/ButtonHome";
 
 const HomeOne = () => {
   const navigate = useNavigate();
