@@ -50,18 +50,23 @@
 
 .containerGrid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, min-content);
+  grid-template-rows: min-content 1fr;
+  justify-items: center;
+  justify-content: space-between;
+  row-gap: 100px;
+}
+
+.containerGrid button {
+  margin: 0;
 }
 
 .containerList {
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: fit-content;
   gap: 16px;
-}
-
-.containerGrid button {
-  margin: 0;
 }
 
 .containerImgsDetails {
@@ -69,4 +74,11 @@
   flex-direction: column;
   width: min-content;
   gap: 32px;
+}
+
+.containerItems {
+  width: min-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

@@ -72,9 +72,6 @@ function CarePlants() {
             </p>
           </li>
         </ul>
-      </div>
-
-      <div className={styles.containerGrid}>
         <figure>
           <img src={carePlantsImg1} alt="" />
         </figure>
