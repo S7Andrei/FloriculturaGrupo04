@@ -49,6 +49,7 @@ const PlantCard = ({ listagemTotal = false, filter }) => {
       {plants
         .filter((plant) => (listagemTotal ? true : plant.isInSale === filter))
         .map((plant) => (
+
           <SwiperSlide key={plant.id}>
             <div className={styles.productList}>
               <button onClick={() => handleProductDetails(plant.id)}>
