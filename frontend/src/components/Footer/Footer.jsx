@@ -1,5 +1,4 @@
 import styles from "./Footer.module.css";
-import bkgreen from "../../assets/bkgreen.png";
 import logo from "../../assets/logowhite.svg";
 
 const Footer = () => {

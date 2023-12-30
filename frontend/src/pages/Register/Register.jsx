@@ -3,7 +3,6 @@ import { useDispatch } from "react-redux";
 import { plantsActions } from "../../store/plants/plantsSlice";
 import { getPlants } from "../../store/plants/plantsAction";
 import Input from "../../components/UI/Form/Input/Input";
-import plant from "../../assets/plantForm.svg";
 
 import styles from "./Register.module.css";
 import Textarea from "../../components/UI/Form/Textarea/Textarea";
@@ -204,10 +203,6 @@ const Register = () => {
           />
           <ButtonForm type="submit">Register</ButtonForm>
         </form>
-
-        <figure>
-          <img src={plant} alt="A model plant" />
-        </figure>
       </section>
     </>
   );
