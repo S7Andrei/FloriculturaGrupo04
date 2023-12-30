@@ -9,6 +9,10 @@
   gap: 10px;
 }
 
+.mobileNav {
+  display: none;
+}
+
 .navBar a {
   text-decoration: none;
 }
@@ -16,5 +20,16 @@
 @media (max-width: 600px) {
   .headerContainer {
     font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navBar {
+    display: none;
+  }
+
+  .mobileNav {
+    display: flex;
+    justify-content: flex-start;
   }
 }

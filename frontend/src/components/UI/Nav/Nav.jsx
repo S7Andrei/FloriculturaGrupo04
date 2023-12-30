@@ -4,6 +4,7 @@ import classes from "./Nav.module.css";
 
 function Nav({ children, ...props }) {
   return (
+    <>
     <NavLink
       {...props}
       className={({ isActive }) =>
@@ -12,6 +13,7 @@ function Nav({ children, ...props }) {
     >
       {children}
     </NavLink>
+    </>
   );
 }
 
