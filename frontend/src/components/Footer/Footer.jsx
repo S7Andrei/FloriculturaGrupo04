@@ -8,50 +8,49 @@ const Footer = () => {
       <div className={`${styles.footerContainer} ${styles.fres}`}>
         <ul>
           <li>
-            <h1>Stay Fresh</h1>
+            <h1 className={styles.footerTitle}>Stay Fresh</h1>
           </li>
           <li>
-            <h3>compassinhos@gmail.com</h3>
+            <h3 className={styles.footerInfo}>compassinhos@gmail.com</h3>
           </li>
           <li>
-            <h3>+55 41 99999-9999</h3>
+            <h3 className={styles.footerInfo}>+55 41 99999-9999</h3>
           </li>
         </ul>
 
         <div className={styles.LinkCommunityContainer}>
           <ul>
             <li>
-              <h2>Links</h2>
+              <h2 className={styles.footerSubtitle}>Links</h2>
             </li>
             <li>
-              <h3>About us</h3>
+              <h3 className={styles.footerInfo}>About us</h3>
             </li>
             <li>
-              <h3>Products</h3>
+              <h3 className={styles.footerInfo}>Products</h3>
             </li>
-            <h3>Blogs</h3>
+            <h3 className={styles.footerInfo}>Blogs</h3>
             <li></li>
           </ul>
 
           <ul>
             <li>
-              <h2>Community</h2>
+              <h2 className={styles.footerSubtitle}>Community</h2>
             </li>
             <li>
-              <h3>About us</h3>
+              <h3 className={styles.footerInfo}>About us</h3>
             </li>
             <li>
-              <h3>Products</h3>
+              <h3 className={styles.footerInfo}>Products</h3>
             </li>
             <li>
-              <h3>Blogs</h3>
+              <h3 className={styles.footerInfo}>Blogs</h3>
             </li>
           </ul>
         </div>
       </div>
 
-      <div className={ `${styles.footerContainer} ${styles.line}`}>
-        
+      <div className={`${styles.footerContainer} ${styles.line}`}>
         <figure>
           <img src={logo} alt="" style={{ width: "50px" }} />
         </figure>

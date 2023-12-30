@@ -1,60 +1,54 @@
-
-
 footer {
-    color: var(--white);
+  color: var(--white);
 }
 
 .footerContent {
-   background-color: var(--luna-green);
-   background-image: url(../../assets/bkgreen.png);
-   padding: 135px 100px 50px 100px;
+  background-color: var(--luna-green);
+  background-image: url(../../assets/bkgreen.png);
+  padding: 135px 100px 50px 100px;
 }
 
-
 .footerContainer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .LinkCommunityContainer {
-    display: flex;
-    gap: 60px;
-    margin-bottom: 100px;
+  display: flex;
+  gap: 60px;
+  margin-bottom: 100px;
 }
 
 .creditsContainer {
-    display: flex; 
+  display: flex;
 }
 
 .line {
-    border-top: 1px solid var(--accent);
-    padding-top: 20px;
+  border-top: 1px solid var(--accent);
+  padding-top: 20px;
 }
 
 .fresh {
-    align-items: baseline;
+  align-items: baseline;
 }
 
-
-h1 {
-    font-size: var(--fonte-grande);
-    margin-bottom: 16PX;
+.footerTitle {
+  font-size: var(--fonte-grande);
+  margin-bottom: 16px;
+  font-weight: bold;
 }
 
-h2 {
-    font-size: var(--fonte-media);
-    margin-bottom: 32px;
+.footerSubtitle {
+  font-size: var(--fonte-media);
+  margin-bottom: 32px;
+  font-weight: bold;
 }
 
-h3 {
-    font-size: var(--fonte-pequena);
+.footerInfo {
+  font-size: var(--fonte-pequena);
 }
 
 li {
-    margin-bottom: 16px;
-}
-
-h1, h2 {
-    font-weight: bold;
+  margin-bottom: 16px;
 }
