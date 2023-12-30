@@ -1,10 +1,19 @@
 .productList {
   display: flex;
-  gap: 18px;
-
+  width: 100%;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  max-width: 1632px;
+  padding: 96px 0px;
+  align-items: center;
+  gap: 48px;
+  margin-left:20vh;
 }
 
-button, input[type="button"], input[type="submit"], input[type="reset"] {
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -17,3 +26,24 @@ button, input[type="button"], input[type="submit"], input[type="reset"] {
   cursor: pointer;
   outline: none;
 }
+
+/* @media screen and (min-width: 1620px) {
+  .productList{
+    flex-direction: column;
+  }
+  .swiper{
+    flex-direction: column;
+  }
+
+}
+.swiper{
+  display: flex;
+  width: 100%;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  max-width: 1632px;
+  padding: 96px 0px;
+  align-items: center;
+  gap: 48px;
+  margin-left:20vh;
+} */
