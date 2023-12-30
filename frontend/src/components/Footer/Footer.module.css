@@ -4,7 +4,7 @@ footer {
 
 .footerContent {
   background-color: var(--luna-green);
-  background-image: url(../../assets/bkgreen.png);
+  background-image: linear-gradient(rgba(52, 71, 51, 0.795), rgba(52, 71, 51, 0.795), rgba(52, 71, 51, 0.795), rgba(52, 71, 51, 0.795)), url(../../assets/bkgreen.png);
   padding: 135px 100px 50px 100px;
 }
 
@@ -26,7 +26,7 @@ footer {
 
 .line {
   border-top: 1px solid var(--accent);
-  padding-top: 20px;
+  padding-top: 28px;
 }
 
 .fresh {
