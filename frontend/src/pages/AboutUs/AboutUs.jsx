@@ -1,7 +1,9 @@
-import andreiImg from "../assets/staff/andrei.png";
-import felipeImg from "../assets/staff/felipe.jpeg";
-import pedroImg from "../assets/staff/pedro.png";
-import rodrigoImg from "../assets/staff/rodrigo.png";
+import andreiImg from "../../assets/staff/andrei.png";
+import felipeImg from "../../assets/staff/felipe.jpeg";
+import pedroImg from "../../assets/staff/pedro.png";
+import rodrigoImg from "../../assets/staff/rodrigo.png";
+
+import "./AboutUs.module.css";
 
 const AboutUs = () => {
   return (
