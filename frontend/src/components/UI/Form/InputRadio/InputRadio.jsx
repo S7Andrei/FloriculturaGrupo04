@@ -1,30 +1,20 @@
-import { useEffect, useRef, useState } from "react";
 import styles from "./InputRadio.module.css";
 
-function InputRadio({ label, id, name, ...props }) {
-  const [isChecked, setIsChecked] = useState();
-  const input = useRef();
-
-  useEffect(() => {
-    const checked = input.current.checked;
-    setIsChecked(checked);
-  }, [input.current.checked]);
-
+function InputRadio({ label, id, name, checked, ...props }) {
   return (
     <p className={styles.inputRadioContainer}>
       <input
         type="radio"
         name={name}
         id={id}
+        checked={checked}
         className={styles.inputRadio}
-        checked={isChecked}
-        ref={input}
         {...props}
       />
       <label
         htmlFor={id}
         className={`${styles.inputRadioLabel} ${
-          isChecked ? styles.checkedLabel : ""
+          checked ? styles.checkedLabel : ""
         }`}
       >
         {label}
