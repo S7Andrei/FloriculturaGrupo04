@@ -23,8 +23,14 @@ function App() {
       children: [
         { index: true, element: <Home /> },
         { path: "about-us", element: <AboutUs /> },
-        { path: "products", element: <Products listagemTotal={true} /> },
-        { path: "products/:id", element: <ProductsDetails /> },
+        {
+          path: "products",
+          element: <Products listagemTotal={true} />,
+        },
+        {
+          path: "products/:id",
+          element: <ProductsDetails />,
+        },
         { path: "register", element: <Register /> },
       ],
     },
