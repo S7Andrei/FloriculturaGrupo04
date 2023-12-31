@@ -8,6 +8,7 @@ import styles from "./Register.module.css";
 import Textarea from "../../components/UI/Form/Textarea/Textarea";
 import ButtonForm from "../../components/UI/Form/ButtonForm/ButtonForm";
 import InputRadio from "../../components/UI/Form/InputRadio/InputRadio";
+import plant from "../../assets//plantForm.svg";
 
 const Register = () => {
   const [plantName, setPlantName] = useState("");
@@ -203,6 +204,9 @@ const Register = () => {
           />
           <ButtonForm type="submit">Register</ButtonForm>
         </form>
+        <figure id={styles.img}>
+          <img src={plant} />
+        </figure>
       </section>
     </>
   );
