@@ -3,8 +3,8 @@ import styles from "./HomeOne.module.css";
 import ButtonHome from "../../../components/UI/Home/ButtonHome/ButtonHome";
 import arrow from "../../../assets/Arrow 1.svg";
 import plant from "../../../assets/plantForm.svg";
-import plantLeft from "../../../assets/left plant.png";
-import box from '../../../assets/Rectangle 31.svg'
+//import plantLeft from "../../../assets/leftPlant.png";
+import box from "../../../assets/Rectangle 31.svg";
 
 const HomeOne = () => {
   const navigate = useNavigate();
@@ -17,7 +17,10 @@ const HomeOne = () => {
     <>
       <section className={styles.homeOneContainer}>
         <div className={styles.teste}>
-          <p id={styles.topTitle}><img src={box} id={styles.box}/>{"  "}Love for Nature</p>
+          <p id={styles.topTitle}>
+            <img src={box} id={styles.box} />
+            {"  "}Love for Nature
+          </p>
           <h1 className={styles.h1}>
             Discover your Side <span id={styles.colorGreen}>green</span>
           </h1>
@@ -36,11 +39,12 @@ const HomeOne = () => {
           <p id={styles.learn}>
             Learn Gardening <img src={arrow} />
           </p>
-          <figure>
-            <img src={plantLeft} id={styles.plantLeft} />
-          </figure>
-        </div>
 
+          
+        </div>
+        <figure id={styles.plantLeft}>
+          
+          </figure>
         <figure id={styles.img}>
           <img src={plant} />
         </figure>
