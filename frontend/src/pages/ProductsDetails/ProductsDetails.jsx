@@ -5,7 +5,8 @@ import styles from "./styles.module.css";
 import imgPlant from "../../assets/plants.png";
 import ButtonHome from "../../components/UI/Home/ButtonHome/ButtonHome";
 import { useEffect, useState } from "react";
-import SplitFeature from "./SplitFeature";
+import SplitFeature from "../../components/SplitFeature/SplitFeature";
+import PriceFormated from "../../components/PriceFormated/PriceFormated";
 
 const ProductsDetails = () => {
   const [isFetching, setIsFetching] = useState(true);
@@ -21,12 +22,16 @@ const ProductsDetails = () => {
 
   console.log(plantSelected);
 
-  var { price } = plantSelected;
-  price = new Intl.NumberFormat("en-US", {
+  var { price, isInSale, discountPercentage } = plantSelected;
+
+  console.log(price, isInSale, discountPercentage);
+
+  const priceF = new Intl.NumberFormat("en-US", {
     style: "currency",
     currency: "USD",
   }).format(price);
 
+  console.log('newprice ' + priceF)
   const handleSearch = () => {
     const plantName = plantSelected.name;
     window.location.href = `https://www.google.com/search?q=${encodeURIComponent(
@@ -56,14 +61,14 @@ const ProductsDetails = () => {
                   );
                 })}
               </div>
-
-              <p id={styles.price}>{price}</p>
-
+              
+              <PriceFormated price={price} isInSale={isInSale} discont={discountPercentage} styles={styles}/>
+              
               <ButtonHome onClick={handleSearch}>Check out</ButtonHome>
 
               <p id={styles.price}>Features</p>
 
-              <SplitFeature plantSelected={plantSelected} />
+              <SplitFeature plantSelected={plantSelected} styles={styles} />
 
               <p id={styles.price}>Description</p>
               <div className={styles.description}>
