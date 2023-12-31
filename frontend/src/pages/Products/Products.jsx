@@ -19,6 +19,7 @@ const Products = ({ listagemTotal = false, filter }) => {
           check out all our <span id={styles.colorGreen}>plants</span>
         </h1>
 
+
         <div className={styles.productList}>
           {plants
             .filter((plant) =>
@@ -32,6 +33,8 @@ const Products = ({ listagemTotal = false, filter }) => {
                     name={plant.name}
                     price={plant.price}
                     label={plant.label[1]}
+                    discont={plant.discountPercentage}
+                    isInSale={plant.isInSale}
                   />
                 </button>
               </div>
