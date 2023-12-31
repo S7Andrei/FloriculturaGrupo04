@@ -111,6 +111,20 @@
       "features": "Teste",
       "description": "Teste",
       "id": 12
+    },
+    {
+      "name": "Orquidia",
+      "subtitle": "Orquidia da Amazonia",
+      "label": [
+        "Flor",
+        "outdoor"
+      ],
+      "isInSale": "promo",
+      "price": "4546",
+      "discountPercentage": "20",
+      "features": "Species Orquidia",
+      "description": "Species Orquidia",
+      "id": 13
     }
   ]
 }
