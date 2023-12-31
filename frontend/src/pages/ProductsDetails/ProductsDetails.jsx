@@ -17,6 +17,7 @@ const ProductsDetails = () => {
   }, [plantId, dispatch]);
 
   console.log(plantSelected);
+
   var { price } = plantSelected;
   price = new Intl.NumberFormat("en-US", {
     style: "currency",
@@ -43,8 +44,13 @@ const ProductsDetails = () => {
           <p id={styles.subtitle}>{plantSelected.subtitle}</p>
 
           <div className={styles.labelContainer}>
-            <p id={styles.label}>{plantSelected.label}</p>
-            <p id={styles.label}>{plantSelected.label}</p>
+            {plantSelected.label.map((label) => {
+              return (
+                <p key={label} id={styles.label}>
+                  {label}
+                </p>
+              );
+            })}
           </div>
 
           <p id={styles.price}>{price}</p>
