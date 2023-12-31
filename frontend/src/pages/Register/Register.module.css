@@ -56,3 +56,87 @@
   margin-bottom: 16px;
   font-weight: 600;
 }
+
+.inputForm {
+  font-family: "Inter", sans-serif;
+  color: var(--IBBNB);
+  font-size: var(--fonte-pequena);
+  background-color: transparent;
+  padding: 12px 16px;
+  border-radius: 4px;
+  border: 2px solid var(--gray);
+}
+
+.inputRadioContainer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.inputRadioLabel {
+  font-size: var(--fonte-pequena);
+  color: var(--gray);
+  font-family: var(--inter);
+  font-weight: 500;
+  line-height: 22px;
+}
+
+.inputRadio {
+  appearance: none;
+  margin: 0;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 2px solid var(--gray);
+}
+
+.inputRadio:checked {
+  background-color: none;
+  background-image: url("../../../../assets/inputRadioSelected.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: none;
+}
+
+.checkedLabel {
+  color: var(--IBBNB);
+}
+
+.inputTextarea {
+  font-family: "Inter", sans-serif;
+  color: var(--IBBNB);
+  font-size: var(--fonte-pequena);
+  padding: 16px;
+  height: 100px;
+  background-color: transparent;
+  border: 2px solid var(--gray);
+  border-radius: 4px;
+  resize: none;
+}
+
+.inputLabel {
+  font-family: var(--inter);
+  color: var(--IBBNB);
+  font-size: calc(var(--fonte-pequena) + 2);
+  font-weight: 500;
+  line-height: 22px;
+}
+
+#erros{
+  font-family: "Inter", sans-serif;
+  color: var(--luna-green);
+  font-size: var(--fonte-pequena);
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  
+}
+#erros:hover{
+  transition:  0.5s ease;
+  color: red;
+}
+
+.errosPriceContainer{
+  display: flex;
+  gap: 35px
+}
