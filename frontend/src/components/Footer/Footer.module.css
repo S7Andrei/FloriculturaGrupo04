@@ -57,10 +57,20 @@ footer {
 
 .footerInfo {
   font-size: var(--fonte-pequena);
-
   font-family: var(--raleway);
+}
+
+.footerInfo a {
+  text-decoration: none;
+  color: var(--white);
 }
 
 .footerList li {
   margin-bottom: 18px;
+}
+
+.rights {
+  text-align: center;
+  font-family: var(--raleway);
+  line-height: 24.72px;
 }
