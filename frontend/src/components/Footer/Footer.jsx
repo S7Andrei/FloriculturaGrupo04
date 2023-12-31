@@ -1,5 +1,6 @@
 import styles from "./Footer.module.css";
 import logo from "../../assets/logowhite.svg";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -22,25 +23,26 @@ const Footer = () => {
             <li>
               <h2 className={styles.footerSubtitle}>Links</h2>
             </li>
-            <li>
-              <h3 className={styles.footerInfo}>About us</h3>
+            <li className={styles.footerInfo}>
+              <Link to={"/about-us"}>About us</Link>
+            </li>
+            <li className={styles.footerInfo}>
+              <Link to={"/products"}>Products</Link>
             </li>
             <li>
-              <h3 className={styles.footerInfo}>Products</h3>
+              <h3 className={styles.footerInfo}>Blogs</h3>
             </li>
-            <h3 className={styles.footerInfo}>Blogs</h3>
-            <li></li>
           </ul>
 
           <ul className={styles.footerList}>
             <li>
               <h2 className={styles.footerSubtitle}>Community</h2>
             </li>
-            <li>
-              <h3 className={styles.footerInfo}>About us</h3>
+            <li className={styles.footerInfo}>
+              <Link to={"/about-us"}>About us</Link>
             </li>
-            <li>
-              <h3 className={styles.footerInfo}>Products</h3>
+            <li className={styles.footerInfo}>
+              <Link to={"/products"}>Products</Link>
             </li>
             <li>
               <h3 className={styles.footerInfo}>Blogs</h3>
@@ -55,7 +57,9 @@ const Footer = () => {
         </figure>
         <ul className={styles.footerList}>
           <li>
-            <h3>Compassinhos ®. All rights reserved.</h3>
+            <h3 className={styles.rights}>
+              Compassinhos ®. All rights <br /> reserved.
+            </h3>
           </li>
         </ul>
       </div>
