@@ -3,7 +3,12 @@
   color: #fcfcfc;
   font-weight: 700;
   font-size: var(--fonte-pequena);
+  font-family: var(--inter);
   padding: 20px 0;
   border-radius: 4px;
   margin-top: 30px;
+}
+
+.btnForm:hover {
+  background-color: #38c474;
 }
