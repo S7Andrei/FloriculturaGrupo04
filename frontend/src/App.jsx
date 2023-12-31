@@ -28,8 +28,6 @@ function App() {
         { path: "register", element: <Register /> },
       ],
     },
-
-    { path: "*", element: <NotFound /> },
   ]);
 
   return <RouterProvider router={router} />;
