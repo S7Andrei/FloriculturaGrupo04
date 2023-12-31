@@ -8,8 +8,10 @@
 
 .inputRadioLabel {
   font-size: var(--fonte-pequena);
-  color: var(--IBBNB);
-  font-family: "Inter", sans-serif;
+  color: var(--gray);
+  font-family: var(--inter);
+  font-weight: 500;
+  line-height: 22px;
 }
 
 .inputRadio {
@@ -29,7 +31,6 @@
   border: none;
 }
 
-.isActive {
+.checkedLabel {
   color: var(--IBBNB);
-  font-size: 24px;
 }
