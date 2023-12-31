@@ -8,8 +8,10 @@
 
 .inputRadioLabel {
   font-size: var(--fonte-pequena);
-  color: var(--IBBNB);
-  font-family: "Inter", sans-serif;
+  color: var(--gray);
+  font-family: var(--inter);
+  font-weight: 500;
+  line-height: 22px;
 }
 
 .inputRadio {
@@ -22,11 +24,13 @@
 }
 
 .inputRadio:checked {
-  background-color: var(--luna-green);
-  border: 2px solid var(--gray);
+  background-color: none;
+  background-image: url("../../../../assets/inputRadioSelected.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: none;
 }
 
-.isActive {
+.checkedLabel {
   color: var(--IBBNB);
-  font-size: 24px;
 }
