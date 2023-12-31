@@ -199,24 +199,24 @@ const Register = () => {
           <div>
             <h3 className={styles.labelRadios}>Label:</h3>
             <div className={styles.inputRadioControl}>
+              <label className={styles.inputRadioLabel}>indoor</label>
               <input
                 id="indoor"
                 type="radio"
                 value="indoor"
                 {...register("labelDoor")}
-                className={styles.inputRadioLabel}
+                className={styles.inputRadio}
                 checked="indoor"
               />
-              <label htmlFor="">indoor</label>
+              <label className={styles.inputRadioLabel}>outdoor</label>
               <input
                 id="outdoor"
                 type="radio"
                 {...register("labelDoor")}
                 checked="outdoor"
                 value="outdoor"
-                className={styles.inputRadioLabel}
+                className={styles.inputRadio}
               />
-              <label htmlFor="">outdoor</label>
             </div>
           </div>
 
