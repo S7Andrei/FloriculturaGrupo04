@@ -57,8 +57,12 @@ footer {
 
 .footerInfo {
   font-size: var(--fonte-pequena);
-
   font-family: var(--raleway);
+}
+
+.footerInfo a {
+  text-decoration: none;
+  color: var(--white);
 }
 
 .footerList li {
