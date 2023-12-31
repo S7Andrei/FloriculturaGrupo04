@@ -19,6 +19,7 @@ function App() {
       path: "/",
       element: <TemplateRoot />,
       loader: getPlants,
+      errorElement: <NotFound />,
       children: [
         { index: true, element: <Home /> },
         { path: "about-us", element: <AboutUs /> },
