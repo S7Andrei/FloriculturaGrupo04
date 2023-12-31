@@ -5,7 +5,7 @@ import { useDispatch } from "react-redux";
 import { plantsActions } from "../store/plants/plantsSlice";
 import { useEffect } from "react";
 
-function TemplateRoot({ children }) {
+function TemplateRoot() {
   const data = useLoaderData();
   const dispatch = useDispatch();
 
@@ -17,7 +17,6 @@ function TemplateRoot({ children }) {
     <>
       <Header />
       <Outlet />
-      {children}
       <Footer />
     </>
   );
