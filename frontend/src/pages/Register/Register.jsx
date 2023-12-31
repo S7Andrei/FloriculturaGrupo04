@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { useDispatch } from "react-redux";
 import { plantsActions } from "../../store/plants/plantsSlice";
 import { getPlants } from "../../store/plants/plantsAction";
@@ -12,16 +13,44 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 
 import * as yup from "yup";
+import ErrosForm from "../../components/ErrosForm/ErrosForm";
 
 const schema = yup
   .object({
-    name: yup.string().required().min(5),
-    subtitle: yup.string().required(),
+    name: yup
+      .string()
+      .required("Name it is a mandatory field")
+      .min(5, "Name must have at least 5 characters")
+      .matches(/^[^\d]+$/, "Name must not contain numbers"),
+    subtitle: yup
+      .string()
+      .required("Subtitle it is a mandatory field")
+      .min(5, "Subtitle must have at least 5 characters"),
     price: yup
       .number()
       .positive()
-      .required()
-      .typeError("A number is required in the field"),
+      .required("Price it is a mandatory field")
+      .typeError("Enter a valid number")
+      .min(1),
+    description: yup
+      .string()
+      .required("Description it is a mandatory field")
+      .min(5),
+    discountPercentage: yup
+      .number()
+      .positive()
+      .required("Discount Percentage it is a mandatory field")
+      .typeError("Enter a valid number")
+      .min(1),
+    features: yup
+      .string()
+      .required("Features it is a mandatory field")
+      .min(5, "Features must have at least 5 characters"),
+    plantType: yup
+      .string()
+      .required("Plant Type it is a mandatory field")
+      .min(5, "Plant Type must have at least 5 characters")
+      .matches(/^[^\d]+$/, "Plant Type must not contain numbers"),
   })
   .required();
 
@@ -41,8 +70,6 @@ const Register = () => {
   }
 
   const handleSubmitForm = (data) => {
-    console.log(data);
-
     let isInSale;
 
     const {
@@ -95,10 +122,6 @@ const Register = () => {
       });
   };
 
-  console.log(errors);
-  console.log(errors?.name?.message);
-  console.log(errors);
-
   return (
     <>
       <section className={styles.registerContainer}>
@@ -107,39 +130,46 @@ const Register = () => {
           className={styles.formContainer}
         >
           <h2 className={styles.registerTitle}>Plant Registration</h2>
+
           <label className={styles.inputLabel}>Plant Name</label>
-          <input
-            id="name"
-            type="text"
-            placeholder="Echinocereus Cactus"
-            className={styles.inputForm}
-            {...register("name")}
-          />
-          {errors?.name?.message !== undefined && (
-            <p id={styles.erros}>{errors?.name?.message}</p>
-          )}
+          <div>
+            <input
+              id="name"
+              type="text"
+              placeholder="Echinocereus Cactus"
+              className={styles.inputForm}
+              {...register("name")}
+            />
+
+            <ErrosForm errors={errors?.name?.message} />
+          </div>
+
           <label className={styles.inputLabel}>Plant Subtitle</label>
-          <input
-            id="subtitle"
-            type="text"
-            placeholder="A majestic addition to your plant collection"
-            className={styles.inputForm}
-            {...register("subtitle")}
-          />
-          {errors?.subtitle?.message !== undefined && (
-            <p id={styles.erros}>{errors?.subtitle?.message}</p>
-          )}
+          <div>
+            <input
+              id="subtitle"
+              type="text"
+              placeholder="A majestic addition to your plant collection"
+              className={styles.inputForm}
+              {...register("subtitle")}
+            />
+
+            <ErrosForm errors={errors?.subtitle?.message} />
+          </div>
+
           <label className={styles.inputLabel}>Plant Type</label>
-          <input
-            id="type"
-            type="text"
-            placeholder="Cactus"
-            className={styles.inputForm}
-            {...register("plantType")}
-          />
-          {errors?.plantType?.message !== undefined && (
-            <p id={styles.erros}>{errors?.plantType?.message}</p>
-          )}
+          <div>
+            <input
+              id="type"
+              type="text"
+              placeholder="Cactus"
+              className={styles.inputForm}
+              {...register("plantType")}
+            />
+
+            <ErrosForm errors={errors?.plantType?.message} />
+          </div>
+
           <label className={styles.inputLabel}>Price</label>
           {/* <label className={styles.inputLabel}>Discount percentage</label> */}
           <div className={styles.halfInputs}>
@@ -156,17 +186,14 @@ const Register = () => {
               id="discountPercentage"
               type="number"
               placeholder="20%"
+              step="0.01"
               className={styles.inputForm}
               {...register("discountPercentage")}
             />
           </div>
           <div className={styles.errosPriceContainer}>
-            {errors?.price?.message !== undefined && (
-              <p id={styles.erros}>{errors?.price?.message}</p>
-            )}
-            {errors?.price?.message !== undefined && (
-              <p id={styles.erros}>{errors?.price?.message}</p>
-            )}
+            <ErrosForm errors={errors?.price?.message} />
+            <ErrosForm errors={errors?.discountPercentage?.message} />
           </div>
 
           <div>
@@ -194,20 +221,26 @@ const Register = () => {
           </div>
 
           <label className={styles.inputLabel}>Features</label>
+          <div>
+            <textarea
+              id="feature"
+              {...register("features")}
+              placeholder="Species: Echinocereus..."
+              className={styles.inputTextarea}
+            />
+            <ErrosForm errors={errors?.features?.message} />
+          </div>
 
-          <textarea
-            id="feature"
-            {...register("features")}
-            placeholder="Species: Echinocereus..."
-            className={styles.inputTextarea}
-          />
           <label className={styles.inputLabel}>Description</label>
-          <textarea
-            id="description"
-            {...register("description")}
-            placeholder="Ladyfinger cactus..."
-            className={styles.inputTextarea}
-          />
+          <div>
+            <textarea
+              id="description"
+              {...register("description")}
+              placeholder="Ladyfinger cactus..."
+              className={styles.inputTextarea}
+            />
+            <ErrosForm errors={errors?.description?.message} />
+          </div>
 
           <ButtonForm type="submit">Register</ButtonForm>
         </form>
