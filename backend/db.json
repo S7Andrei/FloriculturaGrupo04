@@ -111,6 +111,48 @@
       "features": "Teste",
       "description": "Teste",
       "id": 12
+    },
+    {
+      "name": "Orquidia",
+      "subtitle": "Orquidia da Amazonia",
+      "label": [
+        "Flor",
+        "outdoor"
+      ],
+      "isInSale": "promo",
+      "price": "4546",
+      "discountPercentage": "20",
+      "features": "Species Orquidia",
+      "description": "Species Orquidia",
+      "id": 13
+    },
+    {
+      "name": "Teste",
+      "subtitle": "Teste",
+      "label": [
+        "Teste",
+        "indoor"
+      ],
+      "isInSale": "promo",
+      "price": "2323",
+      "discountPercentage": "34",
+      "features": "Teste",
+      "description": "Teste",
+      "id": 14
+    },
+    {
+      "name": "Cactus",
+      "subtitle": "Cactus",
+      "label": [
+        "Cactus",
+        "indoor"
+      ],
+      "isInSale": "promo",
+      "price": "32434",
+      "discountPercentage": "3434",
+      "features": "Cactus",
+      "description": "Cactus",
+      "id": 15
     }
   ]
 }

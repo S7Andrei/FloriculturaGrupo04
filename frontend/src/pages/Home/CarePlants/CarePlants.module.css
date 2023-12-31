@@ -3,7 +3,7 @@
   padding: 100px;
   display: flex;
   flex-direction: column;
-  gap: 100px;
+  gap: 82px;
 }
 
 .carePlantsTitle {
@@ -25,6 +25,12 @@
   font-family: var(--raleway);
   color: var(--gray);
   text-align: center;
+  font-weight: 400;
+  line-height: 27.87px;
+  letter-spacing: 0.08px;
+  word-wrap: break-word;
+  width: 75%;
+  margin: auto;
 }
 
 .carePlantsParagraph {
@@ -34,6 +40,7 @@
   line-height: 27.87px;
   letter-spacing: 0.08px;
   word-wrap: break-word;
+  font-weight: 400;
 }
 
 .listItemParagraph {
@@ -55,6 +62,7 @@
   justify-items: center;
   justify-content: space-between;
   row-gap: 162px;
+  margin-bottom: 80px;
 }
 
 .containerGrid button {
