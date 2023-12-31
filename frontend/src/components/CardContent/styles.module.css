@@ -45,7 +45,7 @@
   width: fit-content;
   /* secondary/Secondary */
   font-family: Raleway;
-  font-size: 16px;
+  font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: 154.5%; /* 24.72px */
@@ -59,4 +59,21 @@
 
 .cardContent {
   margin-left: 20px;
+}
+
+#oldPrice {
+  color: var(--Dark-gray, #afb2aa);
+  font-family: Raleway;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 154.5%; /* 24.72px */
+  text-decoration-line: strikethrough;
+  text-decoration: line-through;
+}
+
+#priceContainer{
+  display: flex;
+  gap: 16px;
+  
 }
