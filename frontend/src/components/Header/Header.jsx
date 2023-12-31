@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { IoMenu } from "react-icons/io5";
-import { slide as Menu } from "react-burger-menu";
+//import { slide as Menu } from "react-burger-menu";
 
 import logo from "../../assets/logo.svg";
 import profile from "../../assets/profileLogo.svg";
@@ -42,7 +42,7 @@ const Header = () => {
           </li>
         </ul>
       </nav>
-      <IoMenu
+      {/* <IoMenu
         onClick={!showMenu ? handleMenuOpen : handleMenuClose}
         className={styles.mobileNav}
       />
@@ -71,7 +71,7 @@ const Header = () => {
             </li>
           </ul>
         </nav>
-      </Menu>
+      </Menu> */}
       <figure>
         <img src={profile} alt="" style={{ width: "50px" }} />
       </figure>
