@@ -122,21 +122,8 @@
   line-height: 22px;
 }
 
-#erros{
-  font-family: "Inter", sans-serif;
-  color: var(--luna-green);
-  font-size: var(--fonte-pequena);
-  background-color: transparent;
-  display: flex;
-  justify-content: center;
-  
-}
-#erros:hover{
-  transition:  0.5s ease;
-  color: red;
-}
-
 .errosPriceContainer{
   display: flex;
-  gap: 35px
+  gap: 119px;
+  margin-top: -4vh;
 }
