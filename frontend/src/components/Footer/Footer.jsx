@@ -57,7 +57,7 @@ const Footer = () => {
         </figure>
         <ul className={styles.footerList}>
           <li>
-            <h3 style={{ textAlign: "center" }}>
+            <h3 className={styles.rights}>
               Compassinhos ®. All rights <br /> reserved.
             </h3>
           </li>
