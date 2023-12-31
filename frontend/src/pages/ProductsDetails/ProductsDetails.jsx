@@ -5,6 +5,7 @@ import styles from "./styles.module.css";
 import imgPlant from "../../assets/plants.png";
 import ButtonHome from "../../components/UI/Home/ButtonHome/ButtonHome";
 import { useEffect, useState } from "react";
+import SplitFeature from "./SplitFeature";
 
 const ProductsDetails = () => {
   const [isFetching, setIsFetching] = useState(true);
@@ -33,7 +34,6 @@ const ProductsDetails = () => {
     )}`;
   };
 
-  //const splitFeatures = plantSelected.features.split(".");
   return (
     <>
       {!isFetching && (
@@ -60,16 +60,14 @@ const ProductsDetails = () => {
               <p id={styles.price}>{price}</p>
 
               <ButtonHome onClick={handleSearch}>Check out</ButtonHome>
-              <div className={styles.features}>
-                <p id={styles.price}>Features</p>
-                {/* {splitFeatures.map((sentence, index) => (
-              <li key={index}>{sentence.trim()}</li>
-            ))} */}
-              </div>
 
+              <p id={styles.price}>Features</p>
+
+              <SplitFeature plantSelected={plantSelected} />
+
+              <p id={styles.price}>Description</p>
               <div className={styles.description}>
-                <p id={styles.price}>Description</p>
-                <p>{plantSelected.description}</p>
+                <p id={styles.description}>{plantSelected.description}</p>
               </div>
             </div>
           </div>
