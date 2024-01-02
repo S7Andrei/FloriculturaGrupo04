@@ -1,12 +1,14 @@
 import { useState } from "react";
 import { IoMenu } from "react-icons/io5";
-//import { slide as Menu } from "react-burger-menu";
+import { slide as Menu } from "react-burger-menu";
 
 import logo from "../../assets/logo.svg";
 import profile from "../../assets/profileLogo.svg";
 
 import Nav from "../UI/Nav/Nav";
 import styles from "./Header.module.css";
+
+
 
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -18,6 +20,24 @@ const Header = () => {
   const handleMenuClose = () => {
     setShowMenu(false);
   };
+
+  let hamburguer = { 
+    bmOverlay: {
+      padding: '20%',
+      alignItems: 'center'
+  },
+  bmItem: {
+    display: 'inline-block',
+    padding: '1em',
+    fontSize: '1em',
+    margin: '1em 20em 1em 2em',
+    lineHeight: '2em'
+  },
+  bmMenuWrap: {
+    width: '100%',
+    height: '40%'
+  },
+}
 
   return (
     <div className={styles.container}>
@@ -47,16 +67,18 @@ const Header = () => {
             </li>
           </ul>
         </nav>
-        {/* <IoMenu
+        <IoMenu
         onClick={!showMenu ? handleMenuOpen : handleMenuClose}
         className={styles.mobileNav}
       />
       <Menu
+
         isOpen={showMenu}
         onClose={handleMenuClose}
-        right
-        width={"50%"}
+        left
+        width={"5%"}
         customBurgerIcon={false}
+        styles={hamburguer}
       >
         <nav>
           <ul>
@@ -76,7 +98,7 @@ const Header = () => {
             </li>
           </ul>
         </nav>
-      </Menu> */}
+      </Menu>
         <figure>
           <img
             src={profile}
@@ -85,6 +107,7 @@ const Header = () => {
           />
         </figure>
       </header>
+    
     </div>
   );
 };
