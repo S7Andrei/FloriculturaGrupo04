@@ -14,6 +14,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 
 import * as yup from "yup";
 import ErrosForm from "../../components/ErrosForm/ErrosForm";
+import { useState } from "react";
 
 const schema = yup
   .object({
@@ -57,6 +58,7 @@ const schema = yup
 
 const Register = () => {
   const dispatch = useDispatch();
+  const [label, setLabel] = useState("indoor");
 
   const {
     register,
@@ -132,31 +134,33 @@ const Register = () => {
         >
           <h2 className={styles.registerTitle}>Plant Registration</h2>
 
-          <p className={styles.inputContainer}>
-            <label className={styles.inputLabel}>Plant Name</label>
-            <input
-              id="name"
-              type="text"
-              placeholder="Echinocereus Cactus"
-              className={styles.inputForm}
-              {...register("name")}
-            />
+          <div className={styles.plantsNamesControl}>
+            <p className={styles.inputContainer}>
+              <label className={styles.inputLabel}>Plant Name</label>
+              <input
+                id="name"
+                type="text"
+                placeholder="Echinocereus Cactus"
+                className={styles.inputForm}
+                {...register("name")}
+              />
 
-            <ErrosForm errors={errors?.name?.message} />
-          </p>
+              <ErrosForm errors={errors?.name?.message} />
+            </p>
 
-          <p className={styles.inputContainer}>
-            <label className={styles.inputLabel}>Plant Subtitle</label>
-            <input
-              id="subtitle"
-              type="text"
-              placeholder="A majestic addition to your plant collection"
-              className={styles.inputForm}
-              {...register("subtitle")}
-            />
+            <p className={styles.inputContainer}>
+              <label className={styles.inputLabel}>Plant Subtitle</label>
+              <input
+                id="subtitle"
+                type="text"
+                placeholder="A majestic addition to your plant collection"
+                className={styles.inputForm}
+                {...register("subtitle")}
+              />
 
-            <ErrosForm errors={errors?.subtitle?.message} />
-          </p>
+              <ErrosForm errors={errors?.subtitle?.message} />
+            </p>
+          </div>
 
           <p className={styles.inputContainer}>
             <label className={styles.inputLabel}>Plant Type</label>
@@ -173,7 +177,7 @@ const Register = () => {
 
           {/* <label className={styles.inputLabel}>Discount percentage</label> */}
 
-          <p className={styles.inputContainer}>
+          <div className={styles.inputContainer}>
             <label className={styles.inputLabel}>Price</label>
             <p className={styles.halfInputs}>
               <input
@@ -193,7 +197,7 @@ const Register = () => {
                 {...register("discountPercentage")}
               />
             </p>
-          </p>
+          </div>
           <div className={styles.errosPriceContainer}>
             <ErrosForm errors={errors?.price?.message} />
             <ErrosForm errors={errors?.discountPercentage?.message} />
@@ -202,49 +206,68 @@ const Register = () => {
           <div>
             <h3 className={styles.labelRadios}>Label:</h3>
             <div className={styles.inputRadioControl}>
-              <label className={styles.inputRadioLabel}>indoor</label>
-              <input
-                id="indoor"
-                type="radio"
-                value="indoor"
-                {...register("labelDoor")}
-                className={styles.inputRadio}
-                checked="indoor"
-              />
-              <label className={styles.inputRadioLabel}>outdoor</label>
-              <input
-                id="outdoor"
-                type="radio"
-                {...register("labelDoor")}
-                checked="outdoor"
-                value="outdoor"
-                className={styles.inputRadio}
-              />
+              <p className={styles.inputRadioContainer}>
+                <input
+                  id="indoor"
+                  type="radio"
+                  value="indoor"
+                  {...register("labelDoor")}
+                  className={styles.inputRadio}
+                  checked={label === "indoor"}
+                  onChange={() => setLabel("indoor")}
+                />
+                <label
+                  className={`${styles.inputRadioLabel} ${
+                    label ? styles.checkedLabel : ""
+                  }`}
+                >
+                  indoor
+                </label>
+              </p>
+              <p className={styles.inputRadioContainer}>
+                <input
+                  id="outdoor"
+                  type="radio"
+                  {...register("labelDoor")}
+                  checked={label === "outdoor"}
+                  value="outdoor"
+                  className={styles.inputRadio}
+                  onChange={() => setLabel("outdoor")}
+                />
+                <label
+                  className={`${styles.inputRadioLabel} ${
+                    label ? styles.checkedLabel : ""
+                  }`}
+                >
+                  outdoor
+                </label>
+              </p>
             </div>
           </div>
 
-          <p className={styles.inputContainer}>
-            <label className={styles.inputLabel}>Features</label>
-            <textarea
-              id="feature"
-              {...register("features")}
-              placeholder="Species: Echinocereus..."
-              className={styles.inputTextarea}
-            />
-            <ErrosForm errors={errors?.features?.message} />
-          </p>
+          <div className={styles.textareaControl}>
+            <p className={styles.inputContainer}>
+              <label className={styles.inputLabel}>Features</label>
+              <textarea
+                id="feature"
+                {...register("features")}
+                placeholder="Species: Echinocereus..."
+                className={styles.inputTextarea}
+              />
+              <ErrosForm errors={errors?.features?.message} />
+            </p>
 
-          <p className={styles.inputContainer}>
-            <label className={styles.inputLabel}>Description</label>
-            <textarea
-              id="description"
-              {...register("description")}
-              placeholder="Ladyfinger cactus..."
-              className={styles.inputTextarea}
-            />
-            <ErrosForm errors={errors?.description?.message} />
-          </p>
-
+            <p className={styles.inputContainer}>
+              <label className={styles.inputLabel}>Description</label>
+              <textarea
+                id="description"
+                {...register("description")}
+                placeholder="Ladyfinger cactus..."
+                className={styles.inputTextarea}
+              />
+              <ErrosForm errors={errors?.description?.message} />
+            </p>
+          </div>
           <ButtonForm type="submit">Register</ButtonForm>
         </form>
         <figure id={styles.img}>
