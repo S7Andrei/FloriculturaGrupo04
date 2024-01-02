@@ -67,3 +67,9 @@ body {
   font-family: "Inter";
   src: url("path/to/inter.woff2") format("woff2");
 }
+
+@media (max-width: 768px) {
+  :root {
+    --fonte-pequena: 12px;
+  }
+}
