@@ -35,7 +35,8 @@ const schema = yup
     description: yup
       .string()
       .required("Description it is a mandatory field")
-      .min(5),
+      .min(5)
+      .max(99),
     discountPercentage: yup
       .number()
       .positive()
