@@ -3,7 +3,7 @@ import felipeImg from "../../assets/staff/felipe.jpeg";
 import pedroImg from "../../assets/staff/pedro.png";
 import rodrigoImg from "../../assets/staff/rodrigo.png";
 
-import "./AboutUs.module.css";
+import styles from "./AboutUs.module.css";
 
 const AboutUs = () => {
   return (
@@ -17,23 +17,23 @@ const AboutUs = () => {
         <h1>Our members</h1>
         <div id="member">
           <h2>Andrei</h2>
-          <img src={andreiImg} alt="Picure of Andrei" />
           <p>Sales</p>
+          <img className={styles.staff-pic} src={andreiImg} alt="Picure of Andrei" />
         </div>
         <div id="member">
           <h2>Felipe</h2>
-          <img src={felipeImg} alt="Picure of Felipe" />
           <p>External Relations</p>
+          <img className={styles.staff-pic}  src={felipeImg} alt="Picure of Felipe" />
         </div>
         <div id="member">
           <h2>Pedro</h2>
-          <img src={pedroImg} alt="Picure of Pedro" />
           <p>Scientific Manager</p>
+          <img className={styles.staff-pic}  src={pedroImg} alt="Picure of Pedro" />
         </div>
         <div id="member">
           <h2>Felipe</h2>
-          <img src={rodrigoImg} alt="Picure of Rodrigo" />
           <p>Caretaker</p>
+          <img className={styles.staff-pic}  src={rodrigoImg} alt="Picure of Rodrigo" />
         </div>
       </article>
     </>
