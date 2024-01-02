@@ -133,31 +133,33 @@ const Register = () => {
         >
           <h2 className={styles.registerTitle}>Plant Registration</h2>
 
-          <p className={styles.inputContainer}>
-            <label className={styles.inputLabel}>Plant Name</label>
-            <input
-              id="name"
-              type="text"
-              placeholder="Echinocereus Cactus"
-              className={styles.inputForm}
-              {...register("name")}
-            />
+          <div className={styles.plantsNamesControl}>
+            <p className={styles.inputContainer}>
+              <label className={styles.inputLabel}>Plant Name</label>
+              <input
+                id="name"
+                type="text"
+                placeholder="Echinocereus Cactus"
+                className={styles.inputForm}
+                {...register("name")}
+              />
 
-            <ErrosForm errors={errors?.name?.message} />
-          </p>
+              <ErrosForm errors={errors?.name?.message} />
+            </p>
 
-          <p className={styles.inputContainer}>
-            <label className={styles.inputLabel}>Plant Subtitle</label>
-            <input
-              id="subtitle"
-              type="text"
-              placeholder="A majestic addition to your plant collection"
-              className={styles.inputForm}
-              {...register("subtitle")}
-            />
+            <p className={styles.inputContainer}>
+              <label className={styles.inputLabel}>Plant Subtitle</label>
+              <input
+                id="subtitle"
+                type="text"
+                placeholder="A majestic addition to your plant collection"
+                className={styles.inputForm}
+                {...register("subtitle")}
+              />
 
-            <ErrosForm errors={errors?.subtitle?.message} />
-          </p>
+              <ErrosForm errors={errors?.subtitle?.message} />
+            </p>
+          </div>
 
           <p className={styles.inputContainer}>
             <label className={styles.inputLabel}>Plant Type</label>
@@ -242,28 +244,29 @@ const Register = () => {
             </div>
           </div>
 
-          <p className={styles.inputContainer}>
-            <label className={styles.inputLabel}>Features</label>
-            <textarea
-              id="feature"
-              {...register("features")}
-              placeholder="Species: Echinocereus..."
-              className={styles.inputTextarea}
-            />
-            <ErrosForm errors={errors?.features?.message} />
-          </p>
+          <div className={styles.textareaControl}>
+            <p className={styles.inputContainer}>
+              <label className={styles.inputLabel}>Features</label>
+              <textarea
+                id="feature"
+                {...register("features")}
+                placeholder="Species: Echinocereus..."
+                className={styles.inputTextarea}
+              />
+              <ErrosForm errors={errors?.features?.message} />
+            </p>
 
-          <p className={styles.inputContainer}>
-            <label className={styles.inputLabel}>Description</label>
-            <textarea
-              id="description"
-              {...register("description")}
-              placeholder="Ladyfinger cactus..."
-              className={styles.inputTextarea}
-            />
-            <ErrosForm errors={errors?.description?.message} />
-          </p>
-
+            <p className={styles.inputContainer}>
+              <label className={styles.inputLabel}>Description</label>
+              <textarea
+                id="description"
+                {...register("description")}
+                placeholder="Ladyfinger cactus..."
+                className={styles.inputTextarea}
+              />
+              <ErrosForm errors={errors?.description?.message} />
+            </p>
+          </div>
           <ButtonForm type="submit">Register</ButtonForm>
         </form>
         <figure id={styles.img}>

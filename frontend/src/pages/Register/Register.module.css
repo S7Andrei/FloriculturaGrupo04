@@ -137,3 +137,15 @@
   flex-direction: column;
   gap: 16px;
 }
+
+.plantsNamesControl {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.textareaControl {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
