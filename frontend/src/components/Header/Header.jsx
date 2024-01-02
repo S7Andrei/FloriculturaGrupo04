@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { IoMenu } from "react-icons/io5";
 import { slide as Menu } from "react-burger-menu";
 
@@ -8,10 +8,10 @@ import profile from "../../assets/profileLogo.svg";
 import Nav from "../UI/Nav/Nav";
 import styles from "./Header.module.css";
 
-
-
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
+
+  const [windowSize, setWindowSize] = useState(window.innerWidth);
 
   const handleMenuOpen = () => {
     setShowMenu(true);
@@ -21,23 +21,40 @@ const Header = () => {
     setShowMenu(false);
   };
 
-  let hamburguer = { 
+  useEffect(() => {
+    const handleWindowsResize = () => {
+      setWindowSize(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleWindowsResize);
+
+    return () => {
+      window.removeEventListener("resize", handleWindowsResize);
+    };
+  }, []);
+
+  let mobileBreakPoint = false;
+  if (windowSize < 768) {
+    mobileBreakPoint = true;
+  }
+
+  let hamburguer = {
     bmOverlay: {
-      padding: '20%',
-      alignItems: 'center'
-  },
-  bmItem: {
-    display: 'inline-block',
-    padding: '1em',
-    fontSize: '1em',
-    margin: '1em 20em 1em 2em',
-    lineHeight: '2em'
-  },
-  bmMenuWrap: {
-    width: '100%',
-    height: '40%'
-  },
-}
+      padding: "20%",
+      alignItems: "center",
+    },
+    bmItem: {
+      display: "inline-block",
+      padding: "1em",
+      fontSize: "1em",
+      margin: "1em 20em 1em 2em",
+      lineHeight: "2em",
+    },
+    bmMenuWrap: {
+      width: "100%",
+      height: "40%",
+    },
+  };
 
   return (
     <div className={styles.container}>
@@ -68,37 +85,38 @@ const Header = () => {
           </ul>
         </nav>
         <IoMenu
-        onClick={!showMenu ? handleMenuOpen : handleMenuClose}
-        className={styles.mobileNav}
-      />
-      <Menu
-
-        isOpen={showMenu}
-        onClose={handleMenuClose}
-        left
-        width={"5%"}
-        customBurgerIcon={false}
-        styles={hamburguer}
-      >
-        <nav>
-          <ul>
-            <li>
-              <Nav to={"/"} end>
-                Home
-              </Nav>
-            </li>
-            <li>
-              <Nav to={"/register"}>Register</Nav>
-            </li>
-            <li>
-              <Nav to={"/products"}>Products</Nav>
-            </li>
-            <li>
-              <Nav to={"/about-us"}>About us</Nav>
-            </li>
-          </ul>
-        </nav>
-      </Menu>
+          onClick={!showMenu ? handleMenuOpen : handleMenuClose}
+          className={styles.mobileNav}
+        />
+        {mobileBreakPoint && (
+          <Menu
+            isOpen={showMenu}
+            onClose={handleMenuClose}
+            left
+            width={"5%"}
+            customBurgerIcon={false}
+            styles={hamburguer}
+          >
+            <nav>
+              <ul>
+                <li>
+                  <Nav to={"/"} end>
+                    Home
+                  </Nav>
+                </li>
+                <li>
+                  <Nav to={"/register"}>Register</Nav>
+                </li>
+                <li>
+                  <Nav to={"/products"}>Products</Nav>
+                </li>
+                <li>
+                  <Nav to={"/about-us"}>About us</Nav>
+                </li>
+              </ul>
+            </nav>
+          </Menu>
+        )}
         <figure>
           <img
             src={profile}
@@ -107,7 +125,6 @@ const Header = () => {
           />
         </figure>
       </header>
-    
     </div>
   );
 };
