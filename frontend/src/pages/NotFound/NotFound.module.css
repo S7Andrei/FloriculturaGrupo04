@@ -58,3 +58,8 @@
 [data-custom="textDec"] {
   text-decoration: none;
 }
+
+.btn{
+  display: flex;
+  justify-content: center;
+}
