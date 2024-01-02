@@ -7,7 +7,7 @@ import AboutUs from "./pages/AboutUs/AboutUs";
 import Products from "./pages/Products/Products";
 import Register from "./pages/Register/Register";
 
-import NotFound from "./pages/NotFound";
+import NotFound from "./pages/NotFound/NotFound";
 
 import "./App.css";
 import ProductsDetails from "./pages/ProductsDetails/ProductsDetails";
