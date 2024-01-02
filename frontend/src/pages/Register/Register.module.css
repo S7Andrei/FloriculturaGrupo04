@@ -25,9 +25,8 @@
 }
 
 .formContainer {
-  width: 35vw;
-  margin: 130px 100px;
-  margin-right: 0;
+  width: 30vw;
+  padding: 130px 100px;
   display: flex;
   flex-direction: column;
   gap: 40px;
@@ -153,4 +152,15 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
+}
+
+@media (max-width: 768px) {
+  .registerContainer figure {
+    display: none;
+  }
+
+  .formContainer {
+    width: 80vw;
+    margin: 135px auto;
+  }
 }
