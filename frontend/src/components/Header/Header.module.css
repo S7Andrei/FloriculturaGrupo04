@@ -1,13 +1,22 @@
+.container {
+  display: flex;
+  justify-content: center;
+}
+
 .headerContainer {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: transparent;
+  position: fixed;
+  z-index: 10;
+  width: 100vw;
+  background-color: var(--wisper);
+  padding: 16px 0;
 }
 
 .navBar {
   display: flex;
-  gap: 10px;
+  gap: 16px;
 }
 
 .mobileNav {
@@ -15,6 +24,7 @@
 }
 
 .navBar a {
+  font-family: var(--raleway);
   text-decoration: none;
 }
 
