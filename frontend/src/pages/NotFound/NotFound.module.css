@@ -57,6 +57,7 @@
   color: var(--white);
 }
 
+<<<<<<< HEAD
 [data-custom="imgC"] img {
   width: 40vw;
 }
@@ -92,4 +93,9 @@
       line-height: 65px;
     }
   }
+=======
+.btn{
+  display: flex;
+  justify-content: center;
+>>>>>>> 930ca72d4ca3a75832aa41b9776eb2b27ab3a2e1
 }
