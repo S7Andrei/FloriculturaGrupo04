@@ -96,7 +96,7 @@
 
 .inputRadio:checked {
   background-color: none;
-  background-image: url("../../../../assets/inputRadioSelected.svg");
+  background-image: url("../../assets/inputRadioSelected.svg");
   background-size: contain;
   background-repeat: no-repeat;
   border: none;
