@@ -7,11 +7,9 @@
   transition: box-shadow 0.3s ease-in-out;
   margin-top: 10px;
   padding-bottom: 33px;
-}
-
-.card:hover {
   box-shadow: 0px 6.476px 6px 0px rgba(41, 41, 41, 0.08);
 }
+
 
 #name {
   color: var(--Primary-Lunar-green, #354733);
