@@ -131,8 +131,8 @@ const Register = () => {
         >
           <h2 className={styles.registerTitle}>Plant Registration</h2>
 
-          <label className={styles.inputLabel}>Plant Name</label>
-          <div>
+          <p className={styles.inputContainer}>
+            <label className={styles.inputLabel}>Plant Name</label>
             <input
               id="name"
               type="text"
@@ -142,10 +142,10 @@ const Register = () => {
             />
 
             <ErrosForm errors={errors?.name?.message} />
-          </div>
+          </p>
 
-          <label className={styles.inputLabel}>Plant Subtitle</label>
-          <div>
+          <p className={styles.inputContainer}>
+            <label className={styles.inputLabel}>Plant Subtitle</label>
             <input
               id="subtitle"
               type="text"
@@ -155,10 +155,10 @@ const Register = () => {
             />
 
             <ErrosForm errors={errors?.subtitle?.message} />
-          </div>
+          </p>
 
-          <label className={styles.inputLabel}>Plant Type</label>
-          <div>
+          <p className={styles.inputContainer}>
+            <label className={styles.inputLabel}>Plant Type</label>
             <input
               id="type"
               type="text"
@@ -168,29 +168,31 @@ const Register = () => {
             />
 
             <ErrosForm errors={errors?.plantType?.message} />
-          </div>
+          </p>
 
-          <label className={styles.inputLabel}>Price</label>
           {/* <label className={styles.inputLabel}>Discount percentage</label> */}
-          <div className={styles.halfInputs}>
-            <input
-              id="price"
-              type="number"
-              placeholder="$139.99"
-              className={styles.inputForm}
-              step="0.01"
-              {...register("price")}
-            />
 
-            <input
-              id="discountPercentage"
-              type="number"
-              placeholder="20%"
-              step="0.01"
-              className={styles.inputForm}
-              {...register("discountPercentage")}
-            />
-          </div>
+          <p className={styles.inputContainer}>
+            <label className={styles.inputLabel}>Price</label>
+            <p className={styles.halfInputs}>
+              <input
+                id="price"
+                type="number"
+                placeholder="$139.99"
+                className={styles.inputForm}
+                step="0.01"
+                {...register("price")}
+              />
+              <input
+                id="discountPercentage"
+                type="number"
+                placeholder="20%"
+                step="0.01"
+                className={styles.inputForm}
+                {...register("discountPercentage")}
+              />
+            </p>
+          </p>
           <div className={styles.errosPriceContainer}>
             <ErrosForm errors={errors?.price?.message} />
             <ErrosForm errors={errors?.discountPercentage?.message} />
@@ -220,8 +222,8 @@ const Register = () => {
             </div>
           </div>
 
-          <label className={styles.inputLabel}>Features</label>
-          <div>
+          <p className={styles.inputContainer}>
+            <label className={styles.inputLabel}>Features</label>
             <textarea
               id="feature"
               {...register("features")}
@@ -229,10 +231,10 @@ const Register = () => {
               className={styles.inputTextarea}
             />
             <ErrosForm errors={errors?.features?.message} />
-          </div>
+          </p>
 
-          <label className={styles.inputLabel}>Description</label>
-          <div>
+          <p className={styles.inputContainer}>
+            <label className={styles.inputLabel}>Description</label>
             <textarea
               id="description"
               {...register("description")}
@@ -240,7 +242,7 @@ const Register = () => {
               className={styles.inputTextarea}
             />
             <ErrosForm errors={errors?.description?.message} />
-          </div>
+          </p>
 
           <ButtonForm type="submit">Register</ButtonForm>
         </form>

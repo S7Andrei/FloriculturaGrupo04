@@ -16,6 +16,10 @@
   transition: filter 0.3s ease;
 }
 
+.registerContainer figure img {
+  width: 60vw;
+}
+
 .registerContainer figure:hover {
   filter: grayscale(0);
 }
@@ -41,7 +45,7 @@
 
 .halfInputs {
   display: flex;
-  gap: 20px;
+  gap: 18px;
 }
 
 .inputRadioControl {
@@ -122,8 +126,14 @@
   line-height: 22px;
 }
 
-.errosPriceContainer{
+.errosPriceContainer {
   display: flex;
   gap: 119px;
   margin-top: -4vh;
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
