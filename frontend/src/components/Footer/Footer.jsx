@@ -32,6 +32,7 @@ const Footer = () => {
             <li>
               <h3 className={styles.footerInfo}>Blogs</h3>
             </li>
+        
           </ul>
 
           <ul className={styles.footerList}>
