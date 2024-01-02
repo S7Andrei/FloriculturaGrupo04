@@ -34,7 +34,7 @@ const ProductsDetails = () => {
   console.log("newprice " + priceF);
   const handleSearch = () => {
     const plantName = plantSelected.name;
-    window.location.href = `https://www.google.com/search?q=${encodeURIComponent(
+    window.location.href = `https://www.google.com/search?q=Comprar+${encodeURIComponent(
       plantName
     )}`;
   };
