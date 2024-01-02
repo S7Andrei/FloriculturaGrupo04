@@ -31,7 +31,7 @@ const ProductsDetails = () => {
     currency: "USD",
   }).format(price);
 
-  console.log('newprice ' + priceF)
+  console.log("newprice " + priceF);
   const handleSearch = () => {
     const plantName = plantSelected.name;
     window.location.href = `https://www.google.com/search?q=${encodeURIComponent(
@@ -42,9 +42,9 @@ const ProductsDetails = () => {
   return (
     <>
       {!isFetching && (
-        <>
+        <div className={styles.detailsContainer}>
           <div className={styles.plantsDetails}>
-            <div className={styles.imgContainer}>
+            <div >
               <img src={imgPlant} alt="Uma planta" id={styles.img} />
             </div>
 
@@ -61,9 +61,14 @@ const ProductsDetails = () => {
                   );
                 })}
               </div>
-              
-              <PriceFormated price={price} isInSale={isInSale} discont={discountPercentage} styles={styles}/>
-              
+
+              <PriceFormated
+                price={price}
+                isInSale={isInSale}
+                discont={discountPercentage}
+                styles={styles}
+              />
+
               <ButtonHome onClick={handleSearch}>Check out</ButtonHome>
 
               <p id={styles.price}>Features</p>
@@ -76,7 +81,7 @@ const ProductsDetails = () => {
               </div>
             </div>
           </div>
-        </>
+        </div>
       )}
     </>
   );
