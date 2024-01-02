@@ -45,7 +45,22 @@ const Products = ({ listagemTotal = false, filter }) => {
             </label>
           </div>
 
-        
+          <div>
+            <label className={styles.inputLabel}>
+              Show by Category:
+              <select
+                value={selectedCategory}
+                onChange={(e) => setSelectedCategory(e.target.value)}
+                className={styles.inputForm}
+              >
+                {categoryOptions.map((category) => (
+                  <option key={category} value={category}>
+                    {category}
+                  </option>
+                ))}
+              </select>
+            </label>
+          </div>
         </div>
 
         <div className={styles.productList}>
