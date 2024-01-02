@@ -20,29 +20,34 @@ const Header = () => {
   };
 
   return (
-    <header className={styles.headerContainer}>
-      <figure>
-        <img src={logo} alt="" style={{ width: "50px" }} />
-      </figure>
-      <nav className={styles.desktopNav}>
-        <ul className={styles.navBar}>
-          <li>
-            <Nav to={"/"} end>
-              Home
-            </Nav>
-          </li>
-          <li>
-            <Nav to={"/register"}>Register</Nav>
-          </li>
-          <li>
-            <Nav to={"/products"}>Products</Nav>
-          </li>
-          <li>
-            <Nav to={"/about-us"}>About us</Nav>
-          </li>
-        </ul>
-      </nav>
-      {/* <IoMenu
+    <div className={styles.container}>
+      <header className={styles.headerContainer}>
+        <figure>
+          <img
+            src={logo}
+            alt=""
+            style={{ width: "50px", marginLeft: "100px" }}
+          />
+        </figure>
+        <nav className={styles.desktopNav}>
+          <ul className={styles.navBar}>
+            <li>
+              <Nav to={"/"} end>
+                Home
+              </Nav>
+            </li>
+            <li>
+              <Nav to={"/register"}>Register</Nav>
+            </li>
+            <li>
+              <Nav to={"/products"}>Products</Nav>
+            </li>
+            <li>
+              <Nav to={"/about-us"}>About us</Nav>
+            </li>
+          </ul>
+        </nav>
+        {/* <IoMenu
         onClick={!showMenu ? handleMenuOpen : handleMenuClose}
         className={styles.mobileNav}
       />
@@ -72,10 +77,15 @@ const Header = () => {
           </ul>
         </nav>
       </Menu> */}
-      <figure>
-        <img src={profile} alt="" style={{ width: "50px" }} />
-      </figure>
-    </header>
+        <figure>
+          <img
+            src={profile}
+            alt=""
+            style={{ width: "50px", marginRight: "100px" }}
+          />
+        </figure>
+      </header>
+    </div>
   );
 };
 
