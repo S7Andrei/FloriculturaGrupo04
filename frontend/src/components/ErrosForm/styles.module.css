@@ -1,0 +1,11 @@
+#erros {
+  font-family: "Inter", sans-serif;
+  color: red;
+  font-size: var(--fonte-pequena);
+  background-color: transparent;
+}
+#erros:hover {
+  transition: 0.5s ease;
+
+  color: var(--luna-green);
+}

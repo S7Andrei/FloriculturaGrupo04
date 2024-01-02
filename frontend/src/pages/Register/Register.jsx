@@ -1,207 +1,247 @@
-import { useState } from "react";
+/* eslint-disable no-unused-vars */
 import { useDispatch } from "react-redux";
 import { plantsActions } from "../../store/plants/plantsSlice";
 import { getPlants } from "../../store/plants/plantsAction";
-import Input from "../../components/UI/Form/Input/Input";
 
 import styles from "./Register.module.css";
-import Textarea from "../../components/UI/Form/Textarea/Textarea";
+
 import ButtonForm from "../../components/UI/Form/ButtonForm/ButtonForm";
-import InputRadio from "../../components/UI/Form/InputRadio/InputRadio";
+
 import plant from "../../assets//plantForm.svg";
 
-const Register = () => {
-  const [plantName, setPlantName] = useState("");
-  const [plantSubtitle, setPlantSubtitle] = useState("");
-  const [plantType, setPlantType] = useState("");
-  const [price, setPrice] = useState("");
-  const [discountPercentage, setDiscountPercentage] = useState("");
-  const [label, setLabel] = useState("indoor");
-  const [features, setFeatures] = useState("");
-  const [description, setDescription] = useState("");
-  const [errors, setErrors] = useState({});
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
 
+import * as yup from "yup";
+import ErrosForm from "../../components/ErrosForm/ErrosForm";
+
+const schema = yup
+  .object({
+    name: yup
+      .string()
+      .required("Name it is a mandatory field")
+      .min(5, "Name must have at least 5 characters")
+      .matches(/^[^\d]+$/, "Name must not contain numbers"),
+    subtitle: yup
+      .string()
+      .required("Subtitle it is a mandatory field")
+      .min(5, "Subtitle must have at least 5 characters"),
+    price: yup
+      .number()
+      .positive()
+      .required("Price it is a mandatory field")
+      .typeError("Enter a valid number")
+      .min(1),
+    description: yup
+      .string()
+      .required("Description it is a mandatory field")
+      .min(5),
+    discountPercentage: yup
+      .number()
+      .positive()
+      .required("Discount Percentage it is a mandatory field")
+      .typeError("Enter a valid number")
+      .min(1),
+    features: yup
+      .string()
+      .required("Features it is a mandatory field")
+      .min(5, "Features must have at least 5 characters"),
+    plantType: yup
+      .string()
+      .required("Plant Type it is a mandatory field")
+      .min(5, "Plant Type must have at least 5 characters")
+      .matches(/^[^\d]+$/, "Plant Type must not contain numbers"),
+  })
+  .required();
+
+const Register = () => {
   const dispatch = useDispatch();
+
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm({ resolver: yupResolver(schema) });
 
   async function updateStatePlants() {
     const data = await getPlants();
     dispatch(plantsActions.handleGetPlants(data));
   }
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmitForm = (data) => {
+    let isInSale;
 
-    const validationErrors = {};
-    if (!plantName) {
-      validationErrors.plantName = "Plant Name is required";
-    }
-    if (!plantSubtitle) {
-      validationErrors.plantSubtitle = "Plant Subtitle is required";
-    }
-    if (!plantType) {
-      validationErrors.plantType = "Plant Type is required";
-    }
-    if (!price) {
-      validationErrors.price = "Price is required";
-    }
+    const {
+      description,
+      discountPercentage,
+      features,
+      labelDoor,
+      name,
+      plantType,
+      price,
+      subtitle,
+    } = data;
 
-    if (Object.keys(validationErrors).length > 0) {
-      setErrors(validationErrors);
+    if (discountPercentage > 0) {
+      isInSale = "promo";
     } else {
-      const myData = new FormData(e.target);
-
-      let isInSale;
-      const data = Object.fromEntries(myData.entries());
-      const {
-        description,
-        discountPercentage,
-        features,
-        labelDoor,
-        name,
-        plantType,
-        price,
-        subtitle,
-      } = data;
-
-      if (discountPercentage > 0) {
-        isInSale = "promo";
-      } else {
-        isInSale = "notPromo";
-      }
-
-      console.log(description);
-      console.log(data);
-
-      const plantsObject = {
-        name: name,
-        subtitle: subtitle,
-        label: [plantType, labelDoor],
-        isInSale,
-        price: price,
-        discountPercentage: discountPercentage,
-        features: features,
-        description: description,
-      };
-
-      fetch("http://localhost:3000/plants", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-
-        body: JSON.stringify(plantsObject),
-      })
-        .then((response) => {
-          if (response.ok) {
-            console.log("Form submitted successfully");
-
-            updateStatePlants();
-
-            e.target.reset();
-            setErrors({});
-          } else {
-            throw new Error("Failed to submit form");
-          }
-        })
-        .catch((error) => {
-          console.error("Form submission error:", error);
-        });
+      isInSale = "notPromo";
     }
+
+    const plantsObject = {
+      name: name,
+      subtitle: subtitle,
+      label: [plantType, labelDoor],
+      isInSale,
+      price: price,
+      discountPercentage: discountPercentage,
+      features: features,
+      description: description,
+    };
+
+    fetch("http://localhost:3000/plants", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+
+      body: JSON.stringify(plantsObject),
+    })
+      .then((response) => {
+        if (response.ok) {
+          console.log("Form submitted successfully");
+
+          updateStatePlants();
+        } else {
+          throw new Error("Failed to submit form");
+        }
+      })
+      .catch((error) => {
+        console.error("Form submission error:", error);
+      });
   };
 
   return (
     <>
       <section className={styles.registerContainer}>
-        <form onSubmit={handleSubmit} className={styles.formContainer}>
+        <form
+          onSubmit={handleSubmit(handleSubmitForm)}
+          className={styles.formContainer}
+        >
           <h2 className={styles.registerTitle}>Plant Registration</h2>
-          <Input
-            id={"name"}
-            name={"name"}
-            placeholder={"Echinocereus Cactus"}
-            label={"Plant Name"}
-            value={plantName}
-            onChange={(e) => setPlantName(e.target.value)}
-            erroMsg={errors.plantName}
-          />
-          <Input
-            id={"subtitle"}
-            name={"subtitle"}
-            placeholder={"A majestic addition to your plant collection"}
-            label={"Plant Subtitle"}
-            value={plantSubtitle}
-            onChange={(e) => setPlantSubtitle(e.target.value)}
-            erroMsg={errors.plantSubtitle}
-          />
-          <Input
-            id={"plantType"}
-            name={"plantType"}
-            label={"Plant Type"}
-            placeholder={"Cactus"}
-            value={plantType}
-            onChange={(e) => setPlantType(e.target.value)}
-            erroMsg={errors.plantType}
-          />
-          <div className={styles.halfInputs}>
-            <Input
-              id={"price"}
-              name="price"
-              label={"Price"}
-              type="number"
-              placeholder={"$139.99"}
-              value={price}
-              onChange={(e) => setPrice(e.target.value)}
-              erroMsg={errors.price}
+
+          <label className={styles.inputLabel}>Plant Name</label>
+          <div>
+            <input
+              id="name"
+              type="text"
+              placeholder="Echinocereus Cactus"
+              className={styles.inputForm}
+              {...register("name")}
             />
-            <Input
-              id={"discountPercentage"}
-              name="discountPercentage"
-              label={"Discount Percentage"}
+
+            <ErrosForm errors={errors?.name?.message} />
+          </div>
+
+          <label className={styles.inputLabel}>Plant Subtitle</label>
+          <div>
+            <input
+              id="subtitle"
+              type="text"
+              placeholder="A majestic addition to your plant collection"
+              className={styles.inputForm}
+              {...register("subtitle")}
+            />
+
+            <ErrosForm errors={errors?.subtitle?.message} />
+          </div>
+
+          <label className={styles.inputLabel}>Plant Type</label>
+          <div>
+            <input
+              id="type"
+              type="text"
+              placeholder="Cactus"
+              className={styles.inputForm}
+              {...register("plantType")}
+            />
+
+            <ErrosForm errors={errors?.plantType?.message} />
+          </div>
+
+          <label className={styles.inputLabel}>Price</label>
+          {/* <label className={styles.inputLabel}>Discount percentage</label> */}
+          <div className={styles.halfInputs}>
+            <input
+              id="price"
               type="number"
-              placeholder={"20%"}
-              value={discountPercentage}
-              onChange={(e) => setDiscountPercentage(e.target.value)}
-              erroMsg={errors.discountPercentage}
+              placeholder="$139.99"
+              className={styles.inputForm}
+              step="0.01"
+              {...register("price")}
+            />
+
+            <input
+              id="discountPercentage"
+              type="number"
+              placeholder="20%"
+              step="0.01"
+              className={styles.inputForm}
+              {...register("discountPercentage")}
             />
           </div>
+          <div className={styles.errosPriceContainer}>
+            <ErrosForm errors={errors?.price?.message} />
+            <ErrosForm errors={errors?.discountPercentage?.message} />
+          </div>
+
           <div>
             <h3 className={styles.labelRadios}>Label:</h3>
             <div className={styles.inputRadioControl}>
-              <InputRadio
-                id={"indoor"}
+              <label className={styles.inputRadioLabel}>indoor</label>
+              <input
+                id="indoor"
+                type="radio"
                 value="indoor"
-                label={"Indoor"}
-                checked={label === "indoor"}
-                name="labelDoor"
-                onChange={() => setLabel("indoor")}
+                {...register("labelDoor")}
+                className={styles.inputRadio}
+                checked="indoor"
               />
-              <InputRadio
-                id={"outdoor"}
-                name="labelDoor"
+              <label className={styles.inputRadioLabel}>outdoor</label>
+              <input
+                id="outdoor"
+                type="radio"
+                {...register("labelDoor")}
+                checked="outdoor"
                 value="outdoor"
-                label={"Outdoor"}
-                checked={label === "outdoor"}
-                onChange={() => setLabel("outdoor")}
+                className={styles.inputRadio}
               />
             </div>
           </div>
-          <Textarea
-            id={"feature"}
-            name="features"
-            label={"Features"}
-            placeholder={"Species: Echinocereus..."}
-            errorMsg={""}
-            value={features}
-            onChange={(e) => setFeatures(e.target.value)}
-          />
-          <Textarea
-            id={"description"}
-            name="description"
-            label={"Description"}
-            placeholder={"Ladyfinger cactus..."}
-            errorMsg={errors.description}
-            value={description}
-            onChange={(e) => setDescription(e.target.value)}
-          />
+
+          <label className={styles.inputLabel}>Features</label>
+          <div>
+            <textarea
+              id="feature"
+              {...register("features")}
+              placeholder="Species: Echinocereus..."
+              className={styles.inputTextarea}
+            />
+            <ErrosForm errors={errors?.features?.message} />
+          </div>
+
+          <label className={styles.inputLabel}>Description</label>
+          <div>
+            <textarea
+              id="description"
+              {...register("description")}
+              placeholder="Ladyfinger cactus..."
+              className={styles.inputTextarea}
+            />
+            <ErrosForm errors={errors?.description?.message} />
+          </div>
+
           <ButtonForm type="submit">Register</ButtonForm>
         </form>
         <figure id={styles.img}>
