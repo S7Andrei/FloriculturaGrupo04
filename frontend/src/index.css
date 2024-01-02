@@ -69,7 +69,4 @@ body {
 }
 
 @media (max-width: 768px) {
-  :root {
-    --fonte-pequena: 12px;
-  }
 }

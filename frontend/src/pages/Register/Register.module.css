@@ -25,13 +25,13 @@
 }
 
 .formContainer {
-  margin: 100px;
+  width: 35vw;
+  margin: 130px 100px;
   margin-right: 0;
   display: flex;
   flex-direction: column;
-  width: fit-content;
   gap: 40px;
-  z-index: 0;
+  z-index: 1;
 }
 
 .registerTitle {
@@ -43,9 +43,14 @@
   font-weight: 600;
 }
 
-.halfInputs {
+.halfInputsContainer {
   display: flex;
+  justify-content: space-between;
   gap: 18px;
+}
+
+.halfInput {
+  width: 50%;
 }
 
 .inputRadioControl {
