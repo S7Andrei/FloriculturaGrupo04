@@ -42,43 +42,41 @@ const ProductsDetails = () => {
   return (
     <>
       {!isFetching && (
-        <div className={styles.detailsContainer}>
-          <div className={styles.plantsDetails}>
-            <div >
-              <img src={imgPlant} alt="Uma planta" id={styles.img} />
+        <div className={styles.plantsDetails}>
+          <div className={styles.imgContainer}>
+            <img src={imgPlant} alt="Uma planta" id={styles.img} />
+          </div>
+
+          <div className={styles.plantContent}>
+            <p id={styles.name}>{plantSelected.name}</p>
+            <p id={styles.subtitle}>{plantSelected.subtitle}</p>
+
+            <div className={styles.labelContainer}>
+              {plantSelected.label.map((label) => {
+                return (
+                  <p key={label} id={styles.label}>
+                    {label}
+                  </p>
+                );
+              })}
             </div>
 
-            <div className={styles.plantContent}>
-              <p id={styles.name}>{plantSelected.name}</p>
-              <p id={styles.subtitle}>{plantSelected.subtitle}</p>
+            <PriceFormated
+              price={price}
+              isInSale={isInSale}
+              discont={discountPercentage}
+              styles={styles}
+            />
 
-              <div className={styles.labelContainer}>
-                {plantSelected.label.map((label) => {
-                  return (
-                    <p key={label} id={styles.label}>
-                      {label}
-                    </p>
-                  );
-                })}
-              </div>
+            <ButtonHome onClick={handleSearch}>Check out</ButtonHome>
 
-              <PriceFormated
-                price={price}
-                isInSale={isInSale}
-                discont={discountPercentage}
-                styles={styles}
-              />
+            <p id={styles.price}>Features</p>
 
-              <ButtonHome onClick={handleSearch}>Check out</ButtonHome>
+            <SplitFeature plantSelected={plantSelected} styles={styles} />
 
-              <p id={styles.price}>Features</p>
-
-              <SplitFeature plantSelected={plantSelected} styles={styles} />
-
-              <p id={styles.price}>Description</p>
-              <div className={styles.description}>
-                <p id={styles.description}>{plantSelected.description}</p>
-              </div>
+            <p id={styles.price}>Description</p>
+            <div className={styles.description}>
+              <p id={styles.description}>{plantSelected.description}</p>
             </div>
           </div>
         </div>
