@@ -4,7 +4,6 @@
   flex-direction: column;
   align-items: center;
   padding: 2em;
-
 }
 .aboutH1 {
   font-size: var(--fonte-grande);
@@ -28,7 +27,6 @@
   justify-content: center;
   text-align: center;
 }
-
 
 .aboutTitle {
   font-size: var(--fonte-grande);
@@ -56,11 +54,12 @@
   filter: grayscale(0);
 }
 
-.membersContainer{
+.membersContainer {
   display: flex;
-  
 }
 
-#member{
-
+@media (max-width: 600px) {
+  .membersContainer {
+    flex-direction: column;
+  }
 }
