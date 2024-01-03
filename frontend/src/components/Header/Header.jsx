@@ -43,7 +43,7 @@ const Header = () => {
       marginTop: "2em",
       padding: "2em",
       alignItems: "center",
-      background: "rgba(0, 0, 0, 0.2)",
+      background: "rgba(0, 0, 0, 0.6)",
     },
     bmItem: {
       display: "inline-block",

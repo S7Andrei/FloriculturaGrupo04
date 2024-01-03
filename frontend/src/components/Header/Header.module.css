@@ -29,6 +29,10 @@
   text-decoration: none;
 }
 
+.menuItem {
+  color: #fff !important;
+}
+
 @media (max-width: 768px) {
   .navBar {
     display: none;
@@ -42,10 +46,6 @@
 
   .desktopNav {
     display: none;
-  }
-
-  .menuItem {
-    color: #fff !important;
   }
 }
 
