@@ -43,8 +43,7 @@ const Header = () => {
       marginTop: "2em",
       padding: "2em",
       alignItems: "center",
-      background: "rgba(0, 0, 0, 0.7)",
-      textDecoration: "none",
+      background: "rgba(0, 0, 0, 0.2)",
     },
     bmItem: {
       display: "inline-block",
@@ -53,11 +52,9 @@ const Header = () => {
       margin: "1em 20em 1em 2em",
       lineHeight: "2em",
       fontFamily: "Raleway, cursive",
-    },
-    bmItemList: {
-      textDecoration: "none",
       color: "#FFF",
     },
+    bmItemList: {},
     bmMenuWrap: {
       width: "100%",
       height: "40%",
