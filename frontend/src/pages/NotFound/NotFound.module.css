@@ -20,34 +20,9 @@
 
 [data-custom="erContainer"] {
   display: flex;
-
   justify-content: space-between;
   align-items: center;
   padding: 130px 100px;
-}
-
-[data-custom="btnbackContainer"] {
-  background: linear-gradient(to right, #354733 50%, white 50%);
-  background-size: 200% 100%;
-  color: white;
-  border: none;
-  cursor: pointer;
-  transition: background-position 0.3s ease;
-  width: 170px;
-  height: 62px;
-  color: var(--Athena-Grey, #f8f9fb);
-  text-align: center;
-  font-family: Raleway;
-  font-size: var(--fonte-media);
-  font-style: normal;
-  font-weight: 400;
-  line-height: 65px;
-}
-
-[data-custom="btnbackContainer"]:hover {
-  background-position: -100% 0;
-  color: black;
-  border: 1px solid var(--Primary-Lunar-green, #354733);
 }
 
 [data-custom="textDec"] {
@@ -56,6 +31,10 @@
   color: var(--white);
 }
 
+[data-custom="imgC"] {
+  width: 30vw;
+  align-items: center;
+ }
 
 [data-custom="btnBack"] {
   background: linear-gradient(to right, #354733 50%, white 50%);
@@ -91,35 +70,49 @@
 }
 
 @media screen {
+@media (max-width:1270px){
+  [data-custom="imgC"] img {
+    width: 40vw;
+  }
+
+  [data-custom="titleOps"] {
+    line-height: 80px;
+  }
+
+  [data-custom="erContainer"] {
+    flex-direction: column-reverse;
+  }
+}
+
   @media (max-width: 768px) {
-    [data-custom="titleOps"] {
+    [data-custom="erContainer"] {
+      padding: 50px;
+    }
+
+    [data-custom="imgC"] {
+        padding: 40px;
+        width: 40vw;
+     }
+
+    [data-custom="titleOps"]{
       margin-bottom: 50px;
     }
 
-    [data-custom="titleOps"] {
-      line-height: 100px;
-  
-    }
-
-    [data-custom="erContainer"] {
-      display: flex;
-      flex-direction: column-reverse;
-      width: 90%;
-      padding: 0;
-      margin: 130px auto;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    [data-custom="imgC"] img {
-      width: 237px;
-      height: 237px;
-      align-items: center;
-     }
   }
+
   @media (max-width: 425px) {
     [data-custom="erContainer"] {
-      margin: center;
+      padding: 25px;
     }
-}
+
+    [data-custom="titleOps"] {
+      line-height: 60px;
+    }
+
+    [data-custom="imgC"] {
+      display: none;
+     }
+
+  }
+
 }
