@@ -13,6 +13,10 @@ const HomeOne = () => {
     navigate(`/products/`);
   };
 
+  const handleSearch = () => {
+    window.location.href = `https://www.rhs.org.uk/advice/beginners-guide`;
+  };
+
   return (
     <>
       <section className={styles.homeOneContainer}>
@@ -36,15 +40,11 @@ const HomeOne = () => {
             Shop now
           </ButtonHome>
 
-          <p id={styles.learn}>
-            Learn Gardening <img src={arrow} />
-          </p>
-
-          
+          <button id={styles.learn} onClick={handleSearch}>
+            Learn Gardening <img src={arrow} id={styles.arrow} />
+          </button>
         </div>
-        <figure id={styles.plantLeft}>
-          
-          </figure>
+        <figure id={styles.plantLeft}></figure>
         <figure id={styles.img}>
           <img src={plant} />
         </figure>
