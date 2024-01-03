@@ -38,18 +38,23 @@ const Header = () => {
     mobileBreakPoint = true;
   }
 
-  let hamburguer = {
+  let hamburguerMenuStyles = {
     bmOverlay: {
-      padding: "20%",
+      marginTop: "2em",
+      padding: "2em",
       alignItems: "center",
+      background: "rgba(0, 0, 0, 0.6)",
     },
     bmItem: {
       display: "inline-block",
-      padding: "1em",
+      padding: "3em",
       fontSize: "1em",
       margin: "1em 20em 1em 2em",
       lineHeight: "2em",
+      fontFamily: "Raleway, cursive",
+      color: "#FFF",
     },
+    bmItemList: {},
     bmMenuWrap: {
       width: "100%",
       height: "40%",
@@ -93,25 +98,30 @@ const Header = () => {
             isOpen={showMenu}
             onClose={handleMenuClose}
             left
-            width={"5%"}
             customBurgerIcon={false}
-            styles={hamburguer}
+            styles={hamburguerMenuStyles}
           >
             <nav>
               <ul>
                 <li>
-                  <Nav to={"/"} end>
+                  <Nav className={styles.menuItem} to={"/"} end>
                     Home
                   </Nav>
                 </li>
                 <li>
-                  <Nav to={"/register"}>Register</Nav>
+                  <Nav className="menu-item" to={"/register"}>
+                    Register
+                  </Nav>
                 </li>
                 <li>
-                  <Nav to={"/products"}>Products</Nav>
+                  <Nav className="menu-item" to={"/products"}>
+                    Products
+                  </Nav>
                 </li>
                 <li>
-                  <Nav to={"/about-us"}>About us</Nav>
+                  <Nav className="menu-item" to={"/about-us"}>
+                    About us
+                  </Nav>
                 </li>
               </ul>
             </nav>
