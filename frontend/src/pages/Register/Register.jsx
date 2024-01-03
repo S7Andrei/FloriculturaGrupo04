@@ -16,6 +16,17 @@ import * as yup from "yup";
 import ErrosForm from "../../components/ErrosForm/ErrosForm";
 import { useState } from "react";
 
+import image1 from "../../assets/plants.png";
+import image2 from "../../assets/plants2.png";
+import image3 from "../../assets/plants3.png";
+import image4 from "../../assets/plants4.png";
+
+const getRandomImage = () => {
+  const images = [image1, image2, image3, image4];
+  const randomIndex = Math.floor(Math.random() * images.length);
+  return images[randomIndex];
+};
+
 const schema = yup
   .object({
     name: yup
@@ -39,11 +50,8 @@ const schema = yup
       .min(5)
       .max(99),
     discountPercentage: yup
-      .number()
-      .positive()
-      .required("Discount Percentage it is a mandatory field")
-      .typeError("Enter a valid number")
-      .min(1),
+      .string()
+      .matches(/^\d*\.?\d+$/, "Discount Percentage must not contain numbers"),
     features: yup
       .string()
       .required("Features it is a mandatory field")
@@ -65,7 +73,7 @@ const Register = () => {
     handleSubmit,
     watch,
     formState: { errors },
-  } = useForm({ resolver: yupResolver(schema) });
+  } = useForm({ resolver: yupResolver(schema)});
 
   async function updateStatePlants() {
     const data = await getPlants();
@@ -75,6 +83,7 @@ const Register = () => {
   const handleSubmitForm = (data) => {
     let isInSale;
 
+    console.log(data)
     const {
       description,
       discountPercentage,
@@ -101,6 +110,7 @@ const Register = () => {
       discountPercentage: discountPercentage,
       features: features,
       description: description,
+      img: getRandomImage(),
     };
 
     fetch("http://localhost:3000/plants", {
@@ -178,10 +188,9 @@ const Register = () => {
           {/* <label className={styles.inputLabel}>Discount percentage</label> */}
 
           <div className={styles.inputContainer}>
-       
-           <p className={styles.halfInputsContainer}>
-              <div >
-              <label className={styles.inputLabel}>Price</label>
+            <p className={styles.halfInputsContainer}>
+              <div>
+                <label className={styles.inputLabel}>Price</label>
                 <input
                   id="price"
                   type="number"
@@ -194,7 +203,7 @@ const Register = () => {
               </div>
 
               <div>
-              <label className={styles.inputLabel}>Discont Percentage</label>
+                <label className={styles.inputLabel}>Discont Percentage</label>
                 <input
                   id="discountPercentage"
                   type="number"
