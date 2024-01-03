@@ -33,3 +33,15 @@
   margin: 1% 0 15% 30%;
   border-radius: 10%;
 }
+
+@media (max-width: 600px) {
+  .aboutP {
+    margin-left: 2em;
+  }
+}
+
+@media (max-width: 480px) {
+  .aboutP {
+    margin-left: 1em;
+  }
+}
