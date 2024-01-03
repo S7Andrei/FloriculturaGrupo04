@@ -33,34 +33,30 @@ const Products = ({ listagemTotal = false, filter }) => {
         </h1>
 
         <div className={styles.querysContainer}>
-          <div>
-            <label className={styles.inputLabel}>
-              Search by Name:
-              <input
-                type="text"
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className={styles.inputForm}
-              />
-            </label>
-          </div>
+          <p>
+            <label className={styles.inputLabel}>Search by Name:</label>
+            <input
+              type="text"
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              className={styles.inputForm}
+            />
+          </p>
 
-          <div>
-            <label className={styles.inputLabel}>
-              Show by Category:
-              <select
-                value={selectedCategory}
-                onChange={(e) => setSelectedCategory(e.target.value)}
-                className={styles.inputSelect}
-              >
-                {categoryOptions.map((category) => (
-                  <option key={category} value={category}>
-                    {category}
-                  </option>
-                ))}
-              </select>
-            </label>
-          </div>
+          <p>
+            <label className={styles.inputLabel}>Show by Category:</label>
+            <select
+              value={selectedCategory}
+              onChange={(e) => setSelectedCategory(e.target.value)}
+              className={styles.inputSelect}
+            >
+              {categoryOptions.map((category) => (
+                <option key={category} value={category}>
+                  {category}
+                </option>
+              ))}
+            </select>
+          </p>
         </div>
 
         <div className={styles.productList}>

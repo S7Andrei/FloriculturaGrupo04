@@ -75,7 +75,6 @@ footer {
   line-height: 24.72px;
 }
 
-
 @media screen {
   @media (max-width: 768px) {
     .footerContainer {
@@ -89,13 +88,16 @@ footer {
     .footerTitle {
       font-size: var(--fonte-grande);
       margin-bottom: 32px;
-    
+
       font-family: var(--eb-garamond);
       font-weight: 700;
     }
     .LinkCommunityContainer {
       margin-bottom: 60px;
     }
-  
+
+    .footerContent {
+      padding: 50px 0;
+    }
   }
 }

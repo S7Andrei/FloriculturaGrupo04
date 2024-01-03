@@ -69,25 +69,43 @@ body {
 }
 
 @media screen {
-  @media (max-width:1024px){
+  @media (max-width: 1024px) {
     :root {
       --fonte-grande: calc(var(--fonte-pequena) * 3);
       --fonte-media: calc(var(--fonte-pequena) * 1.4);
     }
   }
 
-  @media (max-width:768px){
-    :root{
+  @media (max-width: 768px) {
+    :root {
       --font-grande: calc(var(--font-pequena) * 2.5);
       --fonte-media: calc(var(--fonte-pequena) * 1.25);
     }
   }
 
-  @media (max-width:425px){
+  @media (max-width: 425px) {
     :root {
       --fonte-pequena: 15px;
       --fonte-grande: calc(var(--fonte-pequena) * 2.5);
       --fonte-media: calc(var(--fonte-pequena) * 1.35);
+    }
+  }
+
+  @media (max-width: 375px) {
+    :root {
+      --fonte-grande: calc(var(--fonte-pequena) * 2.3);
+    }
+  }
+
+  @media (max-width: 340px) {
+    :root {
+      --fonte-grande: calc(var(--fonte-pequena) * 2.15);
+    }
+  }
+
+  @media (max-width: 320px) {
+    :root {
+      --fonte-grande: calc(var(--fonte-pequena) * 2);
     }
   }
 }
