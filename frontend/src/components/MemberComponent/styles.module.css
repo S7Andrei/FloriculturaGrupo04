@@ -29,19 +29,26 @@
 }
 
 .staffPic {
-  width: 40%;
-  margin: 1% 0 15% 30%;
+  width: 70%;
+  margin: 1% 0 15% 20%;
   border-radius: 10%;
 }
 
 @media (max-width: 600px) {
   .aboutP {
-    margin-left: 2em;
+    margin-left: 3.2em;
+  }
+  .staffPic {
+    width: 35%;
+    margin: 2% 0 15% 35%;
   }
 }
 
 @media (max-width: 480px) {
   .aboutP {
     margin-left: 1em;
+  }
+  .staffPic {
+    width: 30;
   }
 }
