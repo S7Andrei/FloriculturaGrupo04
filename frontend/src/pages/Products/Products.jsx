@@ -51,7 +51,7 @@ const Products = ({ listagemTotal = false, filter }) => {
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className={styles.inputForm}
+                className={styles.inputSelect}
               >
                 {categoryOptions.map((category) => (
                   <option key={category} value={category}>
@@ -65,7 +65,7 @@ const Products = ({ listagemTotal = false, filter }) => {
 
         <div className={styles.productList}>
           {filteredPlants.map((plant) => (
-            <div key={plant.id}>
+            <div key={plant.id} className={styles.cardContainer}>
               <button onClick={() => handleProductDetails(plant.id)}>
                 <CardContent
                   id={plant.id}
