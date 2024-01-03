@@ -11,7 +11,7 @@
   position: fixed;
   z-index: 10;
   width: 100vw;
-  background-color: transparent;
+  background-color: var(--wisper);
   padding: 16px 0;
 }
 
@@ -45,7 +45,7 @@
   }
 }
 
-/* .headerContainer {
+.headerContainer {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -78,5 +78,8 @@
   .mobileNav {
     display: flex;
     justify-content: flex-start;
+    width: 6%;
+    height: 2%;
   }
-} */
+
+}
