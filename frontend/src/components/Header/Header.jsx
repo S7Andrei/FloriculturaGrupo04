@@ -7,10 +7,11 @@ import profile from "../../assets/profileLogo.svg";
 
 import Nav from "../UI/Nav/Nav";
 import styles from "./Header.module.css";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
-
+  const navigate = useNavigate()
   const [windowSize, setWindowSize] = useState(window.innerWidth);
 
   const handleMenuOpen = () => {
@@ -20,6 +21,10 @@ const Header = () => {
   const handleMenuClose = () => {
     setShowMenu(false);
   };
+
+  const handleHome = () => {
+    navigate('/')
+  }
 
   useEffect(() => {
     const handleWindowsResize = () => {
@@ -64,13 +69,16 @@ const Header = () => {
   return (
     <div className={styles.container}>
       <header className={styles.headerContainer}>
-        <figure>
-          <img
-            src={logo}
-            alt=""
-            style={{ width: "50px", marginLeft: "100px" }}
-          />
-        </figure>
+        <button onClick={handleHome}>
+          <figure>
+            <img
+              src={logo}
+              alt=""
+              style={{ width: "50px", marginLeft: "100px" }}
+            />
+          </figure>
+        </button>
+
         <nav className={styles.desktopNav}>
           <ul className={styles.navBar}>
             <li>
