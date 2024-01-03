@@ -87,3 +87,12 @@
   display: flex;
   flex-wrap: wrap;
 }
+
+@media screen {
+  @media (max-width: 768px) {
+    .cardContent {
+      margin: 0 20px;
+      margin-bottom: 20px;
+    }
+  }
+}

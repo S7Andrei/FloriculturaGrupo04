@@ -108,6 +108,10 @@ select option {
     .productContainer {
       padding: 100px 75px;
     }
+
+    .productTitle {
+      margin: 0;
+    }
   }
 
   @media (max-width: 768px) {
@@ -116,7 +120,7 @@ select option {
     }
 
     .cardContainer {
-      width: 35vw;
+      width: 100%;
     }
 
     .productContainer {
@@ -130,13 +134,21 @@ select option {
     }
   }
 
-  @media (max-width: 425px) {
+  @media (max-width: 550px) {
+    .productContainer {
+      padding: 100px 35px;
+    }
+  }
+
+  @media (max-width: 480px) {
     .productList {
       grid-template-columns: 1fr;
     }
+  }
 
-    .cardContainer {
-      width: 60vw;
+  @media (max-width: 375px) {
+    .productContainer {
+      padding: 100px 25px;
     }
   }
 }
