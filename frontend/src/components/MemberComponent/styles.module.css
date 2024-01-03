@@ -1,0 +1,35 @@
+.aboutP {
+  max-width: 70vw;
+  width: 100%;
+  font-size: var(--fonte-pequena);
+  font-family: var(--raleway);
+  color: var(--secondary);
+  line-height: 27.87px;
+  letter-spacing: 0.08px;
+  word-wrap: break-word;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.aboutName {
+  display: flex;
+  justify-content: center;
+  font-size: var(--fonte-pequena);
+  font-family: var(--raleway);
+  color: var(--gray);
+  text-align: center;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 25px;
+  letter-spacing: 0.08px;
+  word-wrap: break-word;
+  margin: auto;
+}
+
+.staffPic {
+  width: 40%;
+  margin: 1% 0 15% 30%;
+  border-radius: 10%;
+}
