@@ -22,7 +22,7 @@
   letter-spacing: 0.08px;
   word-wrap: break-word;
   font-weight: 400;
-  margin: 0 0 0.5em 1em;
+  margin: 0 0 0.3em 0.5em;
   text-align: center;
 }
 
@@ -50,7 +50,7 @@
 
 .staffPic {
   width: 40%;
-  margin: 10% 0 10% 30%;
+  margin: 1% 0 15% 30%;
   border-radius: 10%;
 }
 
