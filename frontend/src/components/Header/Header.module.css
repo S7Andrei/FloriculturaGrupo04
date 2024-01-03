@@ -29,6 +29,10 @@
   text-decoration: none;
 }
 
+.menuItem {
+  color: #fff !important;
+}
+
 @media (max-width: 768px) {
   .navBar {
     display: none;
@@ -56,13 +60,13 @@
   gap: 10px;
 }
 
-.mobileNav {
+/* .mobileNav {
   display: none;
-}
+} */
 
-.navBar a {
+/* .navBar a {
   text-decoration: none;
-}
+} */
 
 @media (max-width: 600px) {
   .headerContainer {
@@ -81,5 +85,4 @@
     width: 6%;
     height: 2%;
   }
-
 }

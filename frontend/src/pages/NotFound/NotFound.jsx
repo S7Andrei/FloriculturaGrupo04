@@ -1,13 +1,16 @@
-import { Link} from "react-router-dom";
+import { Link } from "react-router-dom";
+import TemplateRoot from "../TemplateRoot";
 
 import styles from "./NotFound.module.css";
 import Cacto from "../../assets/404Cactus.png";
-import ButtonHome from "../../components/UI/Home/ButtonHome/ButtonHome";
+import Header from "../../components/Header/Header";
+import Footer from "../../components/Footer/Footer";
 
 const NotFound = () => {
   return (
     <>
-      <div>
+      <Header />
+     
         <div data-custom="erContainer">
           <div>
             <h1 data-custom="titleOps">
@@ -15,16 +18,18 @@ const NotFound = () => {
               <br />
               You Seem To Have Lost Your Way...
             </h1>
-            <ButtonHome>
-              <Link to="/">Home</Link>
-            </ButtonHome>
+            <a href="/">
+              <button data-custom="btnBack">Home</button>
+            </a>
           </div>
 
           <div data-custom="imgC">
             <img src={Cacto} alt="e" />
           </div>
         </div>
-      </div>
+    
+
+      <Footer />
     </>
   );
 };

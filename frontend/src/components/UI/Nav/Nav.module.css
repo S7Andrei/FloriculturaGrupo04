@@ -43,8 +43,13 @@
 }
 
 @media screen and (max-width: 768px) {
-  .hamburger {
-    display: block;
+  .navLink {
+    color: var(--accent);
+    text-decoration: none;
+  }
+
+  .active {
+    color: var(--athena-Grey);
   }
 
   .navLinks {
