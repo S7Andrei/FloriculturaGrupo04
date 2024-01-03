@@ -3,7 +3,7 @@ import styles from "./HomeOne.module.css";
 import ButtonHome from "../../../components/UI/Home/ButtonHome/ButtonHome";
 import arrow from "../../../assets/Arrow 1.svg";
 import plant from "../../../assets/plantForm.svg";
-//import plantLeft from "../../../assets/leftPlant.png";
+import plantLeft from "../../../assets/leftPlant.png";
 import box from "../../../assets/Rectangle 31.svg";
 
 const HomeOne = () => {
@@ -26,8 +26,9 @@ const HomeOne = () => {
             {"  "}Love for Nature
           </p>
           <h1 className={styles.h1}>
-            Discover your Side <span id={styles.colorGreen}>green</span>
+            Discover your<span id={styles.colorGreen}>green</span>
           </h1>
+          <h1 className={styles.h1}>side</h1>
 
           <p id={styles.bio}>
             We are your one-stop destination for all things green and growing.
@@ -43,8 +44,12 @@ const HomeOne = () => {
           <button id={styles.learn} onClick={handleSearch}>
             Learn Gardening <img src={arrow} id={styles.arrow} />
           </button>
+
+         
         </div>
-        <figure id={styles.plantLeft}></figure>
+        <figure id={styles.plantLeft}>
+            <img src={plantLeft} />
+          </figure>
         <figure id={styles.img}>
           <img src={plant} />
         </figure>

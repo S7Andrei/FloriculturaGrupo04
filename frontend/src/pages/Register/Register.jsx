@@ -178,29 +178,35 @@ const Register = () => {
           {/* <label className={styles.inputLabel}>Discount percentage</label> */}
 
           <div className={styles.inputContainer}>
-            <label className={styles.inputLabel}>Price</label>
-            <p className={styles.halfInputsContainer}>
-              <input
-                id="price"
-                type="number"
-                placeholder="$139.99"
-                className={`${styles.inputForm} ${styles.halfInput}`}
-                step="0.01"
-                {...register("price")}
-              />
-              <input
-                id="discountPercentage"
-                type="number"
-                placeholder="20%"
-                step="0.01"
-                className={`${styles.inputForm} ${styles.halfInput}`}
-                {...register("discountPercentage")}
-              />
+       
+           <p className={styles.halfInputsContainer}>
+              <div >
+              <label className={styles.inputLabel}>Price</label>
+                <input
+                  id="price"
+                  type="number"
+                  placeholder="$139.99"
+                  className={`${styles.inputForm} ${styles.halfInput}`}
+                  step="0.01"
+                  {...register("price")}
+                />
+                <ErrosForm errors={errors?.price?.message} />
+              </div>
+
+              <div>
+              <label className={styles.inputLabel}>Discont Percentage</label>
+                <input
+                  id="discountPercentage"
+                  type="number"
+                  placeholder="20%"
+                  step="0.01"
+                  className={`${styles.inputForm} ${styles.halfInput}`}
+                  {...register("discountPercentage")}
+                />
+
+                <ErrosForm errors={errors?.discountPercentage?.message} />
+              </div>
             </p>
-          </div>
-          <div className={styles.errosPriceContainer}>
-            <ErrosForm errors={errors?.price?.message} />
-            <ErrosForm errors={errors?.discountPercentage?.message} />
           </div>
 
           <div>
