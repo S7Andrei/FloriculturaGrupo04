@@ -1,15 +1,19 @@
 .productList {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 18px;
-  align-items: center;
-  justify-content: center;
-
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  gap: 25px;
   margin-bottom: 20px;
 }
 
-.cardContainer{
+.cardContainer {
+  width: 100%;
   height: 100%;
+}
+
+.cardContainer button {
+  height: -webkit-fill-available;
+  width: -webkit-fill-available;
 }
 
 .productContainer {
@@ -26,7 +30,7 @@
 
   /* Primary/Primary */
   font-family: EB Garamond;
-  font-size: 64px;
+  font-size: var(--fonte-grande);
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -58,8 +62,8 @@
   border: 2px solid var(--gray);
 }
 
-select option{
-  color: #333; 
+select option {
+  color: #333;
   padding: 12px 16px;
 }
 
@@ -71,22 +75,68 @@ select option{
   line-height: 22px;
 }
 
-.querysContainer{
+.querysContainer {
   display: flex;
   justify-content: center;
   gap: 30px;
   padding: 30px;
 }
 
-@media screen and (max-width: 650px) {
-  .querysContainer{
-    flex-direction: column;
-  }
-}
+@media screen {
+  @media (max-width: 1440px) {
+    .productList {
+      gap: 20px;
+    }
 
-@media screen and (max-width: 410px){
-  .cardContainer{
-    height: 70%;
+    .cardContainer {
+      width: 18vw;
+      height: 100%;
+    }
   }
-  
+
+  @media (max-width: 1280px) {
+    .productList {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .cardContainer {
+      width: 25vw;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .productContainer {
+      padding: 100px 75px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .productList {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cardContainer {
+      width: 35vw;
+    }
+
+    .productContainer {
+      padding: 100px 50px;
+    }
+  }
+
+  @media (max-width: 650px) {
+    .querysContainer {
+      flex-direction: column;
+    }
+  }
+
+  @media (max-width: 425px) {
+    .productList {
+      grid-template-columns: 1fr;
+    }
+
+    .cardContainer {
+      width: 60vw;
+    }
+  }
 }

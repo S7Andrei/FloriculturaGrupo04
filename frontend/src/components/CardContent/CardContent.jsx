@@ -13,17 +13,21 @@ const getRandomImage = () => {
 };
 
 const CardContent = ({ id, name, price, label, discont, isInSale }) => {
-
   return (
     <div key={id} className={styles.card}>
-      <div>
+      <figure>
         <img src={getRandomImage()} alt="Uma bela planta em seu vaso" />
-      </div>
+      </figure>
       <div className={styles.cardContent}>
         <p id={styles.name}>{name}</p>
 
-        <PriceFormated price={price} discont={discont} isInSale={isInSale} styles={styles}/>
-        
+        <PriceFormated
+          price={price}
+          discont={discont}
+          isInSale={isInSale}
+          styles={styles}
+        />
+
         <p id={styles.label}>{label}</p>
       </div>
     </div>
