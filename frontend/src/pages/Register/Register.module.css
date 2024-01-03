@@ -46,10 +46,11 @@
   display: flex;
   justify-content: space-between;
   gap: 18px;
+  width: 30vw;
 }
 
 .halfInput {
-  width: 50%;
+  width: 12.5vw;
 }
 
 .inputRadioControl {
@@ -130,6 +131,10 @@
   line-height: 22px;
 }
 
+.valuesContainer{
+  width: 30vw;
+}
+
 .errosPriceContainer {
   display: flex;
   gap: 119px;
@@ -158,6 +163,10 @@
   .registerContainer figure img {
     width: 55vw;
   }
+  
+  .halfInputsContainer{
+    gap: 50px;
+  }
 
   .formContainer {
     width: 35vw;
@@ -172,6 +181,10 @@
   .formContainer {
     width: 40vw;
   }
+
+  .halfInputsContainer{
+    gap: 8vw;
+  }
 }
 
 @media (max-width: 768px) {
@@ -183,6 +196,10 @@
     width: 80vw;
     margin: 0;
     padding: 130px 75px;
+  }
+
+  .halfInputsContainer{
+    gap: 8vw;
   }
 }
 
