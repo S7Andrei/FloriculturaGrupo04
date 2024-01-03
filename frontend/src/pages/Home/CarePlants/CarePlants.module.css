@@ -53,11 +53,12 @@
   font-family: var(--lato);
   color: var(--IBBNB);
   font-weight: 700;
+  text-align: center;
 }
 
 .containerGrid {
   display: grid;
-  grid-template-columns: repeat(3, min-content);
+  grid-template-columns: repeat(3, 30%);
   grid-template-rows: min-content 1fr;
   justify-items: center;
   justify-content: space-between;
@@ -67,6 +68,10 @@
 
 .containerGrid button {
   margin: 0;
+}
+
+.containerGrid img {
+  width: 100%;
 }
 
 .containerList {
@@ -80,7 +85,7 @@
 .containerImgsDetails {
   display: flex;
   flex-direction: column;
-  width: min-content;
+  width: 100%;
   gap: 32px;
 }
 
@@ -89,4 +94,23 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+@media (max-width: 1024px) {
+  .containerGrid {
+    grid-template-columns: repeat(2, 47.5%);
+    row-gap: 60px;
+    margin-bottom: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .containerGrid {
+    grid-template-columns: repeat(1, 95%);
+    row-gap: 60px;
+    margin-bottom: 60px;
+  }
+  .carePlantsContainer {
+    padding: 100px 50px;
+  }
 }
