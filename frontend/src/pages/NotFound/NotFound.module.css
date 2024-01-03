@@ -91,7 +91,7 @@
 }
 
 @media screen {
-  @media (max-width: 975px) {
+  @media (max-width: 768px) {
     [data-custom="titleOps"] {
       margin-bottom: 50px;
     }

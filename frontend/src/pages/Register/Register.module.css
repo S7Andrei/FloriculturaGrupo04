@@ -182,5 +182,29 @@
   .formContainer {
     width: 80vw;
     margin: 0;
+    padding: 130px 75px;
+  }
+}
+
+@media (max-width: 568px) {
+  .formContainer {
+    width: 95vw;
+    padding: 130px 50px;
+    gap: 25px;
+  }
+
+  .plantsNamesControl {
+    gap: 18px;
+  }
+
+  .inputContainer {
+    gap: 12px;
+  }
+}
+
+@media (max-width: 425px) {
+  .formContainer {
+    padding: 130px 25px;
+    gap: 25px;
   }
 }
