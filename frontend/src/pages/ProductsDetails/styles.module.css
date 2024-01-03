@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
+  margin-top: 240px;
 }
 
 .plantContent {
@@ -38,14 +39,13 @@ body {
 
   /* Primary/Primary */
   font-family: EB Garamond;
-  font-size: 64px;
+  font-size: var(--fonte-grande);
   font-style: normal;
   font-weight: 700;
   line-height: normal;
   text-transform: capitalize;
   padding: 0;
   margin: 0;
-  display: flex;
 }
 
 #subtitle {
