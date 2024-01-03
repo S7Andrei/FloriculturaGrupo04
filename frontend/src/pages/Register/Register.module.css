@@ -17,7 +17,7 @@
 }
 
 .registerContainer figure img {
-  width: 55vw;
+  width: 58vw;
 }
 
 .registerContainer figure:hover {
@@ -25,13 +25,12 @@
 }
 
 .formContainer {
-  margin: 100px;
-  margin-right: 0;
+  width: 30vw;
+  padding: 130px 100px;
   display: flex;
   flex-direction: column;
-  width: fit-content;
   gap: 40px;
-  z-index: 0;
+  z-index: 1;
 }
 
 .registerTitle {
@@ -43,9 +42,14 @@
   font-weight: 600;
 }
 
-.halfInputs {
+.halfInputsContainer {
   display: flex;
+  justify-content: space-between;
   gap: 18px;
+}
+
+.halfInput {
+  width: 50%;
 }
 
 .inputRadioControl {
@@ -148,4 +152,35 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
+}
+
+@media (max-width: 1270px) {
+  .registerContainer figure img {
+    width: 55vw;
+  }
+
+  .formContainer {
+    width: 35vw;
+  }
+}
+
+@media (max-width: 1024px) {
+  .registerContainer figure img {
+    width: 50vw;
+  }
+
+  .formContainer {
+    width: 40vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .registerContainer figure {
+    display: none;
+  }
+
+  .formContainer {
+    width: 80vw;
+    margin: 0;
+  }
 }

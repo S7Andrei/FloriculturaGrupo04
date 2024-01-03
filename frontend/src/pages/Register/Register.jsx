@@ -179,12 +179,12 @@ const Register = () => {
 
           <div className={styles.inputContainer}>
             <label className={styles.inputLabel}>Price</label>
-            <p className={styles.halfInputs}>
+            <p className={styles.halfInputsContainer}>
               <input
                 id="price"
                 type="number"
                 placeholder="$139.99"
-                className={styles.inputForm}
+                className={`${styles.inputForm} ${styles.halfInput}`}
                 step="0.01"
                 {...register("price")}
               />
@@ -193,7 +193,7 @@ const Register = () => {
                 type="number"
                 placeholder="20%"
                 step="0.01"
-                className={styles.inputForm}
+                className={`${styles.inputForm} ${styles.halfInput}`}
                 {...register("discountPercentage")}
               />
             </p>
