@@ -2,8 +2,6 @@
 //import styles from './styles.module.css'
 
 const PriceFormated = ({price, discont, isInSale, styles}) => {
-
-    console.log(price, discont, isInSale)
     const priceFormat = new Intl.NumberFormat("en-US", {
         style: "currency",
         currency: "USD",
@@ -11,7 +9,6 @@ const PriceFormated = ({price, discont, isInSale, styles}) => {
     
       const numericPrice = parseFloat(price);
       const numericDiscont = parseFloat(discont);
-      console.log(numericDiscont, numericPrice);
     
       const newPrice = numericPrice - (numericPrice * numericDiscont) / 100;
     

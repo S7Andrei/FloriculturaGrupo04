@@ -19,18 +19,8 @@ const ProductsDetails = () => {
     setIsFetching(false);
   }, [dispatch, plantId]);
 
-  console.log(plantSelected);
+  let { price, isInSale, discountPercentage } = plantSelected;
 
-  var { price, isInSale, discountPercentage } = plantSelected;
-
-  console.log(price, isInSale, discountPercentage);
-
-  const priceF = new Intl.NumberFormat("en-US", {
-    style: "currency",
-    currency: "USD",
-  }).format(price);
-
-  console.log("newprice " + priceF);
   const handleSearch = () => {
     const plantName = plantSelected.name;
     window.location.href = `https://www.google.com/search?q=Comprar+${encodeURIComponent(
