@@ -21,6 +21,7 @@ import image2 from "../../assets/plants2.png";
 import image3 from "../../assets/plants3.png";
 import image4 from "../../assets/plants4.png";
 import { useNavigate } from "react-router-dom";
+import RegisterDialog from "../../components/RegisterModal/RegisterModal";
 
 const getRandomImage = () => {
   const images = [image1, image2, image3, image4];
@@ -68,6 +69,8 @@ const schema = yup
 const Register = () => {
   const dispatch = useDispatch();
   const [label, setLabel] = useState("indoor");
+  const [lastID, setLastID] = useState(null);
+  const [showDialog, setShowDialog] = useState(true);
   const navigate = useNavigate();
 
   const {
@@ -75,21 +78,17 @@ const Register = () => {
     handleSubmit,
     watch,
     formState: { errors },
-  } = useForm({ resolver: yupResolver(schema)});
+  } = useForm({ resolver: yupResolver(schema) });
 
   async function updateStatePlants() {
     const data = await getPlants();
     dispatch(plantsActions.handleGetPlants(data));
   }
 
-  const handleProduct = () => {
-    navigate(`/products/`);
-  }
-
   const handleSubmitForm = (data) => {
     let isInSale;
 
-    console.log(data)
+    console.log(data);
     const {
       description,
       discountPercentage,
@@ -127,13 +126,15 @@ const Register = () => {
 
       body: JSON.stringify(plantsObject),
     })
-      .then((response) => {
-        if (response.ok) {
+      .then((response) => response.json()) 
+      .then((data) => {
+        console.log(data);
+        if (data.id) {
           console.log("Form submitted successfully");
-          
+    
+          setLastID(data.id);
           updateStatePlants();
-          handleProduct()
-          
+          setShowDialog(true);
         } else {
           throw new Error("Failed to submit form");
         }
@@ -143,8 +144,13 @@ const Register = () => {
       });
   };
 
+  const closeDialog = () => {
+    setShowDialog(false); 
+  };
+
   return (
     <>
+      
       <section className={styles.registerContainer}>
         <form
           onSubmit={handleSubmit(handleSubmitForm)}
@@ -293,6 +299,9 @@ const Register = () => {
           </div>
           <ButtonForm type="submit">Register</ButtonForm>
         </form>
+
+        <RegisterDialog isOpen={showDialog} onClose={closeDialog} lastID={lastID}/>
+
         <figure id={styles.img}>
           <img src={plant} />
         </figure>
