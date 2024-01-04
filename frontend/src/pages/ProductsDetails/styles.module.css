@@ -11,7 +11,6 @@
   gap: 16px;
   height: fit-content;
   padding: 80px;
-
 }
 
 body {
@@ -19,15 +18,13 @@ body {
 }
 
 .imgContainer {
-  
   max-width: 752px;
   max-height: 50%;
   width: 50%;
-  padding: 80px 0px 80px 80px;
+  padding: 80px 0px 80px 0px;
 }
 
 #img {
-  
   width: 100%;
 
   opacity: 0.9;
@@ -53,7 +50,7 @@ body {
 
   /* Primary/card heading */
   font-family: Lato;
-  font-size: 24px;
+  font-size: var(--fonte-media);
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -64,12 +61,12 @@ body {
 #label {
   color: var(--main-colors-green-95, #158212);
   width: fit-content;
-  /* secondary/Secondary */
+
   font-family: Raleway;
-  font-size: 16px;
+  font-size: var(--fonte-pequena);
   font-style: normal;
   font-weight: 400;
-  line-height: 154.5%; /* 24.72px */
+  line-height: 154.5%; 
 
   border-radius: 19.427px;
   border: 1.619px solid var(--Main-Colors-Green-6, #83e281);
@@ -92,7 +89,7 @@ body {
 
   /* Primary/card heading */
   font-family: Lato;
-  font-size: 24px;
+  font-size: var(--fonte-media);
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -106,51 +103,48 @@ body {
   color: var(--Athena-Grey, #f8f9fb);
   text-align: center;
 
-  /* secondary/Secondary */
   font-family: Raleway;
-  font-size: 16px;
+  font-size: var(--fonte-pequena);
   font-style: normal;
   font-weight: 400;
-  line-height: 154.5%; /* 24.72px */
+  line-height: 154.5%; 
 }
 
 #details {
   color: #000;
 
-  /* secondary/Secondary */
   font-family: Raleway;
-  font-size: 16px;
+  font-size: var(--fonte-pequena);
   font-style: normal;
   font-weight: 400;
-  line-height: 154.5%; /* 24.72px */
+  line-height: 154.5%; 
 }
 
-#featuresDetails{
+#featuresDetails {
   width: 100%;
   max-width: 680px;
 }
 
-#description{
+#description {
   color: #000;
 
-  /* secondary/Secondary */
   font-family: Raleway;
-  font-size: 16px;
+  font-size: var(--fonte-pequena);
   font-style: normal;
   font-weight: 400;
-  line-height: 154.5%; /* 24.72px */
+  line-height: 154.5%; 
   max-width: 680px;
   width: 100%;
 }
 
-.description{
+.description {
   width: 100%;
 }
 
 #oldPrice {
   color: var(--Dark-gray, #afb2aa);
   font-family: Raleway;
-  font-size: 18px;
+  font-size: var(--fonte-media);
   font-style: normal;
   font-weight: 400;
   line-height: 154.5%; /* 24.72px */
@@ -158,34 +152,33 @@ body {
   text-decoration: line-through;
 }
 
-#priceContainer{
+#priceContainer {
   display: flex;
   gap: 16px;
-  
 }
 
 @media screen and (max-width: 1023px) {
-  .plantsDetails{
+  .plantsDetails {
     flex-direction: column;
     padding-top: 100px;
     align-items: center;
     margin-top: 50px;
   }
-  .imgContainer{
+  .imgContainer {
     display: flex;
     justify-content: center;
     padding: 0;
   }
 }
 
-li{
+li {
   padding-left: 1vh;
   size: 1em;
   font-size: 14px;
 }
 
-@media screen and (max-width: 1200px) and (min-width: 1024px){
-  .imgContainer{
+@media screen and (max-width: 1200px) and (min-width: 1024px) {
+  .imgContainer {
     display: flex;
     justify-content: center;
     width: 30%;
@@ -200,38 +193,38 @@ li{
 }
 
 @media screen and (max-width: 720px) {
-  #img{
+  #img {
     width: 200%;
   }
 }
 
 @media screen and (max-width: 555px) {
-  #img{
+  #img {
     width: 200%;
   }
-  .imgContainer{
+  .imgContainer {
     padding: 10px;
   }
 
-  .plantContent{
+  .plantContent {
     padding: 30px;
   }
 }
 
 @media screen and (max-width: 370px) {
-  #img{
+  #img {
     width: 200%;
   }
-  .plantContent{
+  .plantContent {
     padding: 10px;
   }
 }
 
 @media screen and (max-width: 290px) {
-  #img{
+  #img {
     width: 200%;
   }
-  .plantContent{
+  .plantContent {
     padding: 0px;
   }
 }
