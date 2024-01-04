@@ -12,8 +12,13 @@ const CardContent = ({ id, name, price, label, discont, isInSale, img }) => {
       <div className={styles.cardContent}>
         <p id={styles.name}>{name}</p>
 
-        <PriceFormated price={price} discont={discont} isInSale={isInSale} styles={styles}/>
-        
+        <PriceFormated
+          price={price}
+          discont={discont}
+          isInSale={isInSale}
+          styles={styles}
+        />
+
         <p id={styles.label}>{label}</p>
       </div>
     </div>
