@@ -20,6 +20,7 @@ import image1 from "../../assets/plants.png";
 import image2 from "../../assets/plants2.png";
 import image3 from "../../assets/plants3.png";
 import image4 from "../../assets/plants4.png";
+import { useNavigate } from "react-router-dom";
 
 const getRandomImage = () => {
   const images = [image1, image2, image3, image4];
@@ -67,6 +68,7 @@ const schema = yup
 const Register = () => {
   const dispatch = useDispatch();
   const [label, setLabel] = useState("indoor");
+  const navigate = useNavigate();
 
   const {
     register,
@@ -78,6 +80,10 @@ const Register = () => {
   async function updateStatePlants() {
     const data = await getPlants();
     dispatch(plantsActions.handleGetPlants(data));
+  }
+
+  const handleProduct = () => {
+    navigate(`/products/`);
   }
 
   const handleSubmitForm = (data) => {
@@ -124,8 +130,10 @@ const Register = () => {
       .then((response) => {
         if (response.ok) {
           console.log("Form submitted successfully");
-
+          
           updateStatePlants();
+          handleProduct()
+          
         } else {
           throw new Error("Failed to submit form");
         }
