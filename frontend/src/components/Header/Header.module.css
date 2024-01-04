@@ -69,7 +69,7 @@
 } */
 
 @media screen {
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
   .navBar {
     display: none;
   }
@@ -81,6 +81,14 @@
     height: 40px;
   }
 
+  .asd {
+    font-size: var(--fonte-media);
+  }
 
+@media (max-width: 460px) {
+  .asd {
+    font-size: var(--fonte-pequena);
+  }
+}
 }
 }

@@ -58,8 +58,7 @@ const Header = () => {
         </button>
 
         <nav className={styles.desktopNav}>
-          <ol className={styles.navBar}>
-            <div>
+          <ul className={styles.navBar}>
               <li>
                 <Nav to={"/"} end>
                   Home
@@ -74,8 +73,7 @@ const Header = () => {
               <li>
                 <Nav to={"/about-us"}>About us</Nav>
               </li>
-            </div>
-          </ol>
+          </ul>
         </nav>
         <IoMenu
           onClick={!showMenu ? handleMenuOpen : handleMenuClose}
@@ -90,26 +88,34 @@ const Header = () => {
             right
           >
             <nav>
-              <ul>
+              <ul className={styles.abc}>
                 <li>
+                  <p className={styles.asd}>
                   <Nav className={styles.menuItem} to={"/"} end>
                     Home
                   </Nav>
+                  </p>
                 </li>
                 <li>
+                <p className={styles.asd}> 
                   <Nav className="menu-item" to={"/register"}>
                     Register
                   </Nav>
+                </p>
                 </li>
                 <li>
+                <p className={styles.asd}>
                   <Nav className="menu-item" to={"/products"}>
                     Products
                   </Nav>
+                </p>
                 </li>
                 <li>
+                <p className={styles.asd}>  
                   <Nav className="menu-item" to={"/about-us"}>
                     About us
                   </Nav>
+                </p>
                 </li>
               </ul>
             </nav>
