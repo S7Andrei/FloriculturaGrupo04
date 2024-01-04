@@ -2,7 +2,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { plantsActions } from "../../store/plants/plantsSlice";
 import styles from "./styles.module.css";
-import imgPlant from "../../assets/plants.png";
 import ButtonHome from "../../components/UI/Home/ButtonHome/ButtonHome";
 import { useEffect, useState } from "react";
 import SplitFeature from "../../components/SplitFeature/SplitFeature";
@@ -44,7 +43,7 @@ const ProductsDetails = () => {
       {!isFetching && (
         <div className={styles.plantsDetails}>
           <div className={styles.imgContainer}>
-            <img src={imgPlant} alt="Uma planta" id={styles.img} />
+            <img src={plantSelected.img} alt="Uma planta" id={styles.img} />
           </div>
 
           <div className={styles.plantContent}>
