@@ -46,6 +46,8 @@
   .navLink {
     color: var(--accent);
     text-decoration: none;
+    padding: 1em;
+    margin-top: 2em;
   }
 
   .active {
@@ -53,10 +55,11 @@
   }
 
   .navLinks {
-    display: none;
+    padding: 10px;
+    z-index: 999;
   }
 
-  .show {
+  /* .show {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -67,5 +70,5 @@
     width: 100%;
     padding: 10px;
     z-index: 999;
-  }
+  } */
 }
