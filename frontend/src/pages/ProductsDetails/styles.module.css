@@ -8,7 +8,7 @@
 .plantContent {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 16px;
   height: fit-content;
   padding: 80px;
 
@@ -75,11 +75,11 @@ body {
   border: 1.619px solid var(--Main-Colors-Green-6, #83e281);
   background: var(--main-colors-green-05, #f6fff6);
 
-  padding: 5px;
+  padding: 6.476px 12.951px;
 }
 
 #label:nth-child(even) {
-  margin-left: 20px;
+  margin-left: 15px;
 }
 
 .labelContainer {
@@ -169,6 +169,7 @@ body {
     flex-direction: column;
     padding-top: 100px;
     align-items: center;
+    margin-top: 50px;
   }
   .imgContainer{
     display: flex;
@@ -177,13 +178,11 @@ body {
   }
 }
 
-/* @media screen and (max-width: 750px) {
-
-
-  #img{
-    width: 500%;
-  }
-} */
+li{
+  padding-left: 1vh;
+  size: 1em;
+  font-size: 14px;
+}
 
 @media screen and (max-width: 1200px) and (min-width: 1024px){
   .imgContainer{
@@ -200,7 +199,13 @@ body {
   }
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 720px) {
+  #img{
+    width: 200%;
+  }
+}
+
+@media screen and (max-width: 555px) {
   #img{
     width: 200%;
   }

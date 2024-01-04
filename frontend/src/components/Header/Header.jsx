@@ -8,6 +8,7 @@ import profile from "../../assets/profileLogo.svg";
 import Nav from "../UI/Nav/Nav";
 import styles from "./Header.module.css";
 import { useNavigate } from "react-router-dom";
+import hamburguerMenuStyles from "./mbBreak"
 
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -39,32 +40,9 @@ const Header = () => {
   }, []);
 
   let mobileBreakPoint = false;
-  if (windowSize < 768) {
+  if (windowSize <= 768) {
     mobileBreakPoint = true;
   }
-
-  let hamburguerMenuStyles = {
-    bmOverlay: {
-      marginTop: "2em",
-      padding: "2em",
-      alignItems: "center",
-      background: "rgba(0, 0, 0, 0.6)",
-    },
-    bmItem: {
-      display: "inline-block",
-      padding: "3em",
-      fontSize: "1em",
-      margin: "1em 20em 1em 2em",
-      lineHeight: "2em",
-      fontFamily: "Raleway, cursive",
-      color: "#FFF",
-    },
-    bmItemList: {},
-    bmMenuWrap: {
-      width: "100%",
-      height: "40%",
-    },
-  };
 
   return (
     <div className={styles.container}>
@@ -80,7 +58,8 @@ const Header = () => {
         </button>
 
         <nav className={styles.desktopNav}>
-          <ul className={styles.navBar}>
+          <ol className={styles.navBar}>
+            <div>
             <li>
               <Nav to={"/"} end>
                 Home
@@ -95,7 +74,8 @@ const Header = () => {
             <li>
               <Nav to={"/about-us"}>About us</Nav>
             </li>
-          </ul>
+            </div>
+          </ol>
         </nav>
         <IoMenu
           onClick={!showMenu ? handleMenuOpen : handleMenuClose}

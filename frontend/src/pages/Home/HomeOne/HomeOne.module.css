@@ -43,15 +43,7 @@
   width: 100%;
   overflow: hidden;
 
-  /* background-image: url("../../../assets/leftPlant.png");
-  background-repeat: no-repeat;
-  background-position: left bottom;  */
 }
-
-.homeOneContainer:hover{
-  filter: none;
-}
-
 
 #img {
   display: flex;
@@ -61,16 +53,16 @@
   width: 100%;
   height: 100vh;
   filter: grayscale(100%);
-  transition: filter 0.3s ease;
+  /* transition: filter 0.3s ease; */
   top: 0;
   left: 0;
-  z-index: -2;
+  z-index: 0;
 
 }
 
 #img:hover {
   filter: none;
-  z-index: -1;
+  z-index: 0;
 }
 
 /* .homeOneContainer:hover {
@@ -133,7 +125,7 @@
   width: 100%;
   filter: grayscale(100%);
   transition: filter 0.3s ease;
-  z-index: -1;
+  z-index: 0;
 }
 
 .planta{
@@ -163,19 +155,37 @@
     transition: filter 0.3s ease;
     top: 0;
     left: 0;
-    z-index: -1;
+    z-index: -2;
     filter: grayscale(100%);
   }
 
+  #plantLeft {
+    z-index: -2;
+  }
   .teste{
     height: 100vh;
   }
 
 }
 
+@media screen and (max-width: 455px) {
+  #img{
+    z-index: -2;
+  }
+  #plantLeft {
+    z-index: -2;
+  }
+}
+
 @media (max-width: 601px){
   #topTitle{
     margin-top: 150px;
+  }
+  #img{
+    z-index: -2;
+  }
+  #plantLeft {
+    z-index: -2;
   }
 }
 
@@ -183,5 +193,10 @@
   .h1{
     flex-direction: column;
   }
-  
+  #img{
+    z-index: -2;
+  }
+  #plantLeft {
+    z-index: -2;
+  }
 }
