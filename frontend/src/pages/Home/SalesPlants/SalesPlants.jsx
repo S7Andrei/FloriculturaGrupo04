@@ -3,7 +3,7 @@ import styles from "./styles.module.css";
 
 const SalesPlants = () => {
   return (
-    <section>
+    <section className={styles.SalesPlantsContainer}>
       <h1 className={styles.h1}>
         this weeks Most Popular{" "}
         <span id={styles.colorGreen}>
