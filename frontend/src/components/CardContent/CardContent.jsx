@@ -3,12 +3,11 @@ import styles from "./styles.module.css";
 import PriceFormated from "../PriceFormated/PriceFormated";
 
 const CardContent = ({ id, name, price, label, discont, isInSale, img }) => {
-
   return (
     <div key={id} className={styles.card}>
-      <div>
+      <figure>
         <img src={img} alt="Uma bela planta em seu vaso" />
-      </div>
+      </figure>
       <div className={styles.cardContent}>
         <p id={styles.name}>{name}</p>
 

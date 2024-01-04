@@ -1,24 +1,44 @@
+.SalesPlantsContainer {
+  padding: 50px 0 100px 0;
+}
+
 .h1 {
-  width: 800px;
-  margin-top: 43px;
-
+  margin-bottom: 100px;
   color: var(--Primary-Lunar-green, #354733);
-
   /* Primary/Primary */
-  font-family: EB Garamond;
-  font-size: 64px;
+  font-family: var(--eb-garamond);
+  font-size: var(--fonte-grande);
   font-style: normal;
   font-weight: 700;
   line-height: normal;
   text-transform: capitalize;
-}
-
-#title {
-  display: flex;
-  justify-content: center;
   text-align: center;
 }
 
 #colorGreen {
   color: var(--Primary-Avacado, #8a9b6e);
+}
+
+@media screen {
+  @media (max-width: 1024px) {
+    .SalesPlantsContainer {
+      padding: 35px 0 75px 0;
+    }
+
+    .h1 {
+      margin-bottom: 75px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .h1 {
+      margin-bottom: 50px;
+    }
+  }
+
+  @media (max-width: 568px) {
+    .h1 {
+      margin-bottom: 35px;
+    }
+  }
 }

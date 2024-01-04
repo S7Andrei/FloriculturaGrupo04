@@ -1,5 +1,5 @@
 import andreiImg from "../../assets/staff/andrei.png";
-import felipeImg from "../../assets/staff/felipe.png";
+import felipeImg from "../../assets/staff/felipe.jpeg";
 import pedroImg from "../../assets/staff/pedro.png";
 import rodrigoImg from "../../assets/staff/rodrigo.png";
 
