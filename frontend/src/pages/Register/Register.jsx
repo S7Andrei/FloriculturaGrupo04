@@ -52,7 +52,7 @@ const schema = yup
       .max(99),
     discountPercentage: yup
       .string()
-      .matches(/^\d*\.?\d+$/, "Discount Percentage must not contain numbers"),
+      .matches(/^\d*\.?\d*$/, "Discount Percentage must not contain numbers"),
     features: yup
       .string()
       .required("Features it is a mandatory field")
