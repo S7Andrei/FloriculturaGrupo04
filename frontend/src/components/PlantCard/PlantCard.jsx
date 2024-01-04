@@ -46,16 +46,21 @@ const PlantCard = ({ listagemTotal = false, filter }) => {
 
   return (
     <Swiper
-      slidesPerView={1}
       breakpoints={{
+        1700: {
+          slidesPerView: 5,
+        },
         1440: {
           slidesPerView: 4,
         },
-        1280: {
+        960: {
           slidesPerView: 3,
         },
-        768: {
+        568: {
           slidesPerView: 2,
+        },
+        0: {
+          slidesPerView: 1,
         },
       }}
       spaceBetween={50}
