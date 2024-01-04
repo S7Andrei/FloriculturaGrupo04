@@ -1,6 +1,6 @@
 let hamburguerMenuStyles = {
   bmOverlay: {
-    marginLeft: "-600px",
+    marginLeft: "200px",
     width: "100%",
     height: "50px",
     marginTop: "2.8em",
