@@ -45,7 +45,22 @@ const PlantCard = ({ listagemTotal = false, filter }) => {
   // }, []);
 
   return (
-    <Swiper slidesPerView={3.85}  className={styles.swiper}>
+    <Swiper
+      slidesPerView={1}
+      breakpoints={{
+        1440: {
+          slidesPerView: 4,
+        },
+        1280: {
+          slidesPerView: 3,
+        },
+        768: {
+          slidesPerView: 2,
+        },
+      }}
+      spaceBetween={50}
+      className={styles.swiper}
+    >
       {plants
         .filter((plant) => (listagemTotal ? true : plant.isInSale === filter))
         .map((plant) => (
