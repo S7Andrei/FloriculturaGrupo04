@@ -177,13 +177,11 @@ body {
   }
 }
 
-/* @media screen and (max-width: 750px) {
-
-
-  #img{
-    width: 500%;
-  }
-} */
+li{
+  padding-left: 1vh;
+  size: 1em;
+  font-size: 14px;
+}
 
 @media screen and (max-width: 1200px) and (min-width: 1024px){
   .imgContainer{
