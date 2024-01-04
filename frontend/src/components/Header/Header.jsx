@@ -8,11 +8,11 @@ import profile from "../../assets/profileLogo.svg";
 import Nav from "../UI/Nav/Nav";
 import styles from "./Header.module.css";
 import { useNavigate } from "react-router-dom";
-import hamburguerMenuStyles from "./mbBreak"
+import hamburguerMenuStyles from "./mbBreak";
 
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const [windowSize, setWindowSize] = useState(window.innerWidth);
 
   const handleMenuOpen = () => {
@@ -24,8 +24,8 @@ const Header = () => {
   };
 
   const handleHome = () => {
-    navigate('/')
-  }
+    navigate("/");
+  };
 
   useEffect(() => {
     const handleWindowsResize = () => {
@@ -60,20 +60,20 @@ const Header = () => {
         <nav className={styles.desktopNav}>
           <ol className={styles.navBar}>
             <div>
-            <li>
-              <Nav to={"/"} end>
-                Home
-              </Nav>
-            </li>
-            <li>
-              <Nav to={"/register"}>Register</Nav>
-            </li>
-            <li>
-              <Nav to={"/products"}>Products</Nav>
-            </li>
-            <li>
-              <Nav to={"/about-us"}>About us</Nav>
-            </li>
+              <li>
+                <Nav to={"/"} end>
+                  Home
+                </Nav>
+              </li>
+              <li>
+                <Nav to={"/register"}>Register</Nav>
+              </li>
+              <li>
+                <Nav to={"/products"}>Products</Nav>
+              </li>
+              <li>
+                <Nav to={"/about-us"}>About us</Nav>
+              </li>
             </div>
           </ol>
         </nav>
@@ -85,9 +85,9 @@ const Header = () => {
           <Menu
             isOpen={showMenu}
             onClose={handleMenuClose}
-            left
             customBurgerIcon={false}
             styles={hamburguerMenuStyles}
+            right
           >
             <nav>
               <ul>
