@@ -70,7 +70,7 @@ const Register = () => {
   const dispatch = useDispatch();
   const [label, setLabel] = useState("indoor");
   const [lastID, setLastID] = useState(null);
-  const [showDialog, setShowDialog] = useState(true);
+  const [showDialog, setShowDialog] = useState(false);
   const navigate = useNavigate();
 
   const {
