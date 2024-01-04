@@ -1,13 +1,8 @@
+.swiper {
+  margin: 100px;
+}
+
 .productList {
-  display: flex;
-  width: 100%;
-  margin-left: 10vw;
-  margin-right: 10vw;
-  max-width: 1632px;
-  padding: 96px 0px;
-  align-items: center;
-  gap: 48px;
-  margin-left:20vh;
 }
 
 button,

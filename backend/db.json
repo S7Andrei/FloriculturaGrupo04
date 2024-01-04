@@ -1,256 +1,214 @@
 {
   "plants": [
     {
-      "name": "asdasd",
-      "subtitle": "asdasd",
+      "name": "Plantinha do sexo",
+      "subtitle": "Transer",
       "label": [
-        "asdasd",
-        "outdoor"
-      ],
-      "isInSale": true,
-      "price": "asdasd",
-      "discountPercentage": "asdas",
-      "features": "asdasd",
-      "description": "asdasd",
-      "id": 5
-    },
-    {
-      "name": "asdaasdasd",
-      "subtitle": "asdasd",
-      "label": [
-        "asdasdas",
-        "indoor"
-      ],
-      "isInSale": "promo",
-      "price": "2121",
-      "discountPercentage": "232",
-      "features": "asdasd",
-      "description": "asdasd",
-      "id": 6
-    },
-    {
-      "name": "Prantinha no precinho",
-      "subtitle": "asdasdas",
-      "label": [
-        "asdasd",
-        "indoor"
-      ],
-      "isInSale": "promo",
-      "price": "434",
-      "discountPercentage": "3434",
-      "features": "asdasd",
-      "description": "asdasd",
-      "id": 7
-    },
-    {
-      "name": "Prantinha Carissima",
-      "subtitle": "asdasdas",
-      "label": [
-        "asdasd",
+        "Erva safadinha",
         "indoor"
       ],
       "isInSale": "notPromo",
-      "price": "434",
-      "discountPercentage": "",
-      "features": "asdasd",
-      "description": "asdasd",
-      "id": 8
+      "price": 69,
+      "discountPercentage": "0",
+      "features": "Essas flores requerem uma quantidade moderada de água, mas, de maneira única, prosperam quando regadas com o que os habitantes do reino chamam de \"Água Nupcial\", um líquido especial que simboliza a união.\nO ciclo de vida das Transer Delicadas é um verdadeiro romance botânico. Começando com a germinação durante um evento mágico, elas passam por estágios de juventude, florescimento e dança romântica antes de produzir sementes para a próxima geração.\nDurante o período de florescimento, as Transer Delicadas exibem cores suaves e românticas, variando entre tons de rosa, lavanda e branco. Essa paleta de cores cria um espetáculo visual delicado e encantador.",
+      "description": "É muicho safadinha",
+      "img": "/src/assets/plants4.png",
+      "id": 23
     },
     {
-      "name": "PlantaDecente",
-      "subtitle": "sdasd",
-      "label": [
-        "asdasd",
-        "outdoor"
-      ],
-      "isInSale": "promo",
-      "price": "3434",
-      "discountPercentage": "3434",
-      "features": "asdasda",
-      "description": "sdasd",
-      "id": 9
-    },
-    {
-      "name": "Teste",
-      "subtitle": "asdasd",
-      "label": [
-        "asdasd",
-        "indoor"
-      ],
-      "isInSale": "promo",
-      "price": "234",
-      "discountPercentage": "34",
-      "features": "asdasd",
-      "description": "asdasd",
-      "id": 10
-    },
-    {
-      "name": "Teste Master",
-      "subtitle": "asdasdas",
-      "label": [
-        "asdas",
-        "indoor"
-      ],
-      "isInSale": "promo",
-      "price": "34",
-      "discountPercentage": "343",
-      "features": "asdasd",
-      "description": "asdasd",
-      "id": 11
-    },
-    {
-      "name": "Echinoetexas",
+      "name": "TesteTesteTesteTeste",
       "subtitle": "Teste",
       "label": [
         "Teste",
-        "indoor"
-      ],
-      "isInSale": "promo",
-      "price": "3434",
-      "discountPercentage": "3434",
-      "features": "Teste",
-      "description": "Teste",
-      "id": 12
-    },
-    {
-      "name": "Orquidia",
-      "subtitle": "Orquidia da Amazonia",
-      "label": [
-        "Flor",
         "outdoor"
       ],
       "isInSale": "promo",
-      "price": "4546",
+      "price": 654984,
       "discountPercentage": "20",
-      "features": "Species Orquidia",
-      "description": "Species Orquidia",
-      "id": 13
+      "features": "Teste.\nTeste.\nTeste.\nTeste.\nTeste.",
+      "description": "TesteTesteTesteTesteTesteTesteTeste",
+      "img": "/src/assets/plants.png",
+      "id": 24
     },
     {
-      "name": "Teste",
+      "name": "TesteTesteTesteTeste",
       "subtitle": "Teste",
       "label": [
         "Teste",
-        "indoor"
-      ],
-      "isInSale": "promo",
-      "price": "2323",
-      "discountPercentage": "34",
-      "features": "Teste",
-      "description": "Teste",
-      "id": 14
-    },
-    {
-      "name": "Cactus",
-      "subtitle": "Cactus",
-      "label": [
-        "Cactus",
-        "indoor"
-      ],
-      "isInSale": "promo",
-      "price": "32434",
-      "discountPercentage": "3434",
-      "features": "Cactus",
-      "description": "Cactus",
-      "id": 15
-    },
-    {
-      "name": "Plantinha teste",
-      "subtitle": "A Majestic Addition to Your Plant Collection",
-      "label": [
-        "cactus",
-        "indoor"
-      ],
-      "isInSale": "promo",
-      "price": "50",
-      "discountPercentage": "10",
-      "features": "a",
-      "description": "a",
-      "id": 16
-    },
-    {
-      "name": "andorinha voadora",
-      "subtitle": "é uma andorinha",
-      "label": [
-        "andorinha",
-        "outdoor"
-      ],
-      "isInSale": "promo",
-      "price": "1000",
-      "discountPercentage": "50",
-      "features": "sads",
-      "description": "dasda",
-      "id": 17
-    },
-    {
-      "name": "Teste",
-      "subtitle": "dsada",
-      "label": [
-        "dsda",
         "outdoor"
       ],
       "isInSale": "notPromo",
-      "price": "500",
-      "discountPercentage": "",
-      "features": "dfsfs",
-      "description": "",
-      "id": 18
+      "price": 654984,
+      "discountPercentage": "0",
+      "features": "Teste.\nTeste.\nTeste.\nTeste.\nTeste.",
+      "description": "TesteTesteTesteTesteTesteTesteTeste",
+      "img": "/src/assets/plants.png",
+      "id": 25
     },
     {
-      "name": "Teste",
-      "subtitle": "dsada",
+      "name": "TesteTesteTesteTeste",
+      "subtitle": "Teste",
       "label": [
-        "dsda",
+        "Teste",
         "outdoor"
       ],
       "isInSale": "notPromo",
-      "price": "500",
-      "discountPercentage": "",
-      "features": "dfsfs",
-      "description": "fdsfs",
-      "id": 19
+      "price": 654984,
+      "discountPercentage": "0",
+      "features": "Teste.\nTeste.\nTeste.\nTeste.\nTeste.",
+      "description": "TesteTesteTesteTesteTesteTesteTeste",
+      "img": "/src/assets/plants.png",
+      "id": 26
     },
     {
-      "name": "Echinocereus Cactus",
-      "subtitle": "A Majestic Addition to Your Plant Collection",
+      "name": "TesteTesteTesteTeste",
+      "subtitle": "Teste",
       "label": [
-        "cactus",
-        "indoor"
+        "Teste",
+        "outdoor"
       ],
       "isInSale": "notPromo",
-      "price": "500",
-      "discountPercentage": "",
-      "features": "Species: Echinocereus spp. Mature Size: Varies by species, typically ranging from 4 to 12 inches (10-30 cm) in height. Blooming Season: Typically spring or summer, with flowers lasting several days to weeks. Pot Size: Available in various pot sizes to suit your preference and needs. Shipping: Our Echinocereus Cacti are carefully packaged and shipped with the utmost care to ensure they arrive in excellent condition.",
-      "description": "Ladyfinger cactus (*Echinocereus pentalophus*) is also known as Alice, Devil's Fingers, and Dog Tail. It needs bright sunlight, light fertilizer, and is prone to root rot. The root system is shallow and weak. Aphids and mealybugs are also a danger. Avoiding wet soil can help with success with a ladyfinger cactus.",
-      "id": 20
+      "price": 654984,
+      "discountPercentage": "0",
+      "features": "Teste.\nTeste.\nTeste.\nTeste.\nTeste.",
+      "description": "TesteTesteTesteTesteTesteTesteTeste",
+      "img": "/src/assets/plants2.png",
+      "id": 27
     },
     {
-      "name": "dfs",
-      "subtitle": "fdsfs",
+      "name": "TesteTesteTesteTeste",
+      "subtitle": "Teste",
       "label": [
-        "fdsfs",
-        "indoor"
+        "Teste",
+        "outdoor"
       ],
       "isInSale": "notPromo",
-      "price": "5",
-      "discountPercentage": "",
-      "features": "sda",
-      "description": "dsa",
-      "id": 21
+      "price": 654984,
+      "discountPercentage": "0",
+      "features": "Teste.\nTeste.\nTeste.\nTeste.\nTeste.",
+      "description": "TesteTesteTesteTesteTesteTesteTeste",
+      "img": "/src/assets/plants4.png",
+      "id": 28
     },
     {
-      "name": "Echinocereus Cactus",
-      "subtitle": "A Majestic Addition to Your Plant Collection",
+      "name": "TesteTesteTesteTeste",
+      "subtitle": "Teste",
       "label": [
-        "cactus",
-        "indoor"
+        "Teste",
+        "outdoor"
+      ],
+      "isInSale": "notPromo",
+      "price": 654984,
+      "discountPercentage": "0",
+      "features": "Teste.\nTeste.\nTeste.\nTeste.\nTeste.",
+      "description": "TesteTesteTesteTesteTesteTesteTeste",
+      "img": "/src/assets/plants2.png",
+      "id": 29
+    },
+    {
+      "name": "TesteTesteTesteTeste",
+      "subtitle": "Teste",
+      "label": [
+        "Teste",
+        "outdoor"
+      ],
+      "isInSale": "notPromo",
+      "price": 654984,
+      "discountPercentage": "0",
+      "features": "Teste.\nTeste.\nTeste.\nTeste.\nTeste.",
+      "description": "TesteTesteTesteTesteTesteTesteTeste",
+      "img": "/src/assets/plants4.png",
+      "id": 30
+    },
+    {
+      "name": "TesteTesteTesteTeste",
+      "subtitle": "Teste",
+      "label": [
+        "Teste",
+        "outdoor"
       ],
       "isInSale": "promo",
-      "price": 137.85,
-      "discountPercentage": "7",
-      "features": "Species",
-      "description": "Description",
-      "id": 22
+      "price": 654984,
+      "discountPercentage": "15",
+      "features": "Teste.\nTeste.\nTeste.\nTeste.\nTeste.",
+      "description": "TesteTesteTesteTesteTesteTesteTeste",
+      "img": "/src/assets/plants3.png",
+      "id": 31
+    },
+    {
+      "name": "TesteTesteTesteTeste",
+      "subtitle": "Teste",
+      "label": [
+        "Teste",
+        "outdoor"
+      ],
+      "isInSale": "promo",
+      "price": 654984,
+      "discountPercentage": "15",
+      "features": "Teste.\nTeste.\nTeste.\nTeste.\nTeste.",
+      "description": "TesteTesteTesteTesteTesteTesteTeste",
+      "img": "/src/assets/plants3.png",
+      "id": 32
+    },
+    {
+      "name": "TesteTesteTesteTeste",
+      "subtitle": "Teste",
+      "label": [
+        "Teste",
+        "outdoor"
+      ],
+      "isInSale": "promo",
+      "price": 654984,
+      "discountPercentage": "15",
+      "features": "Teste.\nTeste.\nTeste.\nTeste.\nTeste.",
+      "description": "TesteTesteTesteTesteTesteTesteTeste",
+      "img": "/src/assets/plants4.png",
+      "id": 33
+    },
+    {
+      "name": "TesteTesteTesteTeste",
+      "subtitle": "Teste",
+      "label": [
+        "Teste",
+        "outdoor"
+      ],
+      "isInSale": "promo",
+      "price": 654984,
+      "discountPercentage": "15",
+      "features": "Teste.\nTeste.\nTeste.\nTeste.\nTeste.",
+      "description": "TesteTesteTesteTesteTesteTesteTeste",
+      "img": "/src/assets/plants4.png",
+      "id": 34
+    },
+    {
+      "name": "TesteTesteTesteTeste",
+      "subtitle": "Teste",
+      "label": [
+        "Teste",
+        "outdoor"
+      ],
+      "isInSale": "promo",
+      "price": 654984,
+      "discountPercentage": "15",
+      "features": "Teste.\nTeste.\nTeste.\nTeste.\nTeste.",
+      "description": "TesteTesteTesteTesteTesteTesteTeste",
+      "img": "/src/assets/plants2.png",
+      "id": 35
+    },
+    {
+      "name": "TesteTesteTesteTeste",
+      "subtitle": "Teste",
+      "label": [
+        "Teste",
+        "outdoor"
+      ],
+      "isInSale": "promo",
+      "price": 654984,
+      "discountPercentage": "15",
+      "features": "Teste.\nTeste.\nTeste.\nTeste.\nTeste.",
+      "description": "TesteTesteTesteTesteTesteTesteTeste",
+      "img": "/src/assets/plants3.png",
+      "id": 36
     }
   ]
 }

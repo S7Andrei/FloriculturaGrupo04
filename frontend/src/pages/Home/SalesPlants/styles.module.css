@@ -1,22 +1,20 @@
 .h1 {
-  width: 800px;
   margin-top: 43px;
 
   color: var(--Primary-Lunar-green, #354733);
 
   /* Primary/Primary */
-  font-family: EB Garamond;
-  font-size: 64px;
+  font-family: var(--eb-garamond);
+  font-size: var(--fonte-grande);
   font-style: normal;
   font-weight: 700;
   line-height: normal;
   text-transform: capitalize;
+  text-align: center;
 }
 
-#title {
-  display: flex;
-  justify-content: center;
-  text-align: center;
+.h1:last-child {
+  margin-top: 180px;
 }
 
 #colorGreen {
