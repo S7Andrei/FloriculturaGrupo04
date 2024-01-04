@@ -11,6 +11,10 @@
   height: 100%;
 }
 
+.cardContainer p:first-of-type {
+  word-break: break-all;
+}
+
 .cardContainer button {
   height: -webkit-fill-available;
   width: -webkit-fill-available;
