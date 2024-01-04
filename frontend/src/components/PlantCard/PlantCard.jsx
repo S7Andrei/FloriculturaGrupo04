@@ -70,6 +70,7 @@ const PlantCard = ({ listagemTotal = false, filter }) => {
         },
         568: {
           slidesPerView: 1.75,
+          spaceBetween: 25,
         },
         425: {
           slidesPerView: 1.5,

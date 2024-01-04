@@ -33,11 +33,31 @@ input[type="reset"] {
     .swiperContainer {
       padding: 0 50px !important;
     }
+
+    .swiperContainer:first-of-type {
+      margin-bottom: 125px;
+    }
   }
 
   @media (max-width: 768px) {
     .swiperContainer {
       padding: 0 25px !important;
+    }
+
+    .swiperContainer:first-of-type {
+      margin-bottom: 100px;
+    }
+  }
+
+  @media (max-width: 568px) {
+    .swiperContainer:first-of-type {
+      margin-bottom: 75px;
+    }
+  }
+
+  @media (max-width: 425px) {
+    .swiperContainer:first-of-type {
+      margin-bottom: 50px;
     }
   }
 }

@@ -18,3 +18,27 @@
 #colorGreen {
   color: var(--Primary-Avacado, #8a9b6e);
 }
+
+@media screen {
+  @media (max-width: 1024px) {
+    .SalesPlantsContainer {
+      padding: 35px 0 75px 0;
+    }
+
+    .h1 {
+      margin-bottom: 75px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .h1 {
+      margin-bottom: 50px;
+    }
+  }
+
+  @media (max-width: 568px) {
+    .h1 {
+      margin-bottom: 35px;
+    }
+  }
+}
