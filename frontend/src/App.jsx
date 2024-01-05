@@ -21,6 +21,12 @@ function App() {
   const isAuthenticated = useSelector((state) => state.login.isLogado);
   const currentLoginStorage = localStorage.getItem('isLogado');
 
+  const keys = Object.keys(localStorage);
+  const key = keys.find((key) => key === "isLogado");
+  if (key === undefined) {
+    localStorage.setItem("isLogado", false);
+  }
+
   console.log(isAuthenticated);
 
   const router = createBrowserRouter([

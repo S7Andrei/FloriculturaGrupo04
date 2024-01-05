@@ -24,7 +24,8 @@ const Header = () => {
   const [showDialog, setShowDialog] = useState(false);
 
   const login = useSelector((state) => state.login.isLogado);
-  const currentLoginStorage = localStorage.getItem('isLogado');
+  const currentLoginStorage = localStorage.getItem("isLogado");
+
 
   // const handleMenuOpen = () => {
   //   setShowMenu(true);
@@ -100,7 +101,7 @@ const Header = () => {
             <li>
               <Nav to={"/products"}>Products</Nav>
             </li>
-            {currentLoginStorage === 'false' && (
+            {currentLoginStorage === "false" && (
               <li>
                 <Nav to={"/sign-up"}>Sign-up</Nav>
               </li>
