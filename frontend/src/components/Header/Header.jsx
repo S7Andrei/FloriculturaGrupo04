@@ -109,7 +109,7 @@ const Header = () => {
             </li>
             {!login && (
               <li>
-                <Nav to={"/Cadastro"}>Sign-up</Nav>
+                <Nav to={"/sign-up"}>Sign-up</Nav>
               </li>
             )}
           </ul>
