@@ -55,7 +55,7 @@ const schema = yup
       .number()
       .positive()
       .transform((originalValue, originalObject) => {
-        return originalValue === "" ? 0.1 : 0.1;
+        return originalValue === "" ? 0.1 : parseFloat(originalObject);
       })
       .default(0.1),
     features: yup
