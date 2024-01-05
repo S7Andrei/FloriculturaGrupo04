@@ -106,7 +106,6 @@ const Register = () => {
     const data = await getPlants();
     dispatch(plantsActions.handleGetPlants(data));
   }
-  console.log(errors);
   const handleSubmitForm = (data) => {
     let isInSale;
 

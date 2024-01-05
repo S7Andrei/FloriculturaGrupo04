@@ -3,10 +3,7 @@
     {
       "name": "Echinocereus Cactus",
       "subtitle": "A Majestic Addition to Your Plant Collection",
-      "label": [
-        "Cactus",
-        "indoor"
-      ],
+      "label": ["Cactus", "indoor"],
       "isInSale": "promo",
       "price": 30,
       "discountPercentage": 2,
@@ -18,10 +15,7 @@
     {
       "name": "Orquídea",
       "subtitle": "Elegância em flores",
-      "label": [
-        "Flores",
-        "indoor"
-      ],
+      "label": ["Flores", "indoor"],
       "isInSale": "promo",
       "price": 29.99,
       "discountPercentage": 10,
@@ -33,10 +27,7 @@
     {
       "name": "Suculenta",
       "subtitle": "Beleza em simplicidade",
-      "label": [
-        "Suculenta",
-        "outdoor"
-      ],
+      "label": ["Suculenta", "outdoor"],
       "isInSale": "promo",
       "price": 12.99,
       "discountPercentage": 5,
@@ -48,10 +39,7 @@
     {
       "name": "Ficus",
       "subtitle": "Folhas exuberantes",
-      "label": [
-        "Árvore",
-        "indoor"
-      ],
+      "label": ["Árvore", "indoor"],
       "isInSale": "notPromo",
       "price": 49.99,
       "discountPercentage": 0.1,
@@ -63,10 +51,7 @@
     {
       "name": "Violeta Africana",
       "subtitle": "Cores vibrantes",
-      "label": [
-        "Flores",
-        "outdoor"
-      ],
+      "label": ["Flores", "outdoor"],
       "isInSale": "notPromo",
       "price": 14.99,
       "discountPercentage": 0.1,
@@ -78,10 +63,7 @@
     {
       "name": "Palmeira Areca",
       "subtitle": "Toque tropical",
-      "label": [
-        "Palmeira",
-        "outdoor"
-      ],
+      "label": ["Palmeira", "outdoor"],
       "isInSale": "notPromo",
       "price": 39.97,
       "discountPercentage": 0.1,
@@ -93,10 +75,7 @@
     {
       "name": "Rosa Vermelha",
       "subtitle": "Elegância em cada pétala",
-      "label": [
-        "Flores",
-        "indoor"
-      ],
+      "label": ["Flores", "indoor"],
       "isInSale": "notPromo",
       "price": 19.99,
       "discountPercentage": 0.1,
@@ -108,10 +87,7 @@
     {
       "name": "Cacto Dourado",
       "subtitle": "Brilho no deserto",
-      "label": [
-        "Suculenta",
-        "outdoor"
-      ],
+      "label": ["Suculenta", "outdoor"],
       "isInSale": "notPromo",
       "price": 8.99,
       "discountPercentage": 0.1,
@@ -123,10 +99,7 @@
     {
       "name": "Árvore da Felicidade",
       "subtitle": "Prosperidade em cada folha",
-      "label": [
-        " Árvore",
-        "outdoor"
-      ],
+      "label": [" Árvore", "outdoor"],
       "isInSale": "promo",
       "price": 39.99,
       "discountPercentage": 15,
@@ -138,10 +111,7 @@
     {
       "name": "Dracena Marginata",
       "subtitle": " Beleza nas bordas",
-      "label": [
-        "Arbusto",
-        "indoor"
-      ],
+      "label": ["Arbusto", "indoor"],
       "isInSale": "promo",
       "price": 24.99,
       "discountPercentage": 12,
@@ -153,10 +123,7 @@
     {
       "name": "Orégano Italiano",
       "subtitle": "Aroma da Itália em casa",
-      "label": [
-        "Erva Aromática",
-        "outdoor"
-      ],
+      "label": ["Erva Aromática", "outdoor"],
       "isInSale": "promo",
       "price": 6.99,
       "discountPercentage": 8,
