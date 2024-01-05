@@ -63,7 +63,7 @@
   margin-left: 10px;
 }
 
-.teste {
+.homeOneWrapper {
   display: flex;
   flex-direction: column;
   z-index: 0;
@@ -132,7 +132,7 @@
   #plantLeft {
     display: none;
   }
-  .teste {
+  .homeOneWrapper {
     margin-left: 0;
   }
   .homeOneContainer {
@@ -156,7 +156,7 @@
   #plantLeft {
     z-index: -2;
   }
-  .teste {
+  .homeOneWrapper {
     height: 100vh;
   }
 }
@@ -168,7 +168,7 @@
   #img {
     z-index: -2;
   }
-  .teste {
+  .homeOneWrapper {
     z-index: 1;
   }
 }

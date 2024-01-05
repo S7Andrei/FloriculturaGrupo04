@@ -20,13 +20,14 @@ const HomeOne = () => {
   return (
     <>
       <section className={styles.homeOneContainer}>
-        <div className={styles.teste}>
+        <div className={styles.homeOneWrapper}>
           <p id={styles.topTitle}>
             <img src={box} id={styles.box} />
             {"  "}Love for Nature
           </p>
           <h1 className={styles.h1}>
-            Discover your<span id={styles.colorGreen}>green</span>
+            Discover your
+            <strong id={styles.colorGreen}>green</strong>
           </h1>
           <h1 className={styles.h1}>side</h1>
 
@@ -44,12 +45,10 @@ const HomeOne = () => {
           <button id={styles.learn} onClick={handleSearch}>
             Learn Gardening <img src={arrow} id={styles.arrow} />
           </button>
-
-         
         </div>
         <figure id={styles.plantLeft}>
-            <img src={plantLeft} />
-          </figure>
+          <img src={plantLeft} />
+        </figure>
         <figure id={styles.img}>
           <img src={plant} />
         </figure>
