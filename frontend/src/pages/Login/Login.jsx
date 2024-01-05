@@ -17,7 +17,7 @@ const schema = yup
       .string()
       .required("Email it is a mandatory field")
       .min(5, "Email must have at least 5 characters")
-      .matches(/^[^\d]+$/, "Name must not contain numbers"),
+      .matches(/.*@.*/, "Enter a valid email"),
     password: yup
       .string()
       .required("Password it is a mandatory field")
