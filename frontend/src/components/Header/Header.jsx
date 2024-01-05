@@ -207,11 +207,7 @@ const Header = () => {
         )}
         <button onClick={handleLog}>
           <figure>
-            <img
-              src={profile}
-              alt=""
-              style={{ width: "50px", marginRight: "100px" }}
-            />
+            <img src={profile} alt="" style={{ width: "50px" }} />
           </figure>
         </button>
       </header>
