@@ -9,9 +9,9 @@ import styles from "./styles.module.css";
 import { useNavigate } from "react-router-dom";
 import { deletePlant } from "../../store/plants/plantsAction";
 import { useDispatch, useSelector } from "react-redux";
+import ButtomHome from "../../components/UI/Home/ButtonHome/ButtonHome";
 
 const CardContent = ({ id, name, price, label, discont, isInSale, img }) => {
-
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const login = useSelector((state) => state.login.isLogado);
@@ -41,10 +41,12 @@ const CardContent = ({ id, name, price, label, discont, isInSale, img }) => {
           isInSale={isInSale}
           styles={styles}
         />
-        {/* {login && <button onClick={() => handleDelete(id)}>Deletar</button>} */}
-
+      
         <p id={styles.label}>{label}</p>
       </div>
+      {login && (
+          <ButtomHome onClick={() => handleDelete(id)}>Deletar</ButtomHome>
+        )}
     </div>
   );
 };

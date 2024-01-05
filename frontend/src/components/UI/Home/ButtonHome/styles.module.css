@@ -21,7 +21,7 @@
   
   line-height: 154.5%; /* 24.72px */
   box-shadow: 5px 5px 14px 0px rgba(53, 71, 51, 0.20);
-
+  z-index: 1;
 }
 
 /* Estilo do botão quando o mouse passa por cima */
