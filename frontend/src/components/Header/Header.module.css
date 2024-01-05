@@ -33,6 +33,19 @@
   color: #fff !important;
 }
 
+
+.dropItem {
+  display: flex;
+  justify-content: space-between !important;
+  padding: 10px 30px !important;
+}
+
+.dropItem a{
+  font-family: var(--raleway);
+  text-decoration: none;
+  
+}
+
 @media (max-width: 768px) {
   .navBar {
     display: none;
@@ -70,24 +83,25 @@
 
 @media screen {
   @media screen and (max-width: 768px) {
-    .navBar {
-      display: none;
-    }
-
-    .mobileNav {
-      display: flex;
-      justify-content: flex-start;
-      width: 50%;
-      height: 40px;
-    }
-
     .dropButton {
-      text-transform: "none";
-    }
-
-    .dropItem:hover {
-      background-color: "primary.main";
-      color: "common.white";
+      font-size: var(--fonte-pequena);
+      width: 50vw;
+      color: #354733 !important;
     }
   }
+  
+  @media screen and (max-width: 568px) {
+    .dropItem {
+      padding: 8px 15px !important;
+    }
+  }
+  
+  @media (max-width: 335px) {
+    .dropItem {
+      flex-direction: column;
+      gap: 15px;
+    }
+  }
+  
 }
+  
