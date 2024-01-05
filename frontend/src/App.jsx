@@ -15,15 +15,19 @@ import "./App.css";
 //Libs
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { getPlants } from "./store/plants/plantsAction";
+import { useSelector } from "react-redux";
 
 function App() {
-  const currentLoginStorage = localStorage.getItem("isLogado");
+  const isAuthenticated = useSelector((state) => state.login.isLogado);
+  const currentLoginStorage = localStorage.getItem('isLogado');
 
   const keys = Object.keys(localStorage);
   const key = keys.find((key) => key === "isLogado");
   if (key === undefined) {
     localStorage.setItem("isLogado", false);
   }
+
+  console.log(isAuthenticated);
 
   const router = createBrowserRouter([
     {
@@ -44,14 +48,13 @@ function App() {
         },
         {
           path: "register",
-          element:
-            currentLoginStorage === "true" ? (
-              <Register />
-            ) : (
-              <div className="registerOff">
-                <Login />
-              </div>
-            ),
+          element: currentLoginStorage === 'true' ? (
+            <Register />
+          ) : (
+            <div className="registerOff">
+              <Login />
+            </div>
+          ),
         },
         { path: "sign-up", element: <SignUp /> },
       ],
