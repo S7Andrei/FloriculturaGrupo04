@@ -50,7 +50,7 @@ const schema = yup
       .string()
       .required("Description it is a mandatory field")
       .min(5)
-      .max(99),
+      .max(500),
     discountPercentage: yup
       .number()
       .positive("Discount value must be a positive number")
@@ -77,7 +77,8 @@ const schema = yup
     features: yup
       .string()
       .required("Features it is a mandatory field")
-      .min(5, "Features must have at least 5 characters"),
+      .min(5, "Features must have at least 5 characters")
+      .max(200),
     plantType: yup
       .string()
       .required("Plant Type it is a mandatory field")
