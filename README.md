@@ -9,7 +9,7 @@ npm install
 ```
 
 # Execução do sistema
-Execute dois terminais, para executar o > frontend e backend.
+Execute dois terminais, para executar o frontend e backend.
 
 1. Em um terminal, navegue ate a pasta do frontend e use o comando
 
