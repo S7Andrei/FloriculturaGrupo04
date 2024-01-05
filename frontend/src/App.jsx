@@ -1,19 +1,27 @@
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
-
-import TemplateRoot from "./pages/TemplateRoot";
+//Componentes
 import Home from "./pages/Home/Home";
-
 import AboutUs from "./pages/AboutUs/AboutUs";
 import Products from "./pages/Products/Products";
 import Register from "./pages/Register/Register";
-
+import SignUp from './pages/SignUp/SignUp'
 import NotFound from "./pages/NotFound/NotFound";
-
-import "./App.css";
+import TemplateRoot from "./pages/TemplateRoot";
 import ProductsDetails from "./pages/ProductsDetails/ProductsDetails";
+import Login from "./pages/Login/Login";
+
+//Estilos
+import "./App.css";
+
+//Libs
+import { Navigate, RouterProvider, createBrowserRouter } from "react-router-dom";
 import { getPlants } from "./store/plants/plantsAction";
+import { useSelector } from "react-redux";
 
 function App() {
+  const isAuthenticated = useSelector((state) => state.login.isLogado);
+
+  console.log(isAuthenticated);
+
   const router = createBrowserRouter([
     {
       path: "/",
@@ -31,7 +39,12 @@ function App() {
           path: "products/:id",
           element: <ProductsDetails />,
         },
-        { path: "register", element: <Register /> },
+        { 
+          path: "register",
+          element: isAuthenticated ? <Register /> : <Navigate to="/login" />,
+        }, 
+        { path: "login", element: <Login /> },
+        {path: "cadastro", element: <SignUp />}
       ],
     },
   ]);
