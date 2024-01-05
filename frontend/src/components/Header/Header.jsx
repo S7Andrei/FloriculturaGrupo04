@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { useEffect, useState } from "react";
 import { IoMenu } from "react-icons/io5";
 // import { slide as Menu } from "react-burger-menu";
@@ -13,9 +14,7 @@ import hamburguerMenuStyles from "./mbBreak";
 import { useSelector } from "react-redux";
 import LogoutModal from "../LogoutModal/LogoutModal";
 
-
 import { Menu, MenuItem, Button } from "@mui/material";
-
 
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -47,16 +46,13 @@ const Header = () => {
     navigate("/");
   };
 
-
   const closeDialog = () => {
     setShowDialog(false);
   };
 
   const handleLog = () => {
-    setShowDialog((prevState) => !prevState)
-  }
-
-
+    setShowDialog((prevState) => !prevState);
+  };
 
   useEffect(() => {
     const handleWindowsResize = () => {
@@ -95,7 +91,6 @@ const Header = () => {
         </button>
 
         <nav className={styles.desktopNav}>
-
           {console.log(login)}
           <ul className={styles.navBar}>
             <li>
@@ -112,8 +107,12 @@ const Header = () => {
             <li>
               <Nav to={"/about-us"}>About us</Nav>
             </li>
+            {!login && (
+              <li>
+                <Nav to={"/Cadastro"}>Sign-up</Nav>
+              </li>
+            )}
           </ul>
-
         </nav>
         {mobileBreakPoint && (
           <div>
