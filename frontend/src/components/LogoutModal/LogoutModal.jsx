@@ -4,6 +4,7 @@ import close from "../../assets/LogoutModalImg/close.svg";
 import cactuLogout from "../../assets/LogoutModalImg/cactoTriste.png";
 import ButtonHome from "../UI/Home/ButtonHome/ButtonHome";
 import styles from "./styles.module.css";
+
 import { useDispatch, useSelector } from "react-redux";
 import { userActions } from "../../store/login/loginSlice";
 import { useNavigate } from "react-router-dom";
@@ -13,12 +14,12 @@ const LogoutModal = ({ isOpen, onClose }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const login = useSelector((state) => state.login.isLogado);
-  const currentLoginStorage = localStorage.getItem('isLogado');
+  const currentLoginStorage = localStorage.getItem("isLogado");
 
   const handleLogInOut = () => {
     dispatch(userActions.handleUpdateLogin());
-    localStorage.setItem('isLogado', false);
-    onClose()
+    localStorage.setItem("isLogado", false);
+    onClose();
     navigate(`/`);
   };
 
@@ -26,8 +27,8 @@ const LogoutModal = ({ isOpen, onClose }) => {
     <dialog className={isOpen ? styles.modalContainer : styles.modalOff}>
       <section className={styles.modal}>
         {console.log(localStorage + currentLoginStorage)}
-        {console.log(typeof(currentLoginStorage))}
-        {currentLoginStorage === 'true' ? (
+        {console.log(typeof currentLoginStorage)}
+        {currentLoginStorage === "true" ? (
           <div>
             <div id={styles.btnClose}>
               <button onClick={onClose}>
@@ -53,6 +54,7 @@ const LogoutModal = ({ isOpen, onClose }) => {
             </div>
 
             <Login onClose={onClose} />
+            
           </div>
         )}
       </section>

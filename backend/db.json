@@ -14,6 +14,21 @@
       "description": "This is a Cactus.",
       "img": "/src/assets/RegisterImg/plants2.png",
       "id": 1
+    },
+    {
+      "name": "TESTdvsdfvfsv",
+      "subtitle": "Uma coleção de planta de algum lugar",
+      "label": [
+        "Árvore",
+        "indoor"
+      ],
+      "isInSale": "promo",
+      "price": 130,
+      "discountPercentage": 19.99,
+      "features": "scsdvcafdvfdvdfsv",
+      "description": "vsdfvsdfvsdfvsfv",
+      "img": "/src/assets/RegisterImg/plants.png",
+      "id": 2
     }
   ],
   "users": [
