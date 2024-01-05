@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 //Componentes
 import PriceFormated from "../PriceFormated/PriceFormated";
@@ -15,6 +16,7 @@ const CardContent = ({ id, name, price, label, discont, isInSale, img }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const login = useSelector((state) => state.login.isLogado);
+  const currentLoginStorage = localStorage.getItem('isLogado');
 
   const handleProductDetails = (id) => {
     navigate(`/products/${id}`);
@@ -44,7 +46,7 @@ const CardContent = ({ id, name, price, label, discont, isInSale, img }) => {
       
         <p id={styles.label}>{label}</p>
       </div>
-      {login && (
+      {currentLoginStorage === 'true' && (
           <ButtomHome onClick={() => handleDelete(id)}>Deletar</ButtomHome>
         )}
     </div>

@@ -53,11 +53,21 @@ const schema = yup
       .max(99),
     discountPercentage: yup
       .number()
-      .positive()
+      .positive("Discount value must be a positive number")
       .transform((originalValue, originalObject) => {
-        return originalValue === "" ? 0.1 : parseFloat(originalObject);
-      })
+        if (originalValue === "" || originalValue === undefined || isNaN(originalValue)) {
+          return 0.1;
+        }
+        console.log(`originalValue ${originalValue} originalObject ${originalObject}`)
+        console.log(isNaN(originalValue))
+        const parsedValue = parseFloat(originalValue);
+        return !isNaN(parsedValue) && parsedValue >= 0
+          ? parsedValue
+          : (parseFloat(originalObject));
+      }, "Invalid value")
+      .max(99, "Discount value must be less than or equal to 99")
       .default(0.1),
+
     features: yup
       .string()
       .required("Features it is a mandatory field")

@@ -27,7 +27,7 @@ const RegisterDialog = ({ isOpen, onClose, lastID }) => {
         </div>
 
         <ButtonHome onClick={() => handleProduct(lastID)}>
-          Ver planta
+          See Plant
         </ButtonHome>
       </section>
     </dialog>

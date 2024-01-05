@@ -19,6 +19,8 @@ import { useSelector } from "react-redux";
 
 function App() {
   const isAuthenticated = useSelector((state) => state.login.isLogado);
+  const currentLoginStorage = localStorage.getItem('isLogado');
+
   console.log(isAuthenticated);
 
   const router = createBrowserRouter([
@@ -40,7 +42,7 @@ function App() {
         },
         {
           path: "register",
-          element: isAuthenticated ? (
+          element: currentLoginStorage === 'true' ? (
             <Register />
           ) : (
             <div className="registerOff">
