@@ -19,7 +19,7 @@ const ProductsDetails = () => {
     setIsFetching(false);
   }, [dispatch, plantId]);
 
-  let { price, isInSale, discountPercentage } = plantSelected;
+  let { price, isInSale, discountPercentage} = plantSelected;
 
   const handleSearch = () => {
     const plantName = plantSelected.name;

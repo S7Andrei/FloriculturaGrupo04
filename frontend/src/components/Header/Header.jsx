@@ -9,11 +9,16 @@ import Nav from "../UI/Nav/Nav";
 import styles from "./Header.module.css";
 import { useNavigate } from "react-router-dom";
 import hamburguerMenuStyles from "./mbBreak";
+import { useSelector } from "react-redux";
+import LogoutModal from "../LogoutModal/LogoutModal";
 
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
   const navigate = useNavigate();
   const [windowSize, setWindowSize] = useState(window.innerWidth);
+  const [showDialog, setShowDialog] = useState(false);
+
+  const login = useSelector((state) => state.login.isLogado);
 
   const handleMenuOpen = () => {
     setShowMenu(true);
@@ -26,6 +31,14 @@ const Header = () => {
   const handleHome = () => {
     navigate("/");
   };
+
+  const closeDialog = () => {
+    setShowDialog(false);
+  };
+
+  const handleLog = () => {
+    setShowDialog((prevState) => !prevState)
+  }
 
   useEffect(() => {
     const handleWindowsResize = () => {
@@ -58,6 +71,7 @@ const Header = () => {
         </button>
 
         <nav className={styles.desktopNav}>
+          {console.log(login)}
           <ul className={styles.navBar}>
             <li>
               <Nav to={"/"} end>
@@ -113,14 +127,18 @@ const Header = () => {
             </nav>
           </Menu>
         )}
-        <figure>
-          <img
-            src={profile}
-            alt=""
-            style={{ width: "50px", marginRight: "100px" }}
-          />
-        </figure>
+        <button onClick={handleLog}>
+          <figure>
+            <img
+              src={profile}
+              alt=""
+              style={{ width: "50px", marginRight: "100px" }}
+            />
+          </figure>
+        </button>
       </header>
+
+      <LogoutModal isOpen={showDialog} onClose={closeDialog} />
     </div>
   );
 };
