@@ -37,7 +37,9 @@ const HomeOne = () => {
             vibrant flowers to lush indoor foliage, allowing you to create your
             very own green oasis.
           </p>
-
+          <figure id={styles.plantLeft}>
+          <img src={plantLeft} />
+        </figure>
           <ButtonHome onClick={handleProductDetails} id={styles.btn}>
             Shop now
           </ButtonHome>
@@ -46,9 +48,7 @@ const HomeOne = () => {
             Learn Gardening <img src={arrow} id={styles.arrow} />
           </button>
         </div>
-        <figure id={styles.plantLeft}>
-          <img src={plantLeft} />
-        </figure>
+        
         <figure id={styles.img}>
           <img src={plant} />
         </figure>
