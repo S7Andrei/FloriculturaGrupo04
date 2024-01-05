@@ -26,11 +26,6 @@ const Header = () => {
   const login = useSelector((state) => state.login.isLogado);
   const currentLoginStorage = localStorage.getItem("isLogado");
 
-  const keys = Object.keys(localStorage);
-  const key = keys.find((key) => key === "isLogado");
-  if (key === "isLogado") {
-    localStorage.setItem("isLogado", false);
-  }
 
   // const handleMenuOpen = () => {
   //   setShowMenu(true);
