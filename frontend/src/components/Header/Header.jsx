@@ -102,7 +102,11 @@ const Header = () => {
                 <Nav to={"/products"}>Products</Nav>
               </li>
               <li>
+
+                <Nav to={"/sign-up"}>Sign-up</Nav>
+
                 <Nav to={"/about-us"}>About us</Nav>
+
               </li>
           </ul>
         </nav>

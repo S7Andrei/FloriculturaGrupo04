@@ -48,8 +48,7 @@ function App() {
             </div>
           ),
         },
-        { path: "login", element: <Login /> },
-        { path: "cadastro", element: <SignUp /> },
+        { path: "sign-up", element: <SignUp /> },
       ],
     },
   ]);
