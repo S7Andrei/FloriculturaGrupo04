@@ -26,8 +26,6 @@ const LogoutModal = ({ isOpen, onClose }) => {
   return (
     <dialog className={isOpen ? styles.modalContainer : styles.modalOff}>
       <section className={styles.modal}>
-        {console.log(localStorage + currentLoginStorage)}
-        {console.log(typeof currentLoginStorage)}
         {currentLoginStorage === "true" ? (
           <div>
             <div id={styles.btnClose}>
@@ -54,7 +52,6 @@ const LogoutModal = ({ isOpen, onClose }) => {
             </div>
 
             <Login onClose={onClose} />
-            
           </div>
         )}
       </section>
