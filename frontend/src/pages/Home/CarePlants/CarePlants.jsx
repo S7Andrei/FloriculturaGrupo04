@@ -9,6 +9,11 @@ import carePlantsImg2 from "../../../assets/careYourPlantsFoto2.png";
 import carePlantsImg3 from "../../../assets/careYourPlantsFoto3.png";
 
 function CarePlants() {
+
+  const handleMorePhotos = () => {
+    window.location.href = `https://unsplash.com/pt-br/s/fotografias/gardening`;
+  }
+
   return (
     <section className={styles.carePlantsContainer}>
       <div>
@@ -96,7 +101,7 @@ function CarePlants() {
             the way. Get ready to explore our virtual garden and discover the
             joys of gardening with us!
           </p>
-          <ButtonHome>See more photos</ButtonHome>
+          <ButtonHome onClick={handleMorePhotos}>See more photos</ButtonHome>
         </div>
       </div>
     </section>

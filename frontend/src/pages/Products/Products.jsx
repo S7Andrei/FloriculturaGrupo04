@@ -1,19 +1,19 @@
 /* eslint-disable react/prop-types */
+//Componentes
 import CardContent from "../../components/CardContent/CardContent";
-import { useSelector } from "react-redux";
+
+//Estilos
 import styles from "./styles.module.css";
-import { useNavigate } from "react-router-dom";
+
+//Libs
 import { useState } from "react";
+import { useSelector } from "react-redux";
 
 const Products = ({ listagemTotal = false, filter }) => {
   const plants = useSelector((state) => state.plants.plants);
-  const navigate = useNavigate();
+
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("all");
-
-  const handleProductDetails = (id) => {
-    navigate(`/products/${id}`);
-  };
 
   const filteredPlants = plants.filter(
     (plant) =>
@@ -62,17 +62,15 @@ const Products = ({ listagemTotal = false, filter }) => {
         <div className={styles.productList}>
           {filteredPlants.map((plant) => (
             <div key={plant.id} className={styles.cardContainer}>
-              <button onClick={() => handleProductDetails(plant.id)}>
-                <CardContent
-                  id={plant.id}
-                  name={plant.name}
-                  price={plant.price}
-                  label={plant.label[1]}
-                  discont={plant.discountPercentage}
-                  isInSale={plant.isInSale}
-                  img={plant.img}
-                />
-              </button>
+              <CardContent
+                id={plant.id}
+                name={plant.name}
+                price={plant.price}
+                label={plant.label[1]}
+                discont={plant.discountPercentage}
+                isInSale={plant.isInSale}
+                img={plant.img}
+              />
             </div>
           ))}
         </div>
