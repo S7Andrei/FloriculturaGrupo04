@@ -55,6 +55,7 @@
 }
 
 .inputLabel {
+  display: flex;
   font-family: var(--inter);
   color: var(--IBBNB);
   font-size: calc(var(--fonte-pequena) + 2);
@@ -64,7 +65,8 @@
 .inputContainer {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 5px;
+  margin-bottom: 25px;
 }
 
 .error {
