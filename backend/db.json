@@ -171,6 +171,11 @@
       "email": "admin@plantpeace.com",
       "password": "abcde12345",
       "id": 1
+    },
+    {
+      "email": "andreitest1@gmail.com",
+      "password": "abacaxi24",
+      "id": 2
     }
   ]
 }
