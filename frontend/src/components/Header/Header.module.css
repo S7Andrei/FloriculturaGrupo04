@@ -33,17 +33,15 @@
   color: #fff !important;
 }
 
-
 .dropItem {
   display: flex;
   justify-content: space-between !important;
   padding: 10px 30px !important;
 }
 
-.dropItem a{
+.dropItem a {
   font-family: var(--raleway);
   text-decoration: none;
-  
 }
 
 @media (max-width: 768px) {
@@ -82,6 +80,14 @@
   text-decoration: none;
 } */
 
+.navLink {
+  color: var(--luna-green);
+}
+
+.active {
+  color: var(--avocado);
+}
+
 @media screen {
   @media screen and (max-width: 768px) {
     .dropButton {
@@ -90,13 +96,13 @@
       color: #354733 !important;
     }
   }
-  
+
   @media screen and (max-width: 568px) {
     .dropItem {
       padding: 8px 15px !important;
     }
   }
-  
+
   @media (max-width: 335px) {
     .dropItem {
       flex-direction: column;
@@ -109,6 +115,4 @@
       margin-left: 68px;
     }
   }
-  
 }
-  

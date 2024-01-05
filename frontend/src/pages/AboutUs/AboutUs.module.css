@@ -1,41 +1,45 @@
 .aboutUs {
-  margin-top: 10%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2em;
+  gap: 35px;
+  padding: 150px 100px 100px 100px;
 }
 
 .aboutH1 {
+  color: var(--Primary-Lunar-green, #354733);
+  font-family: EB Garamond;
   font-size: var(--fonte-grande);
-  font-family: var(---eb-garamond);
-  color: var(--luna-green);
+  font-style: normal;
   font-weight: 700;
-  margin-bottom: 1em;
+  line-height: normal;
+  text-transform: capitalize;
 }
 
 .aboutP {
-  max-width: 70vw;
-  width: 100%;
+  width: 70%;
   font-size: var(--fonte-pequena);
-  font-family: var(--raleway);
-  color: var(--secondary);
+  font-family: var(---raleway);
+  color: var(--Secondary-Secondary, #808276);
   line-height: 27.87px;
   letter-spacing: 0.08px;
   word-wrap: break-word;
   font-weight: 400;
-  display: flex;
-  justify-content: center;
   text-align: center;
+  margin-bottom: 25px;
 }
 
 .aboutTitle {
+  color: var(--Primary-Lunar-green, #354733);
+  /* Primary/Primary */
+  font-family: var(--eb-garamond);
   font-size: var(--fonte-grande);
-  font-family: var(---eb-garamond);
-  color: var(--luna-green);
-  font-weight: 400;
-  font-size: 40px;
-  margin: 1em 0 1em 0;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: capitalize;
+  text-align: center;
+  margin-bottom: 10px;
 }
 
 .aboutUs figure {
@@ -47,20 +51,49 @@
   transition: filter 0.3s ease;
 }
 
-.aboutUs figure img {
-  width: 55vw;
-}
-
-.aboutUs figure:hover {
-  filter: grayscale(0);
-}
-
 .membersContainer {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 50px;
 }
 
-@media (max-width: 600px) {
-  .membersContainer {
-    flex-direction: column;
+@media screen {
+  @media (max-width: 1024px) {
+    .aboutP {
+      width: 100%;
+    }
+
+    .aboutUs {
+      gap: 25px;
+      padding: 150px 75px 100px 75px;
+    }
+
+    .membersContainer {
+      gap: 35px;
+    }
+  }
+
+  @media (max-width: 960px) {
+    .membersContainer {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 568px) {
+    .membersContainer {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    .aboutUs {
+      gap: 25px;
+      padding: 125px 50px 100px 50px;
+    }
+  }
+
+  @media (max-width: 375px) {
+    .aboutUs {
+      gap: 15px;
+      padding: 125px 35px 100px 35px;
+    }
   }
 }

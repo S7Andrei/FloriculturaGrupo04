@@ -81,14 +81,15 @@ const Register = () => {
     register,
     handleSubmit,
     watch,
-    formState: { errors }, reset
+    formState: { errors },
+    reset,
   } = useForm({ resolver: yupResolver(schema) });
 
   async function updateStatePlants() {
     const data = await getPlants();
     dispatch(plantsActions.handleGetPlants(data));
   }
-  console.log(errors)
+  console.log(errors);
   const handleSubmitForm = (data) => {
     let isInSale;
 
@@ -130,12 +131,12 @@ const Register = () => {
 
       body: JSON.stringify(plantsObject),
     })
-      .then((response) => response.json()) 
+      .then((response) => response.json())
       .then((data) => {
         console.log(data);
         if (data.id) {
           console.log("Form submitted successfully");
-    
+
           setLastID(data.id);
           updateStatePlants();
           setShowDialog(true);
@@ -149,8 +150,8 @@ const Register = () => {
   };
 
   const closeDialog = () => {
-    setShowDialog(false); 
-    reset()
+    setShowDialog(false);
+    reset();
   };
 
   return (
@@ -304,7 +305,11 @@ const Register = () => {
           <ButtonForm type="submit">Register</ButtonForm>
         </form>
 
-        <RegisterDialog isOpen={showDialog} onClose={closeDialog} lastID={lastID}/>
+        <RegisterDialog
+          isOpen={showDialog}
+          onClose={closeDialog}
+          lastID={lastID}
+        />
 
         <figure id={styles.img}>
           <img src={plant} />
