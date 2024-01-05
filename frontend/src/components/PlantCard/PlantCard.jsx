@@ -52,11 +52,11 @@ const PlantCard = ({ listagemTotal = false, filter }) => {
         console.log(teste);
       }}
       breakpoints={{
-        1800: {
+        /*         1800: {
           slidesPerView: 4.25,
-        },
+        }, */
         1600: {
-          slidesPerView: 3.7,
+          slidesPerView: 3.5,
         },
         1440: {
           slidesPerView: 3.25,
@@ -95,7 +95,10 @@ const PlantCard = ({ listagemTotal = false, filter }) => {
         .map((plant) => (
           <SwiperSlide key={plant.id} className={styles.slideContainer}>
             <div className={styles.productList}>
-              <button onClick={() => handleProductDetails(plant.id)}>
+              <button
+                onClick={() => handleProductDetails(plant.id)}
+                style={{ width: "100%" }}
+              >
                 <CardContent
                   id={plant.id}
                   name={plant.name}

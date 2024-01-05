@@ -1,13 +1,10 @@
 /* eslint-disable react/prop-types */
-//Componentes
-import CardContent from "../../components/CardContent/CardContent";
-
-//Estilos
-import styles from "./styles.module.css";
-
-//Libs
 import { useState } from "react";
 import { useSelector } from "react-redux";
+
+import CardContent from "../../components/CardContent/CardContent";
+
+import styles from "./styles.module.css";
 
 const Products = ({ listagemTotal = false, filter }) => {
   const plants = useSelector((state) => state.plants.plants);
@@ -33,7 +30,7 @@ const Products = ({ listagemTotal = false, filter }) => {
         </h1>
 
         <div className={styles.querysContainer}>
-          <p>
+          <p className={styles.campoForm}>
             <label className={styles.inputLabel}>Search by Name:</label>
             <p>
               <input
@@ -45,7 +42,7 @@ const Products = ({ listagemTotal = false, filter }) => {
             </p>
           </p>
 
-          <p>
+          <p className={styles.campoForm}>
             <label className={styles.inputLabel}>Show by Category:</label>
             <p>
               <select

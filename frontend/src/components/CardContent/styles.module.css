@@ -29,6 +29,10 @@
   line-height: normal;
   text-align: left;
   margin: 0;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 #price {
@@ -62,7 +66,6 @@
   padding: 6.476px 12.951px;
 }
 
-
 .cardContent {
   display: flex;
   flex-direction: column;
@@ -70,6 +73,7 @@
   margin: 0 32px;
   margin-bottom: 32px;
   height: 100%;
+  width: 80%;
 }
 
 #oldPrice {
@@ -93,6 +97,16 @@
     .cardContent {
       margin: 0 20px;
       margin-bottom: 20px;
+    }
+
+    #label {
+      padding: 5px 10px;
+    }
+  }
+
+  @media (max-width: 425px) {
+    #label {
+      padding: 3.75px 8px;
     }
   }
 }
