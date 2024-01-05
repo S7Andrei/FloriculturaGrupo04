@@ -9,7 +9,7 @@
   justify-content: space-between;
   position: fixed;
   z-index: 10;
-  width: calc(100vw - 100px);
+  width: calc(100vw - 200px);
   background-color: var(--wisper);
   padding: 16px 100px;
 }
@@ -89,23 +89,28 @@
     }
   }
 
+  @media (max-width: 602px) {
+    .headerContainer {
+      width: calc(100vw - 150px);
+      padding: 16px 75px;
+    }
+  }
+
   @media screen and (max-width: 568px) {
     .dropItem {
       padding: 8px 15px !important;
+    }
+
+    .headerContainer {
+      width: calc(100vw - 100px);
+      padding: 16px 50px;
     }
   }
 
   @media (max-width: 425px) {
     .headerContainer {
-      width: calc(100vw - 75px);
-      padding: 16px 75px;
-    }
-  }
-
-  @media (max-width: 375px) {
-    .headerContainer {
       width: calc(100vw - 50px);
-      padding: 16px 50px;
+      padding: 16px 25px;
     }
   }
 
