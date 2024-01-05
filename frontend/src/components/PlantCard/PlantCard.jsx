@@ -45,11 +45,52 @@ const PlantCard = ({ listagemTotal = false, filter }) => {
   // }, []);
 
   return (
-    <Swiper slidesPerView={4} className={styles.swiper}>
+    <Swiper
+      spaceBetween={50}
+      className={styles.swiperContainer}
+      onReachEnd={(teste) => {
+        console.log(teste);
+      }}
+      breakpoints={{
+        1700: {
+          slidesPerView: 4.5,
+        },
+        1440: {
+          slidesPerView: 3.25,
+        },
+        1300: {
+          slidesPerView: 3,
+        },
+        1024: {
+          slidesPerView: 2.5,
+        },
+        769: {
+          slidesPerView: 2.25,
+          spaceBetween: 35,
+        },
+        568: {
+          slidesPerView: 1.75,
+          spaceBetween: 25,
+        },
+        425: {
+          slidesPerView: 1.5,
+          spaceBetween: 20,
+        },
+
+        320: {
+          slidesPerView: 1.15,
+          spaceBetween: 15,
+        },
+        0: {
+          slidesPerView: 1.05,
+          spaceBetween: 10,
+        },
+      }}
+    >
       {plants
         .filter((plant) => (listagemTotal ? true : plant.isInSale === filter))
         .map((plant) => (
-          <SwiperSlide key={plant.id}>
+          <SwiperSlide key={plant.id} className={styles.slideContainer}>
             <div className={styles.productList}>
               <button onClick={() => handleProductDetails(plant.id)}>
                 <CardContent

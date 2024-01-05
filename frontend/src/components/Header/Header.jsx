@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { IoMenu } from "react-icons/io5";
-import { slide as Menu } from "react-burger-menu";
+// import { slide as Menu } from "react-burger-menu";
 
 import logo from "../../assets/logo.svg";
 import profile from "../../assets/profileLogo.svg";
@@ -9,8 +9,13 @@ import Nav from "../UI/Nav/Nav";
 import styles from "./Header.module.css";
 import { useNavigate } from "react-router-dom";
 import hamburguerMenuStyles from "./mbBreak";
+
 import { useSelector } from "react-redux";
 import LogoutModal from "../LogoutModal/LogoutModal";
+
+
+import { Menu, MenuItem, Button } from "@mui/material";
+
 
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -20,17 +25,28 @@ const Header = () => {
 
   const login = useSelector((state) => state.login.isLogado);
 
-  const handleMenuOpen = () => {
-    setShowMenu(true);
+  // const handleMenuOpen = () => {
+  //   setShowMenu(true);
+  // };
+
+  // const handleMenuClose = () => {
+  //   setShowMenu(false);
+  // };
+
+  const [anchorEl, setAnchorEl] = useState(null);
+
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
   };
 
-  const handleMenuClose = () => {
-    setShowMenu(false);
+  const handleClose = () => {
+    setAnchorEl(null);
   };
 
   const handleHome = () => {
     navigate("/");
   };
+
 
   const closeDialog = () => {
     setShowDialog(false);
@@ -39,6 +55,8 @@ const Header = () => {
   const handleLog = () => {
     setShowDialog((prevState) => !prevState)
   }
+
+
 
   useEffect(() => {
     const handleWindowsResize = () => {
@@ -57,6 +75,12 @@ const Header = () => {
     mobileBreakPoint = true;
   }
 
+  const createHandleMenuClick = (menuItem) => {
+    return () => {
+      console.log(`Clicked on ${menuItem}`);
+    };
+  };
+
   return (
     <div className={styles.container}>
       <header className={styles.headerContainer}>
@@ -71,6 +95,7 @@ const Header = () => {
         </button>
 
         <nav className={styles.desktopNav}>
+
           {console.log(login)}
           <ul className={styles.navBar}>
             <li>
@@ -88,44 +113,70 @@ const Header = () => {
               <Nav to={"/about-us"}>About us</Nav>
             </li>
           </ul>
+
         </nav>
-        <IoMenu
-          onClick={!showMenu ? handleMenuOpen : handleMenuClose}
-          className={styles.mobileNav}
-        />
         {mobileBreakPoint && (
-          <Menu
-            isOpen={showMenu}
-            onClose={handleMenuClose}
-            left
-            customBurgerIcon={false}
-            styles={hamburguerMenuStyles}
-          >
-            <nav>
-              <ul>
-                <li>
-                  <Nav className={styles.menuItem} to={"/"} end>
-                    Home
-                  </Nav>
-                </li>
-                <li>
-                  <Nav className="menu-item" to={"/register"}>
-                    Register
-                  </Nav>
-                </li>
-                <li>
-                  <Nav className="menu-item" to={"/products"}>
-                    Products
-                  </Nav>
-                </li>
-                <li>
-                  <Nav className="menu-item" to={"/about-us"}>
-                    About us
-                  </Nav>
-                </li>
-              </ul>
-            </nav>
-          </Menu>
+          <div>
+            <Button onClick={handleClick} className={styles.dropButton}>
+              Menu
+            </Button>
+            <Menu
+              anchorEl={anchorEl}
+              open={Boolean(anchorEl)}
+              onClose={handleClose}
+            >
+              <MenuItem className={styles.dropItem} onClick={handleClose}>
+                <Nav /> {/* Render the Nav component inside the MenuItem */}
+              </MenuItem>
+            </Menu>
+          </div>
+          // <Menu
+          //   isOpen={showMenu}
+          //   onClose={handleMenuClose}
+          //   customBurgerIcon={false}
+          //   styles={hamburguerMenuStyles}
+          //   right
+          // >
+          //   <nav>
+          //     <ul>
+          //       <li>
+          //         <Nav className={styles.menuItem} to={"/"} end>
+          //           Home
+          //         </Nav>
+          //       </li>
+          //       <li>
+          //         <Nav className="menu-item" to={"/register"}>
+          //           Register
+          //         </Nav>
+          //       </li>
+          //       <li>
+          //         <Nav className="menu-item" to={"/products"}>
+          //           Products
+          //         </Nav>
+          //       </li>
+          //       <li>
+          //         <Nav className="menu-item" to={"/about-us"}>
+          //           About us
+          //         </Nav>
+          //       </li>
+          //     </ul>
+          //   </nav>
+          // </Menu>
+
+          // <Dropdown>
+          //   <MenuButton>My account</MenuButton>
+          //   <Menu slots={{ listbox: Nav }}>
+          //     <MenuItem onClick={createHandleMenuClick("Profile")}>
+          //       Profile
+          //     </MenuItem>
+          //     <MenuItem onClick={createHandleMenuClick("Language settings")}>
+          //       Language settings
+          //     </MenuItem>
+          //     <MenuItem onClick={createHandleMenuClick("Log out")}>
+          //       Log out
+          //     </MenuItem>
+          //   </Menu>
+          // </Dropdown>
         )}
         <button onClick={handleLog}>
           <figure>

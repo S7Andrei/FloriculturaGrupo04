@@ -11,6 +11,7 @@ import { deletePlant } from "../../store/plants/plantsAction";
 import { useDispatch, useSelector } from "react-redux";
 
 const CardContent = ({ id, name, price, label, discont, isInSale, img }) => {
+
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const login = useSelector((state) => state.login.isLogado);
