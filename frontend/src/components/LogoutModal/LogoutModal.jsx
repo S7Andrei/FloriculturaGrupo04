@@ -13,7 +13,7 @@ const LogoutModal = ({ isOpen, onClose }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const login = useSelector((state) => state.login.isLogado);
-  let currentLoginStorage = localStorage.getItem('isLogado');
+  const currentLoginStorage = localStorage.getItem('isLogado');
 
   const handleLogInOut = () => {
     dispatch(userActions.handleUpdateLogin());
