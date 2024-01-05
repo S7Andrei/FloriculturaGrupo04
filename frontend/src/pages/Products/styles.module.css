@@ -61,7 +61,7 @@
   color: var(--IBBNB);
   font-size: var(--fonte-pequena);
   background-color: transparent;
-  padding: 12px 16px;
+  padding: 12px 42px;
   border-radius: 4px;
   border: 2px solid var(--gray);
 }
@@ -130,6 +130,12 @@ select option {
   @media (max-width: 650px) {
     .querysContainer {
       flex-direction: column;
+    }
+  }
+
+  @media screen and (max-width: 1920px) and (min-width: 1000px) {
+    .querysContainer {
+      align-items: center;
     }
   }
 
