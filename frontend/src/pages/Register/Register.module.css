@@ -159,6 +159,10 @@
   gap: 16px;
 }
 
+#heightError{
+  padding-top: 16px;
+}
+
 @media (max-width: 1270px) {
   .registerContainer figure img {
     width: 55vw;
