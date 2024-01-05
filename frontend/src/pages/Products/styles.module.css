@@ -12,7 +12,10 @@
 }
 
 .cardContainer p:first-of-type {
-  word-break: break-all;
+  word-break: keep-all !important;
+  text-overflow: ellipsis !important;
+  white-space: inherit !important;
+  overflow: auto !important;
 }
 
 .cardContainer button {
@@ -86,6 +89,12 @@ select option {
   padding: 30px;
 }
 
+.campoForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 @media screen {
   @media (max-width: 1440px) {
     .productList {
@@ -128,7 +137,17 @@ select option {
   }
 
   @media (max-width: 650px) {
+    .productContainer {
+      padding: 100px 35px;
+    }
+
     .querysContainer {
+      padding: 30px 0;
+      flex-direction: column;
+    }
+
+    .querysContainer p {
+      display: flex;
       flex-direction: column;
     }
   }
@@ -146,6 +165,7 @@ select option {
 
     .querysContainer {
       padding: 30px 0;
+      flex-direction: column;
     }
 
     .querysContainer p {
