@@ -49,12 +49,12 @@ const SignUp = () => {
 
   return (
     <section className={styles.container}>
-      <div className={styles.loginContainer}>
-        <h1 className={styles.h1}>Cadastro</h1>
+      <div className={styles.singContainer}>
+        <h1 className={styles.h1}>Sign-up</h1>
         <form onSubmit={handleCadastro}>
           <p className={styles.inputContainer}>
             <label htmlFor="email" className={styles.inputLabel}>
-              Username:
+              Email:
             </label>
             <input
               type="text"

@@ -1,5 +1,16 @@
 .loginContainer {
-  max-width: 400px;
+  width: 25vw;
+  min-width:300px;
+  justify-content: center;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.singContainer {
+  width: 25vw;
+  min-width:300px;
   justify-content: center;
   padding: 20px;
   border: 1px solid #ccc;
@@ -23,8 +34,8 @@
   color: var(--Primary-Avacado, #8a9b6e);
   text-align: center;
 
-  padding-left: 100px;
-  padding-right: 100px;
+  /* padding-left: 100px; */
+  /* padding-right: 100px; */
   font-family: EB Garamond;
   font-size: var(--fonte-grande);
   font-style: normal;
@@ -64,4 +75,5 @@
 #btnCenter {
   display: flex;
   justify-content: center;
+  margin-top: 20px;
 }

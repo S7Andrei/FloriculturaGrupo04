@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./styles.module.css";
@@ -5,7 +6,7 @@ import { useDispatch } from "react-redux";
 import { userActions } from "../../store/login/loginSlice";
 import ButtonHome from "../../components/UI/Home/ButtonHome/ButtonHome";
 
-const Login = () => {
+const Login = ({onClose}) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -16,14 +17,14 @@ const Login = () => {
   const handleLogin = async () => {
     try {
       const response = await fetch("http://localhost:3000/users");
-      const users = await response.json();
-
+      const users = await response.json()
       const user = users.find(
-        (user) => user.username === email && user.password === password
+        (user) => user.email === email && user.password === password
       );
 
       if (user) {
-        navigate("/register");
+        navigate("/");
+        onClose()
         dispatch(userActions.handleUpdateLogin());
       } else {
         setError("Invalid username or password");
