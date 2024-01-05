@@ -73,7 +73,7 @@ const schema = yup
       }, "Invalid value")
       .max(99, "Discount value must be less than or equal to 99")
       .default(0.1),
-
+    labelDoor: yup.string().required(),
     features: yup
       .string()
       .required("Features it is a mandatory field")
@@ -265,7 +265,7 @@ const Register = () => {
                   id="indoor"
                   type="radio"
                   value="indoor"
-                  {...register("labelDoor")}
+                  {...register("labelDoor", { required: true })}
                   className={styles.inputRadio}
                   checked={label === "indoor"}
                   onChange={() => setLabel("indoor")}
@@ -282,7 +282,7 @@ const Register = () => {
                 <input
                   id="outdoor"
                   type="radio"
-                  {...register("labelDoor")}
+                  {...register("labelDoor", { required: true })}
                   checked={label === "outdoor"}
                   value="outdoor"
                   className={styles.inputRadio}
@@ -295,6 +295,8 @@ const Register = () => {
                 >
                   outdoor
                 </label>
+
+                <ErrosForm errors={errors?.labelDoor?.message} />
               </p>
             </div>
           </div>

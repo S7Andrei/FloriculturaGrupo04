@@ -39,3 +39,7 @@ json-server --watch db.json
 - GET
 - POST
 - DELETE
+
+# Deploy
+
+Deploy realizado na plataforma [Vercel](https://vercel.com/) para fins de demonstração do projeto. O sistema no deploy não possui banco integrado, devido a necessitar de ajustes no codigo fonte. Então, bugs ao recarregar a página são esperados.

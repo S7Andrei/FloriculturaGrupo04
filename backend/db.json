@@ -16,19 +16,154 @@
       "id": 1
     },
     {
-      "name": "TESTdvsdfvfsv",
-      "subtitle": "Uma coleção de planta de algum lugar",
+      "name": "Orquídea",
+      "subtitle": "Elegância em flores",
+      "label": [
+        "Flores",
+        "indoor"
+      ],
+      "isInSale": "promo",
+      "price": 29.99,
+      "discountPercentage": 10,
+      "features": "Perene. Necessita de sombra parcial.",
+      "description": "Uma planta exuberante com flores delicadas em diversas cores.\n",
+      "img": "/src/assets/RegisterImg/plants.png",
+      "id": 2
+    },
+    {
+      "name": "Suculenta",
+      "subtitle": "Beleza em simplicidade",
+      "label": [
+        "Suculenta",
+        "outdoor"
+      ],
+      "isInSale": "promo",
+      "price": 12.99,
+      "discountPercentage": 5,
+      "features": "Resistente à seca. Ideal para ambientes ensolarados",
+      "description": "Pequenas e charmosas, as suculentas são fáceis de cuidar.",
+      "img": "/src/assets/RegisterImg/plants2.png",
+      "id": 3
+    },
+    {
+      "name": "Ficus",
+      "subtitle": "Folhas exuberantes",
       "label": [
         "Árvore",
         "indoor"
       ],
-      "isInSale": "promo",
-      "price": 130,
-      "discountPercentage": 19.99,
-      "features": "scsdvcafdvfdvdfsv",
-      "description": "vsdfvsdfvsdfvsfv",
+      "isInSale": "notPromo",
+      "price": 49.99,
+      "discountPercentage": 0.1,
+      "features": "Folhas largas. Crescimento rápido",
+      "description": "Uma árvore de interior impressionante, perfeita para espaços amplos.",
+      "img": "/src/assets/RegisterImg/plants4.png",
+      "id": 4
+    },
+    {
+      "name": "Violeta Africana",
+      "subtitle": "Cores vibrantes",
+      "label": [
+        "Flores",
+        "outdoor"
+      ],
+      "isInSale": "notPromo",
+      "price": 14.99,
+      "discountPercentage": 0.1,
+      "features": "Cuidado moderado. Floresce durante o ano todo",
+      "description": "Pequenas, mas cheias de vida, as violetas africanas trazem cor para qualquer ambiente.",
+      "img": "/src/assets/RegisterImg/plants3.png",
+      "id": 5
+    },
+    {
+      "name": "Palmeira Areca",
+      "subtitle": "Toque tropical",
+      "label": [
+        "Palmeira",
+        "outdoor"
+      ],
+      "isInSale": "notPromo",
+      "price": 39.97,
+      "discountPercentage": 0.1,
+      "features": "Folhagem densa. Adapta-se a ambientes internos",
+      "description": "Uma palmeira elegante que adiciona um toque de tropicalidade ao seu espaço.",
+      "img": "/src/assets/RegisterImg/plants2.png",
+      "id": 6
+    },
+    {
+      "name": "Rosa Vermelha",
+      "subtitle": "Elegância em cada pétala",
+      "label": [
+        "Flores",
+        "indoor"
+      ],
+      "isInSale": "notPromo",
+      "price": 19.99,
+      "discountPercentage": 0.1,
+      "features": " Floresce na primavera. aroma suave",
+      "description": " Uma rosa vermelha clássica, simbolizando amor e paixão.",
       "img": "/src/assets/RegisterImg/plants.png",
-      "id": 2
+      "id": 7
+    },
+    {
+      "name": "Cacto Dourado",
+      "subtitle": "Brilho no deserto",
+      "label": [
+        "Suculenta",
+        "outdoor"
+      ],
+      "isInSale": "notPromo",
+      "price": 8.99,
+      "discountPercentage": 0.1,
+      "features": "Armazenamento de água. resistente ao calor",
+      "description": "Um cacto pequeno com espinhos dourados, perfeito para ambientes ensolarados.",
+      "img": "/src/assets/RegisterImg/plants2.png",
+      "id": 8
+    },
+    {
+      "name": "Árvore da Felicidade",
+      "subtitle": "Prosperidade em cada folha",
+      "label": [
+        " Árvore",
+        "outdoor"
+      ],
+      "isInSale": "promo",
+      "price": 39.99,
+      "discountPercentage": 15,
+      "features": "Folhas redondas, traz boa sorte",
+      "description": " A Árvore da Felicidade é conhecida por atrair boa fortuna e positividade.",
+      "img": "/src/assets/RegisterImg/plants.png",
+      "id": 9
+    },
+    {
+      "name": "Dracena Marginata",
+      "subtitle": " Beleza nas bordas",
+      "label": [
+        "Arbusto",
+        "indoor"
+      ],
+      "isInSale": "promo",
+      "price": 24.99,
+      "discountPercentage": 12,
+      "features": " Folhas estreitas. fácil de cuidar",
+      "description": "Uma planta de interior elegante com folhas verdes e bordas vermelhas.",
+      "img": "/src/assets/RegisterImg/plants2.png",
+      "id": 11
+    },
+    {
+      "name": "Orégano Italiano",
+      "subtitle": "Aroma da Itália em casa",
+      "label": [
+        "Erva Aromática",
+        "outdoor"
+      ],
+      "isInSale": "promo",
+      "price": 6.99,
+      "discountPercentage": 8,
+      "features": "Uso culinário. aroma intenso",
+      "description": "Orégano fresco para realçar o sabor das suas receitas italianas.",
+      "img": "/src/assets/RegisterImg/plants2.png",
+      "id": 12
     }
   ],
   "users": [

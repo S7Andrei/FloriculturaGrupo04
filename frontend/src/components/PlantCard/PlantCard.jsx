@@ -97,7 +97,6 @@ const PlantCard = ({ listagemTotal = false, filter }) => {
             <div className={styles.productList}>
               <button
                 onClick={() => handleProductDetails(plant.id)}
-                style={{ width: "100%" }}
               >
                 <CardContent
                   id={plant.id}
