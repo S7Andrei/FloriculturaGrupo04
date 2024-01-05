@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { useEffect, useState } from "react";
 import { IoMenu } from "react-icons/io5";
 // import { slide as Menu } from "react-burger-menu";
@@ -9,6 +10,9 @@ import Nav from "../UI/Nav/Nav";
 import styles from "./Header.module.css";
 import { NavLink, useNavigate } from "react-router-dom";
 
+import { useSelector } from "react-redux";
+import LogoutModal from "../LogoutModal/LogoutModal";
+
 import { Menu, MenuItem, Button } from "@mui/material";
 
 import "./GlobalMenu.css"
@@ -17,6 +21,9 @@ const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
   const navigate = useNavigate();
   const [windowSize, setWindowSize] = useState(window.innerWidth);
+  const [showDialog, setShowDialog] = useState(false);
+
+  const login = useSelector((state) => state.login.isLogado);
 
   // const handleMenuOpen = () => {
   //   setShowMenu(true);
@@ -38,6 +45,14 @@ const Header = () => {
 
   const handleHome = () => {
     navigate("/");
+  };
+
+  const closeDialog = () => {
+    setShowDialog(false);
+  };
+
+  const handleLog = () => {
+    setShowDialog((prevState) => !prevState);
   };
 
   useEffect(() => {
@@ -77,12 +92,9 @@ const Header = () => {
         </button>
 
         <nav className={styles.desktopNav}>
+
           <ul className={styles.navBar}>
-              <li>
-                <Nav to={"/"} end>
-                  Home
-                </Nav>
-              </li>
+
               <li>
                 <Nav to={"/register"}>Register</Nav>
               </li>
@@ -169,14 +181,18 @@ const Header = () => {
           //   </Menu>
           // </Dropdown>
         )}
-        <figure>
-          <img
-            src={profile}
-            alt=""
-            style={{ width: "50px", marginRight: "100px" }}
-          />
-        </figure>
+        <button onClick={handleLog}>
+          <figure>
+            <img
+              src={profile}
+              alt=""
+              style={{ width: "50px", marginRight: "100px" }}
+            />
+          </figure>
+        </button>
       </header>
+
+      <LogoutModal isOpen={showDialog} onClose={closeDialog} />
     </div>
   );
 };

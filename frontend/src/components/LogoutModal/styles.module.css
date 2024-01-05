@@ -1,0 +1,78 @@
+.modalContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.modal {
+  background: #f3f3f2;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  margin-right: 32px;
+}
+
+.modalOff {
+  display: none;
+}
+
+.title {
+  display: flex;
+  margin: 25px;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--Primary-Avacado, #8a9b6e);
+  text-align: center;
+
+  /* Primary/Primary */
+  font-family: EB Garamond;
+  font-size: var(--fonte-grande);
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: capitalize;
+}
+
+#btnClose {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#img {
+  width: 50%;
+}
+
+#background {
+  display: flex;
+  z-index: -2;
+}
+
+#cactuSucess {
+  width: 30%;
+}
+
+.imgContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.subtitle {
+  color: var(--Dark-gray, #afb2aa);
+
+  /* Primary/card heading */
+  font-family: Lato;
+  font-size: var(--fonte-media);
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 13px;
+  margin-left: 0;
+}

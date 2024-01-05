@@ -37,7 +37,7 @@
   align-items: flex-start;
   /* secondary/Secondary */
   font-family: Raleway;
-  font-size: 16px;
+  font-size: var(--fonte-pequena);
   font-style: normal;
   font-weight: 400;
   line-height: 154.5%; /* 24.72px */
@@ -46,12 +46,11 @@
 }
 
 #label {
-  color: var(--Primary-Avacado, #8a9b6e);
-
+  color: var(--main-colors-green-95, #158212);
   width: fit-content;
   /* secondary/Secondary */
   font-family: Raleway;
-  font-size: 14px;
+  font-size: var(--fonte-pequena);
   font-style: normal;
   font-weight: 400;
   line-height: 154.5%; /* 24.72px */
@@ -60,8 +59,9 @@
   border: 1.619px solid var(--Main-Colors-Green-6, #83e281);
   background: var(--main-colors-green-05, #f6fff6);
 
-  padding: 5px;
+  padding: 6.476px 12.951px;
 }
+
 
 .cardContent {
   display: flex;
@@ -75,7 +75,7 @@
 #oldPrice {
   color: var(--Dark-gray, #afb2aa);
   font-family: Raleway;
-  font-size: 16px;
+  font-size: var(--fonte-pequena);
   font-style: normal;
   font-weight: 400;
   line-height: 154.5%; /* 24.72px */

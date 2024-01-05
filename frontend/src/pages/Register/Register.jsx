@@ -52,8 +52,12 @@ const schema = yup
       .min(5)
       .max(99),
     discountPercentage: yup
-      .string()
-      .matches(/^\d*\.?\d*$/, "Discount Percentage must not contain numbers"),
+      .number()
+      .positive()
+      .transform((originalValue, originalObject) => {
+        return originalValue === "" ? 0.1 : 0.1;
+      })
+      .default(0.1),
     features: yup
       .string()
       .required("Features it is a mandatory field")
@@ -77,14 +81,14 @@ const Register = () => {
     register,
     handleSubmit,
     watch,
-    formState: { errors },
+    formState: { errors }, reset
   } = useForm({ resolver: yupResolver(schema) });
 
   async function updateStatePlants() {
     const data = await getPlants();
     dispatch(plantsActions.handleGetPlants(data));
   }
-
+  console.log(errors)
   const handleSubmitForm = (data) => {
     let isInSale;
 
@@ -100,7 +104,7 @@ const Register = () => {
       subtitle,
     } = data;
 
-    if (discountPercentage > 0) {
+    if (discountPercentage > 0.1) {
       isInSale = "promo";
     } else {
       isInSale = "notPromo";
@@ -146,11 +150,11 @@ const Register = () => {
 
   const closeDialog = () => {
     setShowDialog(false); 
+    reset()
   };
 
   return (
     <>
-      
       <section className={styles.registerContainer}>
         <form
           onSubmit={handleSubmit(handleSubmitForm)}
