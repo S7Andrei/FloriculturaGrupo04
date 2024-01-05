@@ -27,6 +27,7 @@ const schema = yup
 
 const Login = ({ onClose }) => {
   const navigate = useNavigate();
+  const [erroLogin, setErroLogin] = useState()
 
   const {
     register,
@@ -53,11 +54,11 @@ const Login = ({ onClose }) => {
         localStorage.setItem('isLogado', true);
         onClose();
       } else {
-        throw new Error("Failed to submit form");
+        setErroLogin("Failed to login, verify your credentials");
       }
     } catch (error) {
       console.error("Login error:", error);
-      throw new Error("An error occurred during login");
+      setErroLogin("An error occurred during login");
     }
   };
 
@@ -86,6 +87,7 @@ const Login = ({ onClose }) => {
             />
             <ErrosForm errors={errors?.password?.message} />
           </p>
+          <ErrosForm errors={erroLogin} />
 
           <p id={styles.btnCenter}>
             <ButtonHome type="submit">Login</ButtonHome>
