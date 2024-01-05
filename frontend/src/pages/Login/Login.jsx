@@ -1,36 +1,62 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/prop-types */
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./styles.module.css";
 import { useDispatch } from "react-redux";
 import { userActions } from "../../store/login/loginSlice";
 import ButtonHome from "../../components/UI/Home/ButtonHome/ButtonHome";
+import ErrosForm from "../../components/ErrosForm/ErrosForm";
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import * as yup from "yup";
 
-const Login = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [error, setError] = useState("");
+const schema = yup
+  .object({
+    email: yup
+      .string()
+      .required("Email it is a mandatory field")
+      .min(5, "Email must have at least 5 characters")
+      .matches(/.*@.*/, "Enter a valid email"),
+    password: yup
+      .string()
+      .required("Password it is a mandatory field")
+      .min(5, "Password must have at least 5 characters"),
+  })
+  .required();
+
+const Login = ({ onClose }) => {
   const navigate = useNavigate();
+
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+    reset,
+  } = useForm({ resolver: yupResolver(schema) });
 
   const dispatch = useDispatch();
 
-  const handleLogin = async () => {
+  const handleLogin = async (data) => {
+    console.log(data);
     try {
       const response = await fetch("http://localhost:3000/users");
       const users = await response.json();
-
       const user = users.find(
-        (user) => user.username === email && user.password === password
+        (user) => user.email === data.email && user.password === data.password
       );
 
       if (user) {
-        navigate("/register");
+        navigate("/");
         dispatch(userActions.handleUpdateLogin());
+        onClose();
       } else {
-        setError("Invalid username or password");
+        throw new Error("Failed to submit form");
       }
     } catch (error) {
       console.error("Login error:", error);
-      setError("An error occurred during login");
+      throw new Error("An error occurred during login");
     }
   };
 
@@ -38,35 +64,31 @@ const Login = () => {
     <section className={styles.container}>
       <div className={styles.loginContainer}>
         <h1 className={styles.h1}>Login</h1>
-        <form>
+        <form onSubmit={handleSubmit(handleLogin)}>
           <p className={styles.inputContainer}>
             <label className={styles.inputLabel}>Email:</label>
             <input
               type="text"
               id="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
               className={styles.inputForm}
+              {...register("email")}
             />
+            <ErrosForm errors={errors?.email?.message} />
           </p>
           <p className={styles.inputContainer}>
             <label className={styles.inputLabel}>Password:</label>
             <input
               type="password"
               id="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
               className={styles.inputForm}
+              {...register("password")}
             />
+            <ErrosForm errors={errors?.password?.message} />
           </p>
 
           <p id={styles.btnCenter}>
-            <ButtonHome type="button" onClick={handleLogin}>
-              Login
-            </ButtonHome>
+            <ButtonHome type="submit">Login</ButtonHome>
           </p>
-
-          {error && <div className={styles.error}>{error}</div>}
         </form>
       </div>
     </section>

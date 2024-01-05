@@ -41,7 +41,7 @@ const CardContent = ({ id, name, price, label, discont, isInSale, img }) => {
           isInSale={isInSale}
           styles={styles}
         />
-        {login && <button onClick={() => handleDelete(id)}>Deletar</button>}
+        {/* {login && <button onClick={() => handleDelete(id)}>Deletar</button>} */}
 
         <p id={styles.label}>{label}</p>
       </div>

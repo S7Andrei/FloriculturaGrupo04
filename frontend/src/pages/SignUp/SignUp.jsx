@@ -1,20 +1,40 @@
+/* eslint-disable no-unused-vars */
 import { useState } from "react";
 import styles from "../Login/styles.module.css";
 import ButtonHome from "../../components/UI/Home/ButtonHome/ButtonHome";
+import ErrosForm from "../../components/ErrosForm/ErrosForm";
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import * as yup from "yup";
+import { useNavigate } from "react-router-dom";
+
+const schema = yup
+  .object({
+    email: yup
+      .string()
+      .required("Email it is a mandatory field")
+      .min(5, "Email must have at least 5 characters")
+      .matches(/.*@.*/, "Enter a valid email"),
+    password: yup
+      .string()
+      .required("Password it is a mandatory field")
+      .min(5, "Password must have at least 5 characters"),
+  })
+  .required();
 
 const SignUp = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [error, setError] = useState("");
+ const navigate = useNavigate()
 
-  const handleCadastro = (e) => {
-    e.preventDefault();
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+    reset,
+  } = useForm({ resolver: yupResolver(schema) });
 
-    const myForm = new FormData(e.target);
-
-    const data = Object.fromEntries(myForm.entries());
-    console.log(data);
-
+  const handleCadastro = (data) => {
+    console.log(data)
     const { email, password } = data;
     const dataUser = {
       email: email,
@@ -38,6 +58,7 @@ const SignUp = () => {
         console.log(data);
         if (data.id) {
           console.log("Form submitted successfully");
+          navigate('/')
         } else {
           throw new Error("Failed to submit form");
         }
@@ -49,20 +70,19 @@ const SignUp = () => {
 
   return (
     <section className={styles.container}>
-      <div className={styles.loginContainer}>
-        <h1 className={styles.h1}>Cadastro</h1>
-        <form onSubmit={handleCadastro}>
+      <div className={styles.singContainer}>
+        <h1 className={styles.h1}>Sign-up</h1>
+        <form onSubmit={handleSubmit(handleCadastro)}>
           <p className={styles.inputContainer}>
             <label htmlFor="email" className={styles.inputLabel}>
-              Username:
+              Email:
             </label>
             <input
               type="text"
-              name="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
               className={styles.inputForm}
+              {...register("email")}
             />
+            <ErrosForm errors={errors?.email?.message} />
           </p>
           <p className={styles.inputContainer}>
             <label htmlFor="password" className={styles.inputLabel}>
@@ -70,16 +90,14 @@ const SignUp = () => {
             </label>
             <input
               type="password"
-              name="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
               className={styles.inputForm}
+              {...register("password")}
             />
+             <ErrosForm errors={errors?.password?.message} />
           </p>
           <p id={styles.btnCenter}>
-            <ButtonHome type="submit">Cadastrar</ButtonHome>
+            <ButtonHome type="submit">Sign-up</ButtonHome>
           </p>
-          {error && <div className={styles.error}>{error}</div>}
         </form>
       </div>
     </section>
