@@ -70,6 +70,7 @@ const Products = ({ listagemTotal = false, filter }) => {
                 discont={plant.discountPercentage}
                 isInSale={plant.isInSale}
                 img={plant.img}
+                onDelete={true}
               />
             </div>
           ))}

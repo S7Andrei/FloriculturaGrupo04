@@ -12,11 +12,20 @@ import { deletePlant } from "../../store/plants/plantsAction";
 import { useDispatch, useSelector } from "react-redux";
 import ButtomHome from "../../components/UI/Home/ButtonHome/ButtonHome";
 
-const CardContent = ({ id, name, price, label, discont, isInSale, img }) => {
+const CardContent = ({
+  id,
+  name,
+  price,
+  label,
+  discont,
+  isInSale,
+  img,
+  onDelete = false,
+}) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const login = useSelector((state) => state.login.isLogado);
-  const currentLoginStorage = localStorage.getItem('isLogado');
+  const currentLoginStorage = localStorage.getItem("isLogado");
 
   const handleProductDetails = (id) => {
     navigate(`/products/${id}`);
@@ -43,12 +52,12 @@ const CardContent = ({ id, name, price, label, discont, isInSale, img }) => {
           isInSale={isInSale}
           styles={styles}
         />
-      
+
         <p id={styles.label}>{label}</p>
       </div>
-      {currentLoginStorage === 'true' && (
-          <ButtomHome onClick={() => handleDelete(id)}>Deletar</ButtomHome>
-        )}
+      {onDelete && currentLoginStorage === "true" && (
+        <ButtomHome onClick={() => handleDelete(id)}>Deletar</ButtomHome>
+      )}
     </div>
   );
 };
