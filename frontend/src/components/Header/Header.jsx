@@ -7,8 +7,8 @@ import Nav from "../UI/Nav/Nav";
 import LogoutModal from "../LogoutModal/LogoutModal";
 import styles from "./Header.module.css";
 
-import logo from "../../assets/logo.svg";
-import profile from "../../assets/profileLogo.svg";
+import logo from "../../assets/HeaderImg/logo.svg";
+import profile from "../../assets/HeaderImg/profileLogo.svg";
 
 import "./GlobalMenu.css";
 

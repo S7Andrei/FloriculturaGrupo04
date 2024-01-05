@@ -4,282 +4,38 @@
       "name": "Echinocereus Cactus",
       "subtitle": "A Majestic Addition to Your Plant Collection",
       "label": [
-        "cactus",
-        "indoor"
-      ],
-      "isInSale": "notPromo",
-      "price": "500",
-      "discountPercentage": "",
-      "features": "Species: Echinocereus spp. Mature Size: Varies by species, typically ranging from 4 to 12 inches (10-30 cm) in height. Blooming Season: Typically spring or summer, with flowers lasting several days to weeks. Pot Size: Available in various pot sizes to suit your preference and needs. Shipping: Our Echinocereus Cacti are carefully packaged and shipped with the utmost care to ensure they arrive in excellent condition.",
-      "description": "Ladyfinger cactus (*Echinocereus pentalophus*) is also known as Alice, Devil's Fingers, and Dog Tail. It needs bright sunlight, light fertilizer, and is prone to root rot. The root system is shallow and weak. Aphids and mealybugs are also a danger. Avoiding wet soil can help with success with a ladyfinger cactus.",
-      "id": 20,
-      "img": "/src/assets/plants4.png"
-    },
-    {
-      "name": "dsadad",
-      "subtitle": "dsada",
-      "label": [
-        "dasdad",
+        "Cactus",
         "indoor"
       ],
       "isInSale": "promo",
-      "price": 55,
-      "discountPercentage": "5",
-      "features": "fdfsdfds",
-      "description": "fsdfsfds",
-      "img": "/src/assets/plants3.png",
-      "id": 41
+      "price": 30,
+      "discountPercentage": 2,
+      "features": "Species: Echinocereus spp.\nMature Size: Varies by species, typically ranging from 4 to 12 inches (10-30 cm) in height.\nBlooming Season: Typically spring or summer, with flowers lasting several days to weeks.\nPot Size: Available in various pot sizes to suit your preference and needs.",
+      "description": "This is a Cactus.",
+      "img": "/src/assets/RegisterImg/plants2.png",
+      "id": 1
     },
     {
-      "name": "dfsdfsfd",
-      "subtitle": "fsdfsdfsd",
+      "name": "TESTdvsdfvfsv",
+      "subtitle": "Uma coleção de planta de algum lugar",
       "label": [
-        "fdsfsfd",
+        "Árvore",
         "indoor"
       ],
       "isInSale": "promo",
-      "price": 55,
-      "discountPercentage": "5",
-      "features": "sdasdadssda",
-      "description": "dasdasdsa",
-      "img": "/src/assets/plants4.png",
-      "id": 42
-    },
-    {
-      "name": "sdfdfsfdsf",
-      "subtitle": "fdsfsfds",
-      "label": [
-        "fsdfs",
-        "indoor"
-      ],
-      "isInSale": "promo",
-      "price": 50,
-      "discountPercentage": "5",
-      "features": "dsadasd",
-      "description": "dsdads",
-      "img": "/src/assets/plants2.png",
-      "id": 43
-    },
-    {
-      "name": "dsadasd",
-      "subtitle": "dasdas",
-      "label": [
-        "dasda",
-        "indoor"
-      ],
-      "isInSale": "promo",
-      "price": 50,
-      "discountPercentage": "49.99",
-      "features": "ddsadasd",
-      "description": "dasdadsa",
-      "img": "/src/assets/plants.png",
-      "id": 44
-    },
-    {
-      "name": "dsadsa",
-      "subtitle": "dasda",
-      "label": [
-        "dasda",
-        "indoor"
-      ],
-      "isInSale": "promo",
-      "price": 550,
-      "discountPercentage": "55.99",
-      "features": "dsadsad",
-      "description": "dsadas",
-      "img": "/src/assets/plants4.png",
-      "id": 46
-    },
-    {
-      "name": "dsadada",
-      "subtitle": "sdadsadas",
-      "label": [
-        "sadsad",
-        "indoor"
-      ],
-      "isInSale": "promo",
-      "price": 55,
-      "discountPercentage": "5",
-      "features": "dasasd",
-      "description": "adasdasda",
-      "img": "/src/assets/plants2.png",
-      "id": 47
-    },
-    {
-      "name": "dasda",
-      "subtitle": "dsadasd",
-      "label": [
-        "dasadsda",
-        "indoor"
-      ],
-      "isInSale": "notPromo",
-      "price": 519.98,
-      "discountPercentage": "",
-      "features": "dasda",
-      "description": "adsda",
-      "img": "/src/assets/plants.png",
-      "id": 48
-    },
-    {
-      "name": "sdadas",
-      "subtitle": "dsadas",
-      "label": [
-        "dsadasd",
-        "indoor"
-      ],
-      "isInSale": "promo",
-      "price": 650,
-      "discountPercentage": "5",
-      "features": "sdadasd",
-      "description": "dasdas",
-      "img": "/src/assets/plants4.png",
-      "id": 49
-    },
-    {
-      "name": "dsaasda",
-      "subtitle": "dasdad",
-      "label": [
-        "dadasd",
-        "indoor"
-      ],
-      "isInSale": "promo",
-      "price": 50,
-      "discountPercentage": "5",
-      "features": "dsada",
-      "description": "dsada",
-      "img": "/src/assets/plants2.png",
-      "id": 50
-    },
-    {
-      "name": "dasda",
-      "subtitle": "dasdas",
-      "label": [
-        "dsada",
-        "indoor"
-      ],
-      "isInSale": "promo",
-      "price": 855,
-      "discountPercentage": "5",
-      "features": "dsadas",
-      "description": "dasdas",
-      "img": "/src/assets/plants.png",
-      "id": 51
-    },
-    {
-      "name": "dsadad",
-      "subtitle": "dsada",
-      "label": [
-        "dsadd",
-        "indoor"
-      ],
-      "isInSale": "promo",
-      "price": 50,
-      "discountPercentage": "4.98",
-      "features": "sdadsa",
-      "description": "dasdsa",
-      "img": "/src/assets/plants.png",
-      "id": 52
-    },
-    {
-      "name": "dasdsa",
-      "subtitle": "dsadas",
-      "label": [
-        "dasdsa",
-        "indoor"
-      ],
-      "isInSale": "promo",
-      "price": 50,
-      "discountPercentage": "5",
-      "features": "dasdada",
-      "description": "dasdad",
-      "img": "/src/assets/plants.png",
-      "id": 53
-    },
-    {
-      "name": "sdadsada",
-      "subtitle": "dsadsad",
-      "label": [
-        "dsdasd",
-        "indoor"
-      ],
-      "isInSale": "promo",
-      "price": 50,
-      "discountPercentage": "84.98",
-      "features": "dasdas",
-      "description": "dsasadsa",
-      "img": "/src/assets/plants2.png",
-      "id": 54
-    },
-    {
-      "name": "sdadsada",
-      "subtitle": "dsadsad",
-      "label": [
-        "dsdasd",
-        "indoor"
-      ],
-      "isInSale": "promo",
-      "price": 50,
-      "discountPercentage": "84.98",
-      "features": "dasdas",
-      "description": "dsasadsa",
-      "img": "/src/assets/plants2.png",
-      "id": 55
-    },
-    {
-      "name": "plantinha do sexo ",
-      "subtitle": "sesdasdas",
-      "label": [
-        "dadad",
-        "indoor"
-      ],
-      "isInSale": "promo",
-      "price": 50.01,
-      "discountPercentage": "5",
-      "features": "dasdsa",
-      "description": "ddasda",
-      "img": "/src/assets/plants2.png",
-      "id": 57
-    },
-    {
-      "name": "Pedro Caitano de Souza Neto",
-      "subtitle": "A Majestic Addition to Your Plant Collection",
-      "label": [
-        "cactus",
-        "indoor"
-      ],
-      "isInSale": "promo",
-      "price": 50,
-      "discountPercentage": "5",
-      "features": "ffffffffff",
-      "description": "ffffffffffffff",
-      "img": "/src/assets/plants2.png",
-      "id": 58
-    },
-    {
-      "name": "Echinocereus Cactus",
-      "subtitle": "A Majestic Addition to Your Plant Collection",
-      "label": [
-        "cactus",
-        "indoor"
-      ],
-      "isInSale": "notPromo",
-      "price": 50,
-      "discountPercentage": 0.1,
-      "features": "efefsf",
-      "description": "ffsfsf",
-      "img": "/src/assets/plants3.png",
-      "id": 61
+      "price": 130,
+      "discountPercentage": 19.99,
+      "features": "scsdvcafdvfdvdfsv",
+      "description": "vsdfvsdfvsdfvsfv",
+      "img": "/src/assets/RegisterImg/plants.png",
+      "id": 2
     }
   ],
   "users": [
     {
-      "password": "senha123",
+      "email": "admin@plantpeace.com",
+      "password": "abcde12345",
       "id": 1
-    },
-    {
-      "email": "luffy@gmail.com",
-      "password": "senha123",
-      "id": 2
     }
   ]
 }

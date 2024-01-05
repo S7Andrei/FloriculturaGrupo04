@@ -7,7 +7,7 @@ import styles from "./Register.module.css";
 
 import ButtonForm from "../../components/UI/Form/ButtonForm/ButtonForm";
 
-import plant from "../../assets//plantForm.svg";
+import plant from "../../assets//RegisterImg/plantForm.svg";
 
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -16,10 +16,10 @@ import * as yup from "yup";
 import ErrosForm from "../../components/ErrosForm/ErrosForm";
 import { useState } from "react";
 
-import image1 from "../../assets/plants.png";
-import image2 from "../../assets/plants2.png";
-import image3 from "../../assets/plants3.png";
-import image4 from "../../assets/plants4.png";
+import image1 from "../../assets/RegisterImg/plants.png";
+import image2 from "../../assets/RegisterImg/plants2.png";
+import image3 from "../../assets/RegisterImg/plants3.png";
+import image4 from "../../assets/RegisterImg/plants4.png";
 import { useNavigate } from "react-router-dom";
 import RegisterDialog from "../../components/RegisterModal/RegisterModal";
 

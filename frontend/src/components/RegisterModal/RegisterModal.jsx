@@ -1,11 +1,10 @@
 /* eslint-disable react/prop-types */
 import { useNavigate } from "react-router-dom";
-
-import ButtonHome from "../UI/Home/ButtonHome/ButtonHome";
-
 import styles from "./styles.module.css";
-import close from "../../assets/close.svg";
-import cactuSucess from "../../assets/cactuSucess.png";
+
+import close from "../../assets/RegisterModalImg/close.svg";
+import cactuSucess from "../../assets/RegisterModalImg/cactuSucess.png";
+import ButtonHome from "../UI/Home/ButtonHome/ButtonHome";
 
 const RegisterDialog = ({ isOpen, onClose, lastID }) => {
   const navigate = useNavigate();

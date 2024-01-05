@@ -1,16 +1,14 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
+import close from "../../assets/LogoutModalImg/close.svg";
+import cactuLogout from "../../assets/LogoutModalImg/cactoTriste.png";
+import ButtonHome from "../UI/Home/ButtonHome/ButtonHome";
+import styles from "./styles.module.css";
+
 import { useDispatch, useSelector } from "react-redux";
 import { userActions } from "../../store/login/loginSlice";
 import { useNavigate } from "react-router-dom";
-
 import Login from "../../pages/Login/Login";
-import ButtonHome from "../UI/Home/ButtonHome/ButtonHome";
-
-import close from "../../assets/close.svg";
-import cactuLogout from "../../assets/cactoTriste.png";
-
-import styles from "./styles.module.css";
 
 const LogoutModal = ({ isOpen, onClose }) => {
   const dispatch = useDispatch();
@@ -56,6 +54,7 @@ const LogoutModal = ({ isOpen, onClose }) => {
             </div>
 
             <Login onClose={onClose} />
+            
           </div>
         )}
       </section>

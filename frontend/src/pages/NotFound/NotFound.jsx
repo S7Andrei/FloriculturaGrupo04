@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import TemplateRoot from "../TemplateRoot";
 
 import styles from "./NotFound.module.css";
-import Cacto from "../../assets/404Cactus.png";
+import Cacto from "../../assets/NotFoundImg/404Cactus.png";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 

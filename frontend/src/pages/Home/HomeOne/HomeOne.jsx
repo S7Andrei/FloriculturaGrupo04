@@ -1,10 +1,10 @@
 import { useNavigate } from "react-router";
 import styles from "./HomeOne.module.css";
 import ButtonHome from "../../../components/UI/Home/ButtonHome/ButtonHome";
-import arrow from "../../../assets/Arrow 1.svg";
-import plant from "../../../assets/plantForm.svg";
-import plantLeft from "../../../assets/leftPlant.png";
-import box from "../../../assets/Rectangle 31.svg";
+import arrow from "../../../assets/HomeOneImg/Arrow 1.svg";
+import plant from "../../../assets/HomeOneImg/plantForm.svg";
+import plantLeft from "../../../assets/HomeOneImg/leftPlant.png";
+import box from "../../../assets/HomeOneImg/Rectangle 31.svg";
 
 const HomeOne = () => {
   const navigate = useNavigate();
