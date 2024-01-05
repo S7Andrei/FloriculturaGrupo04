@@ -6,24 +6,11 @@
   color: var(--avocado);
 }
 
-.nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #fff;
-  color: black;
-}
-
 .logo {
   text-decoration: none;
   color: black;
   font-size: 1.3rem;
   margin-left: 1rem;
-}
-
-.hamburger {
-  display: none;
-  cursor: pointer;
 }
 
 .navLinks {
@@ -58,17 +45,4 @@
     padding: 10px;
     z-index: 999;
   }
-
-  /* .show {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    background-color: #fff;
-    width: 100%;
-    padding: 10px;
-    z-index: 999;
-  } */
 }
