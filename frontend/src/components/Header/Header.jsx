@@ -121,12 +121,39 @@ const Header = () => {
               onClose={handleClose}
             >
               <MenuItem className={styles.dropItem} onClick={handleClose}>
-                <NavLink to={"/"} end>
+                <NavLink
+                  to={"/"}
+                  className={({ isActive }) =>
+                    isActive ? styles.active : styles.navLink
+                  }
+                  end
+                >
                   Home
                 </NavLink>
-                <NavLink to={"/register"}>Register</NavLink>
-                <NavLink to={"/products"}>Products</NavLink>
-                <NavLink to={"/about-us"}>About us</NavLink>
+                <NavLink
+                  to={"/register"}
+                  className={({ isActive }) =>
+                    isActive ? styles.active : styles.navLink
+                  }
+                >
+                  Register
+                </NavLink>
+                <NavLink
+                  to={"/products"}
+                  className={({ isActive }) =>
+                    isActive ? styles.active : styles.navLink
+                  }
+                >
+                  Products
+                </NavLink>
+                <NavLink
+                  to={"/about-us"}
+                  className={({ isActive }) =>
+                    isActive ? styles.active : styles.navLink
+                  }
+                >
+                  About us
+                </NavLink>
               </MenuItem>
             </Menu>
           </div>
@@ -180,11 +207,7 @@ const Header = () => {
         )}
         <button onClick={handleLog}>
           <figure>
-            <img
-              src={profile}
-              alt=""
-              style={{ width: "50px", marginRight: "100px" }}
-            />
+            <img src={profile} alt="" style={{ width: "50px" }} />
           </figure>
         </button>
       </header>
