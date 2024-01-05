@@ -15,10 +15,8 @@ import "./App.css";
 //Libs
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { getPlants } from "./store/plants/plantsAction";
-import { useSelector } from "react-redux";
 
 function App() {
-  const isAuthenticated = useSelector((state) => state.login.isLogado);
   const currentLoginStorage = localStorage.getItem("isLogado");
 
   const keys = Object.keys(localStorage);
