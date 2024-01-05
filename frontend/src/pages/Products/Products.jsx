@@ -30,7 +30,7 @@ const Products = ({ listagemTotal = false, filter }) => {
         </h1>
 
         <div className={styles.querysContainer}>
-          <p>
+          <p className={styles.campoForm}>
             <label className={styles.inputLabel}>Search by Name:</label>
             <p>
               <input
@@ -42,7 +42,7 @@ const Products = ({ listagemTotal = false, filter }) => {
             </p>
           </p>
 
-          <p>
+          <p className={styles.campoForm}>
             <label className={styles.inputLabel}>Show by Category:</label>
             <p>
               <select
