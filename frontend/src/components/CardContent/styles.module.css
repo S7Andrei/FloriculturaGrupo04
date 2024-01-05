@@ -98,5 +98,15 @@
       margin: 0 20px;
       margin-bottom: 20px;
     }
+
+    #label {
+      padding: 5px 10px;
+    }
+  }
+
+  @media (max-width: 425px) {
+    #label {
+      padding: 3.75px 8px;
+    }
   }
 }
