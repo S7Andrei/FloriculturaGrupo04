@@ -222,37 +222,36 @@ const Register = () => {
 
           {/* <label className={styles.inputLabel}>Discount percentage</label> */}
 
-          <div className={styles.inputContainer}>
-            <p className={styles.halfInputsContainer}>
-              <p>
-                <label className={styles.inputLabel}>Price</label>
-                <input
-                  id="price"
-                  type="number"
-                  placeholder="$139.99"
-                  className={`${styles.inputForm} ${styles.halfInput}`}
-                  step="0.01"
-                  {...register("price")}
-                />
-                <p id={styles.heightError}>
-                  <ErrosForm errors={errors?.price?.message} />
-                </p>
+          <div className={styles.halfInputsContainer}>
+            <p>
+              <label className={styles.inputLabel}>Price</label>
+              <input
+                id="price"
+                type="number"
+                placeholder="$139.99"
+                className={`${styles.inputForm} ${styles.halfInput}`}
+                step="0.01"
+                {...register("price")}
+              />
+              <p id={styles.heightError}>
+                <ErrosForm errors={errors?.price?.message} />
               </p>
+            </p>
 
-              <div>
-                <label className={styles.inputLabel}>Discont Percentage</label>
-                <input
-                  id="discountPercentage"
-                  type="number"
-                  placeholder="20%"
-                  step="0.01"
-                  className={`${styles.inputForm} ${styles.halfInput}`}
-                  {...register("discountPercentage")}
-                />
-                <p id={styles.heightError}>
-                  <ErrosForm errors={errors?.discountPercentage?.message} />
-                </p>
-              </div>
+            <p className={styles.halfInputsWrapper}>
+              <label className={styles.inputLabel}>Discont Percentage</label>
+
+              <input
+                id="discountPercentage"
+                type="number"
+                placeholder="20%"
+                step="0.01"
+                className={`${styles.inputForm} ${styles.halfInput}`}
+                {...register("discountPercentage")}
+              />
+              <p id={styles.heightError}>
+                <ErrosForm errors={errors?.discountPercentage?.message} />
+              </p>
             </p>
           </div>
 
