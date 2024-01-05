@@ -228,3 +228,9 @@ li {
     padding: 0px;
   }
 }
+
+@media screen and (max-width: 420px) {
+  #img{
+    padding: 20px;
+  }
+}

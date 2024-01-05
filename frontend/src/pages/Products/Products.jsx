@@ -35,27 +35,31 @@ const Products = ({ listagemTotal = false, filter }) => {
         <div className={styles.querysContainer}>
           <p>
             <label className={styles.inputLabel}>Search by Name:</label>
-            <input
-              type="text"
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              className={styles.inputForm}
-            />
+            <p>
+              <input
+                type="text"
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className={styles.inputForm}
+              />
+            </p>
           </p>
 
           <p>
             <label className={styles.inputLabel}>Show by Category:</label>
-            <select
-              value={selectedCategory}
-              onChange={(e) => setSelectedCategory(e.target.value)}
-              className={styles.inputSelect}
-            >
-              {categoryOptions.map((category) => (
-                <option key={category} value={category}>
-                  {category}
-                </option>
-              ))}
-            </select>
+            <p>
+              <select
+                value={selectedCategory}
+                onChange={(e) => setSelectedCategory(e.target.value)}
+                className={styles.inputSelect}
+              >
+                {categoryOptions.map((category) => (
+                  <option key={category} value={category}>
+                    {category}
+                  </option>
+                ))}
+              </select>
+            </p>
           </p>
         </div>
 
@@ -70,6 +74,7 @@ const Products = ({ listagemTotal = false, filter }) => {
                 discont={plant.discountPercentage}
                 isInSale={plant.isInSale}
                 img={plant.img}
+                onDelete={true}
               />
             </div>
           ))}

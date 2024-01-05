@@ -55,15 +55,21 @@ const schema = yup
       .number()
       .positive("Discount value must be a positive number")
       .transform((originalValue, originalObject) => {
-        if (originalValue === "" || originalValue === undefined || isNaN(originalValue)) {
+        if (
+          originalValue === "" ||
+          originalValue === undefined ||
+          isNaN(originalValue)
+        ) {
           return 0.1;
         }
-        console.log(`originalValue ${originalValue} originalObject ${originalObject}`)
-        console.log(isNaN(originalValue))
+        console.log(
+          `originalValue ${originalValue} originalObject ${originalObject}`
+        );
+        console.log(isNaN(originalValue));
         const parsedValue = parseFloat(originalValue);
         return !isNaN(parsedValue) && parsedValue >= 0
           ? parsedValue
-          : (parseFloat(originalObject));
+          : parseFloat(originalObject);
       }, "Invalid value")
       .max(99, "Discount value must be less than or equal to 99")
       .default(0.1),
@@ -218,7 +224,7 @@ const Register = () => {
 
           <div className={styles.inputContainer}>
             <p className={styles.halfInputsContainer}>
-              <div>
+              <p>
                 <label className={styles.inputLabel}>Price</label>
                 <input
                   id="price"
@@ -228,8 +234,10 @@ const Register = () => {
                   step="0.01"
                   {...register("price")}
                 />
-                <ErrosForm errors={errors?.price?.message} />
-              </div>
+                <p id={styles.heightError}>
+                  <ErrosForm errors={errors?.price?.message} />
+                </p>
+              </p>
 
               <div>
                 <label className={styles.inputLabel}>Discont Percentage</label>
@@ -241,8 +249,9 @@ const Register = () => {
                   className={`${styles.inputForm} ${styles.halfInput}`}
                   {...register("discountPercentage")}
                 />
-
-                <ErrosForm errors={errors?.discountPercentage?.message} />
+                <p id={styles.heightError}>
+                  <ErrosForm errors={errors?.discountPercentage?.message} />
+                </p>
               </div>
             </p>
           </div>
