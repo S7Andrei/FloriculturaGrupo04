@@ -1,6 +1,81 @@
 {
   "plants": [
     {
+      "name": "Monstera Deliciosa",
+      "subtitle": "A Statement Piece for Your Indoor Garden",
+      "label": [
+        "tropical",
+        "indoor"
+      ],
+      "isInSale": "promo",
+      "price": 39.99,
+      "discountPercentage": "10",
+      "features": "Heart-shaped leaves",
+      "description": "Known for its iconic split leaves and easy care, the Monstera Deliciosa adds a touch of tropical elegance to any space.",
+      "id": 1,
+      "img": "/src/assets/monstera-deliciosa.jpg"
+    },
+    {
+      "name": "Fiddle Leaf Fig",
+      "subtitle": "Enhance Your Home with Nature's Sculpture",
+      "label": [
+        "fig",
+        "indoor"
+      ],
+      "isInSale": "promo",
+      "price": 79.99,
+      "discountPercentage": "15",
+      "features": "Large, violin-shaped leaves",
+      "description": "The Fiddle Leaf Fig is prized for its broad, glossy leaves that make a bold statement, perfect for interior decorating.",
+      "id": 2,
+      "img": "/src/assets/fiddle-leaf-fig.jpg"
+    },
+    {
+      "name": "Snake Plant",
+      "subtitle": "An Air-Purifying Marvel for Your Home",
+      "label": [
+        "succulent",
+        "indoor"
+      ],
+      "isInSale": "normal",
+      "price": 25.5,
+      "discountPercentage": "0",
+      "features": "Tall, upright leaves",
+      "description": "The Snake Plant is a resilient, low-maintenance plant known for its ability to purify indoor air, making it an ideal choice for any room.",
+      "id": 3,
+      "img": "/src/assets/snake-plant.jpg"
+    },
+    {
+      "name": "ZZ Plant",
+      "subtitle": "Robust and Stylish Greenery",
+      "label": [
+        "foliage",
+        "indoor"
+      ],
+      "isInSale": "promo",
+      "price": 34.75,
+      "discountPercentage": "5",
+      "features": "Shiny, dark green leaves",
+      "description": "The ZZ Plant is a hardy, drought-tolerant plant that thrives on neglect, making it a perfect choice for busy plant enthusiasts.",
+      "id": 4,
+      "img": "/src/assets/zz-plant.jpg"
+    },
+    {
+      "name": "Peace Lily",
+      "subtitle": "Elegant Beauty with Air-Purifying Benefits",
+      "label": [
+        "flowering",
+        "indoor"
+      ],
+      "isInSale": "normal",
+      "price": 22.99,
+      "discountPercentage": "0",
+      "features": "White flowers with glossy leaves",
+      "description": "The Peace Lily is renowned for its striking white flowers and its ability to cleanse indoor air, adding tranquility to any space.",
+      "id": 5,
+      "img": "/src/assets/peace-lily.jpg"
+    },
+    {
       "name": "Echinocereus Cactus",
       "subtitle": "A Majestic Addition to Your Plant Collection",
       "label": [
