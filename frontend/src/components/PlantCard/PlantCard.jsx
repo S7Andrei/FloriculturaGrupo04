@@ -52,8 +52,11 @@ const PlantCard = ({ listagemTotal = false, filter }) => {
         console.log(teste);
       }}
       breakpoints={{
-        1700: {
-          slidesPerView: 4.5,
+        1800: {
+          slidesPerView: 4.25,
+        },
+        1600: {
+          slidesPerView: 3.7,
         },
         1440: {
           slidesPerView: 3.25,

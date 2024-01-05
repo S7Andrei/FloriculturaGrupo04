@@ -102,15 +102,44 @@
     row-gap: 60px;
     margin-bottom: 60px;
   }
+
+  .carePlantsContainer {
+    padding: 100px 75px;
+  }
 }
 
 @media (max-width: 768px) {
   .containerGrid {
     grid-template-columns: repeat(1, 95%);
+    margin-bottom: 0;
     row-gap: 60px;
-    margin-bottom: 60px;
   }
+
   .carePlantsContainer {
-    padding: 100px 50px;
+    padding: 75px 50px;
+    gap: 40px;
+  }
+
+  .carePlantsSubtitle {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+@media (max-width: 568px) {
+  .carePlantsContainer {
+    padding: 50px;
+  }
+}
+
+@media (max-width: 425px) {
+  .carePlantsContainer {
+    padding: 50px 25px;
+  }
+}
+
+@media (max-width: 375px) {
+  .carePlantsContainer {
+    padding: 50px 20px;
   }
 }
