@@ -19,10 +19,6 @@
   gap: 16px;
 }
 
-.mobileNav {
-  display: none;
-}
-
 .navBar a {
   font-family: var(--raleway);
   text-decoration: none;
@@ -44,10 +40,6 @@
 }
 
 @media (max-width: 768px) {
-  .navBar {
-    display: none;
-  }
-
   .mobileNav {
     display: flex;
     align-items: center;
@@ -63,14 +55,6 @@
   display: flex;
   gap: 10px;
 }
-
-/* .mobileNav {
-  display: none;
-} */
-
-/* .navBar a {
-  text-decoration: none;
-} */
 
 .navLink {
   color: var(--luna-green);

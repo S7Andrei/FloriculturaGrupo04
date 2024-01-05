@@ -6,7 +6,7 @@ const MemberComponent = ({ name, about, img }) => {
     <div className={styles.member}>
       <h2 className={styles.aboutName}>{name}</h2>
       <p className={styles.aboutP}>{about}</p>
-      <img className={styles.staffPic} src={img} alt="Picure of Andrei" />
+      <img className={styles.staffPic} src={img} alt="Member Picture" />
     </div>
   );
 };
