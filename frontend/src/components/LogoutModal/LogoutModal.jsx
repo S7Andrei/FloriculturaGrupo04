@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import close from "../../assets/close.svg";
 import cactuLogout from "../../assets/cactoTriste.png";
@@ -12,9 +13,11 @@ const LogoutModal = ({ isOpen, onClose }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const login = useSelector((state) => state.login.isLogado);
+  let currentLoginStorage = localStorage.getItem('isLogado');
 
   const handleLogInOut = () => {
     dispatch(userActions.handleUpdateLogin());
+    localStorage.setItem('isLogado', false);
     onClose()
     navigate(`/`);
   };
@@ -22,7 +25,9 @@ const LogoutModal = ({ isOpen, onClose }) => {
   return (
     <dialog className={isOpen ? styles.modalContainer : styles.modalOff}>
       <section className={styles.modal}>
-        {login ? (
+        {console.log(localStorage + currentLoginStorage)}
+        {console.log(typeof(currentLoginStorage))}
+        {currentLoginStorage === 'true' ? (
           <div>
             <div id={styles.btnClose}>
               <button onClick={onClose}>

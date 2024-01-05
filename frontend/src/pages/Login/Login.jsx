@@ -50,6 +50,7 @@ const Login = ({ onClose }) => {
       if (user) {
         navigate("/");
         dispatch(userActions.handleUpdateLogin());
+        localStorage.setItem('isLogado', true);
         onClose();
       } else {
         throw new Error("Failed to submit form");
