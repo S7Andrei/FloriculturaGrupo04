@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
-import close from "../../assets/close.svg";
-import cactuLogout from "../../assets/cactoTriste.png";
+import close from "../../assets/LogoutModalImg/close.svg";
+import cactuLogout from "../../assets/LogoutModalImg/cactoTriste.png";
 import ButtonHome from "../UI/Home/ButtonHome/ButtonHome";
 import styles from "./styles.module.css";
 import { useDispatch, useSelector } from "react-redux";

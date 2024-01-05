@@ -3,8 +3,8 @@ import { useEffect, useState } from "react";
 import { IoMenu } from "react-icons/io5";
 // import { slide as Menu } from "react-burger-menu";
 
-import logo from "../../assets/logo.svg";
-import profile from "../../assets/profileLogo.svg";
+import logo from "../../assets/HeaderImg/logo.svg";
+import profile from "../../assets/HeaderImg/profileLogo.svg";
 
 import Nav from "../UI/Nav/Nav";
 import styles from "./Header.module.css";

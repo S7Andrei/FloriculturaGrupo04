@@ -1,12 +1,12 @@
 import styles from "./CarePlants.module.css";
-import watering from "../../../assets/watering.svg";
-import sunligth from "../../../assets/sunligth.svg";
-import nutrientsAndFertilizing from "../../../assets/nutrientsAndFertilizing.svg";
+import watering from "../../../assets/CarePlantsImg/watering.svg";
+import sunligth from "../../../assets/CarePlantsImg/sunligth.svg";
+import nutrientsAndFertilizing from "../../../assets/CarePlantsImg/nutrientsAndFertilizing.svg";
 import ButtonHome from "../../../components/UI/Home/ButtonHome/ButtonHome";
 
-import carePlantsImg1 from "../../../assets/careYourPlantsFoto1.png";
-import carePlantsImg2 from "../../../assets/careYourPlantsFoto2.png";
-import carePlantsImg3 from "../../../assets/careYourPlantsFoto3.png";
+import carePlantsImg1 from "../../../assets/CarePlantsImg/careYourPlantsFoto1.png";
+import carePlantsImg2 from "../../../assets/CarePlantsImg/careYourPlantsFoto2.png";
+import carePlantsImg3 from "../../../assets/CarePlantsImg/careYourPlantsFoto3.png";
 
 function CarePlants() {
 
