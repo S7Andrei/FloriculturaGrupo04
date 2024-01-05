@@ -53,11 +53,21 @@ const schema = yup
       .max(99),
     discountPercentage: yup
       .number()
-      .positive()
+      .positive("Discount value must be a positive number")
       .transform((originalValue, originalObject) => {
-        return originalValue === "" ? 0.1 : parseFloat(originalObject);
-      })
+        if (originalValue === "" || originalValue === undefined || isNaN(originalValue)) {
+          return 0.1;
+        }
+        console.log(`originalValue ${originalValue} originalObject ${originalObject}`)
+        console.log(isNaN(originalValue))
+        const parsedValue = parseFloat(originalValue);
+        return !isNaN(parsedValue) && parsedValue >= 0
+          ? parsedValue
+          : (parseFloat(originalObject));
+      }, "Invalid value")
+      .max(99, "Discount value must be less than or equal to 99")
       .default(0.1),
+
     features: yup
       .string()
       .required("Features it is a mandatory field")
@@ -81,14 +91,15 @@ const Register = () => {
     register,
     handleSubmit,
     watch,
-    formState: { errors }, reset
+    formState: { errors },
+    reset,
   } = useForm({ resolver: yupResolver(schema) });
 
   async function updateStatePlants() {
     const data = await getPlants();
     dispatch(plantsActions.handleGetPlants(data));
   }
-  console.log(errors)
+  console.log(errors);
   const handleSubmitForm = (data) => {
     let isInSale;
 
@@ -130,12 +141,12 @@ const Register = () => {
 
       body: JSON.stringify(plantsObject),
     })
-      .then((response) => response.json()) 
+      .then((response) => response.json())
       .then((data) => {
         console.log(data);
         if (data.id) {
           console.log("Form submitted successfully");
-    
+
           setLastID(data.id);
           updateStatePlants();
           setShowDialog(true);
@@ -149,8 +160,8 @@ const Register = () => {
   };
 
   const closeDialog = () => {
-    setShowDialog(false); 
-    reset()
+    setShowDialog(false);
+    reset();
   };
 
   return (
@@ -304,7 +315,11 @@ const Register = () => {
           <ButtonForm type="submit">Register</ButtonForm>
         </form>
 
-        <RegisterDialog isOpen={showDialog} onClose={closeDialog} lastID={lastID}/>
+        <RegisterDialog
+          isOpen={showDialog}
+          onClose={closeDialog}
+          lastID={lastID}
+        />
 
         <figure id={styles.img}>
           <img src={plant} />
