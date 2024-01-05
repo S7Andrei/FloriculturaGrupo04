@@ -8,13 +8,14 @@ import profile from "../../assets/profileLogo.svg";
 
 import Nav from "../UI/Nav/Nav";
 import styles from "./Header.module.css";
-import { useNavigate } from "react-router-dom";
-import hamburguerMenuStyles from "./mbBreak";
+import { NavLink, useNavigate } from "react-router-dom";
 
 import { useSelector } from "react-redux";
 import LogoutModal from "../LogoutModal/LogoutModal";
 
 import { Menu, MenuItem, Button } from "@mui/material";
+
+import "./GlobalMenu.css"
 
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -91,27 +92,22 @@ const Header = () => {
         </button>
 
         <nav className={styles.desktopNav}>
-          {console.log(login)}
+
           <ul className={styles.navBar}>
-            <li>
-              <Nav to={"/"} end>
-                Home
-              </Nav>
-            </li>
-            <li>
-              <Nav to={"/register"}>Register</Nav>
-            </li>
-            <li>
-              <Nav to={"/products"}>Products</Nav>
-            </li>
-            <li>
-              <Nav to={"/about-us"}>About us</Nav>
-            </li>
-            {!login && (
+
               <li>
-                <Nav to={"/sign-up"}>Sign-up</Nav>
+                <Nav to={"/register"}>Register</Nav>
               </li>
-            )}
+              <li>
+                <Nav to={"/products"}>Products</Nav>
+              </li>
+              <li>
+
+                <Nav to={"/sign-up"}>Sign-up</Nav>
+
+                <Nav to={"/about-us"}>About us</Nav>
+
+              </li>
           </ul>
         </nav>
         {mobileBreakPoint && (
@@ -119,13 +115,25 @@ const Header = () => {
             <Button onClick={handleClick} className={styles.dropButton}>
               Menu
             </Button>
-            <Menu
+            <Menu className={styles.menuContainer}
               anchorEl={anchorEl}
               open={Boolean(anchorEl)}
               onClose={handleClose}
             >
-              <MenuItem className={styles.dropItem} onClick={handleClose}>
-                <Nav /> {/* Render the Nav component inside the MenuItem */}
+              
+              
+              <MenuItem className={styles.dropItem} onClick={handleClose}> {/* Renderize os componentes nav dentro do MenuItem. */}
+
+              <NavLink to={"/"} end>
+                  Home
+                </NavLink> 
+
+                <NavLink to={"/register"}>Register</NavLink> 
+
+                <NavLink to={"/products"}>Products</NavLink>
+
+                <NavLink to={"/about-us"}>About us</NavLink>
+
               </MenuItem>
             </Menu>
           </div>
